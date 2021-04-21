@@ -1,8 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logoimg from '../../images/menu_logo.png'
+import Menubtn from '../atom/Menubtn'
 
-const Menubar = () => {
+const Menubar = ({name}) => {
+    
+    const menulist = [
+        { title : 'Home'},
+        { title : 'ABOUT'},
+        { title : 'PRODUCT'},
+        { title : 'SHOP'},
+        { title : 'INQUIRY'},
+    ]
+
     return (
         <Wrapper>
             <Inner>
@@ -10,7 +20,11 @@ const Menubar = () => {
                     <img src={Logoimg} alt="menu logo" />
                 </LogoArea>
                 <MenuArea>
-
+                    {menulist.map(index => {
+                        return (
+                            <Menubtn key={index}>{index.title}</Menubtn>
+                        )
+                    })}
                 </MenuArea>
             </Inner>
         </Wrapper>
@@ -39,12 +53,14 @@ const LogoArea = styled.div`
     display : flex;
     align-items : center;
     justify-content : center;
+    margin-right : 3vw;
 `
 
 const MenuArea = styled.div`
-    background-color : green;
-    width : 100%;
+    /* background-color : green; */
+    width : 80vw;
     height : 100%;
+    display : flex;
 `
 
 export default Menubar

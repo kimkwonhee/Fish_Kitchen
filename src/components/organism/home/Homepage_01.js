@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import homeimg_01 from '../../images/home_img01.jpg'
-import logo from '../../images/home_logo.png'
+import homeimg_01 from '../../../images/home_img01.jpg'
+import logo from '../../../images/home_logo.png'
 import Fade from 'react-reveal/Fade'
 
 const Homepage_01 = () => {

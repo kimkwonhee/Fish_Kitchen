@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import homeimg_04 from '../../images/home_img04.jpg'
+import homeimg_05 from '../../../images/home_img05.jpg'
 import Fade from 'react-reveal/Fade'
 
-const Homepage_04 = () => {
+const Homepage_05= () => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                    <HomeTitle>7년간의 노하우</HomeTitle>
-                    <HomeSub>7년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다</HomeSub>
+                    <HomeTitle>믿고 받아보세요</HomeTitle>
+                    <HomeSub>어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다</HomeSub>
                 </Section>
             </BackImg>
         </Wrapper>
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 const BackImg = styled.div`
     width : 100%;
     height : 100vh;
-    background : url(${homeimg_04});
+    background : url(${homeimg_05});
     background-repeat : no-repeat;
     min-height: 100%;
     background-position: center center;
@@ -33,24 +33,21 @@ const BackImg = styled.div`
 `
 
 const Section = styled.div`
-    width : 50vw;
-    float : right;
+    width : 510px;
     margin-top : 47.4vh;
+    margin-left : 19.2vw;
 `
 
 const HomeTitle = styled.div`
-    width : 446px;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     font-size: 52px;
     font-weight: 600;
     letter-spacing: 1.2px;
-    text-align: left;
     color: #ffffff;
     margin-bottom : 8px;
 `
 
 const HomeSub = styled.div`
-    /* width : 447px; */
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     font-size: 17px;
     font-weight: 400;
@@ -60,4 +57,4 @@ const HomeSub = styled.div`
     color: #ffffff;
 `
 
-export default Homepage_04;
+export default Homepage_05;

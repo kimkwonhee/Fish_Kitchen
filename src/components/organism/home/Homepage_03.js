@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import homeimg_05 from '../../images/home_img05.jpg'
+import homeimg_03 from '../../../images/home_img03.jpg'
 import Fade from 'react-reveal/Fade'
 
-const Homepage_05= () => {
+const Homepage_03= () => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                    <HomeTitle>믿고 받아보세요</HomeTitle>
-                    <HomeSub>어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다</HomeSub>
+                    <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
+                    <HomeSub>검증된 위생 관리 시스템으로 안심하고 드실수 있습니다</HomeSub>
                 </Section>
             </BackImg>
         </Wrapper>
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 const BackImg = styled.div`
     width : 100%;
     height : 100vh;
-    background : url(${homeimg_05});
+    background : url(${homeimg_03});
     background-repeat : no-repeat;
     min-height: 100%;
     background-position: center center;
@@ -33,7 +33,7 @@ const BackImg = styled.div`
 `
 
 const Section = styled.div`
-    width : 510px;
+    width : 465px;
     margin-top : 47.4vh;
     margin-left : 19.2vw;
 `
@@ -57,4 +57,4 @@ const HomeSub = styled.div`
     color: #ffffff;
 `
 
-export default Homepage_05;
+export default Homepage_03;

@@ -1,12 +1,11 @@
 import React , { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Slider from "react-slick";
-
-import Homepage_01 from '../components/organism/Homepage_01'
-import Homepage_02 from '../components/organism/Homepage_02'
-import Homepage_03 from '../components/organism/Homepage_03'
-import Homepage_04 from '../components/organism/Homepage_04'
-import Homepage_05 from '../components/organism/Homepage_05'
+import Homepage_01 from '../components/organism/home/Homepage_01'
+import Homepage_02 from '../components/organism/home/Homepage_02'
+import Homepage_03 from '../components/organism/home/Homepage_03'
+import Homepage_04 from '../components/organism/home/Homepage_04'
+import Homepage_05 from '../components/organism/home/Homepage_05'
 import Menubar from '../components/organism/Menubar';
 import Homebtn from '../components/atom/Homebtn';
 
@@ -56,7 +55,7 @@ const _Home = () => {
       
     return (
         <Wrapper>
-            <Menubar />
+            <Menubar name="home"/>
             <Slider {...settings}>
                 <Homepage_01 />
                 <Homepage_02 />

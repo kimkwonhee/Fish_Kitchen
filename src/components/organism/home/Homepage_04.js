@@ -1,16 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import homeimg_02 from '../../images/home_img02.jpg'
+import homeimg_04 from '../../../images/home_img04.jpg'
 import Fade from 'react-reveal/Fade'
 
-const Homepage_02 = () => {
+const Homepage_04 = () => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                    <HomeTitle>신선함을 고스란히</HomeTitle>
-                    <HomeSub>어부키친은 최신식 생산 시설로 제품 생산성 및 품질에<br />
-                        최선의 노력을 기울이고 있습니다</HomeSub>
+                    <HomeTitle>7년간의 노하우</HomeTitle>
+                    <HomeSub>7년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다</HomeSub>
                 </Section>
             </BackImg>
         </Wrapper>
@@ -26,7 +25,7 @@ const Wrapper = styled.div`
 const BackImg = styled.div`
     width : 100%;
     height : 100vh;
-    background : url(${homeimg_02});
+    background : url(${homeimg_04});
     background-repeat : no-repeat;
     min-height: 100%;
     background-position: center center;
@@ -51,7 +50,7 @@ const HomeTitle = styled.div`
 `
 
 const HomeSub = styled.div`
-    width : 447px;
+    /* width : 447px; */
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     font-size: 17px;
     font-weight: 400;
@@ -61,4 +60,4 @@ const HomeSub = styled.div`
     color: #ffffff;
 `
 
-export default Homepage_02;
+export default Homepage_04;
