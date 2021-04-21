@@ -7,8 +7,6 @@ const _About_store = () => {
     return (
         <Wrapper>
             <Menubar name="about"/>
-
-            
             <Section1>
                 <Ab_title1>사람들의 아침식탃에 올라갈<br />신선한 물고기를 위해</Ab_title1>
             </Section1>
