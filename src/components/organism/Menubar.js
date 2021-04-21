@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logoimg from '../images/menu_logo.png'
+import Logoimg from '../../images/menu_logo.png'
 
 const Menubar = () => {
     return (
@@ -32,11 +32,9 @@ const Inner = styled.div`
     height : 100%;
     margin-left : 12.8vw;
     margin-right : 245px;
-    /* background-color : blue; */
     display : flex;
 `
 const LogoArea = styled.div`
-    /* background-color : red; */
     height : 100%;
     display : flex;
     align-items : center;
