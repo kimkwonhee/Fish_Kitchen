@@ -55,7 +55,6 @@ const _Home = () => {
       
     return (
         <Wrapper>
-            <Menubar name="home"/>
             <Slider {...settings}>
                 <Homepage_01 />
                 <Homepage_02 />

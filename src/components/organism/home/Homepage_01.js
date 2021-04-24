@@ -39,7 +39,7 @@ const BackImg = styled.div`
 
 const Empty = styled.div`
     width : 100%;
-    height : 120px;
+    height : 100px;
     margin-bottom : 22vh;
     /* background : red; */
 `

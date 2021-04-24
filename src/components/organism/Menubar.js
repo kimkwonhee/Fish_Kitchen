@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logoimg from '../../images/menu_logo.png'
+import Logoimg from '../../images/menu_logo01.png'
 import Menubtn from '../atom/Menubtn'
 
 const Menubar = ({name}) => {
@@ -33,7 +33,7 @@ const Menubar = ({name}) => {
 
 const Wrapper = styled.div`
     width : 100%;
-    height : 120px;
+    height : 100px;
     position : fixed;
     top : 0;
     left : 0;
@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 const Inner = styled.div`
     width : 70.5vw;
     height : 100%;
-    margin-left : 12.8vw;
+    margin-left : 14.8vw;
     margin-right : 245px;
     display : flex;
 `
@@ -61,6 +61,10 @@ const MenuArea = styled.div`
     width : 80vw;
     height : 100%;
     display : flex;
+
+    &:hover {
+        border-bottom : 2px solid #ffffff;
+    }
 `
 
 export default Menubar

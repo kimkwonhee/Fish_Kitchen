@@ -31,33 +31,40 @@ const BackImg = styled.div`
     min-height: 100%;
     background-position: center center;
     background-size: cover;
+    display : flex;
+    justify-content : center;
 `
 
 const Section = styled.div`
-    width : 50vw;
-    float : right;
-    margin-top : 47.4vh;
+    width : 62.5vw;
+    height : 150px;
+    margin-top : 67.4vh;
+    /* background-color : red; */
 `
 
 const HomeTitle = styled.div`
-    width : 446px;
+    width : 97%;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 52px;
+    font-size: 3.25rem;
     font-weight: 600;
     letter-spacing: 1.2px;
-    text-align: left;
     color: #ffffff;
     margin-bottom : 8px;
+    /* background-color : green; */
+    margin-right : 2vw;
+    text-align : right;
 `
 
 const HomeSub = styled.div`
-    width : 447px;
+    width : 97%;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 17px;
+    font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.4px;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1.72;
+    /* background-color : blue; */
+    text-align : right;
     color: #ffffff;
 `
 
