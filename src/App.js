@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Menubar from './components/organism/Menubar'
+import _About_company from './pages/_About_company'
 import _About_store from './pages/_About_store'
+import _About_vision from './pages/_About_vision'
 import _home from './pages/_Home'
 
 const App = () => {
@@ -9,7 +11,9 @@ const App = () => {
     <Wrapper>
       <Menubar name="home"/>
       {/* <_home /> */}
-      <_About_store />
+      {/* <_About_store /> */}
+      {/* <_About_vision /> */}
+      <_About_company />
     </Wrapper>
   )
 }
