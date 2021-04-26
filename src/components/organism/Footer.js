@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Inquirebtn from '../atom/Inquirebtn'
 
-
 const Footer = () => {
     return (
         <Wrapper>

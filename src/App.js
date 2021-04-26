@@ -6,6 +6,8 @@ import _About_history from './pages/_About_history'
 import _About_store from './pages/_About_store'
 import _About_vision from './pages/_About_vision'
 import _home from './pages/_Home'
+import _Inquiry from './pages/_Inquiry'
+import _Product from './pages/_Product'
 
 const App = () => {
   return (
@@ -15,7 +17,9 @@ const App = () => {
       {/* <_About_store /> */}
       {/* <_About_vision /> */}
       {/* <_About_company /> */}
-      <_About_history />
+      {/* <_About_history /> */}
+      {/* <_Product /> */}
+      <_Inquiry />
     </Wrapper>
   )
 }

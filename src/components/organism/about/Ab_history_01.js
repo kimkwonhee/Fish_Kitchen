@@ -4,8 +4,6 @@ import dots from '../../../images/dot.png'
 import history_img01 from '../../../images/ab_history_img01.jpg'
 import history_img02 from '../../../images/ab_history_img02.jpg'
 
-
-
 const HistoryBoxList = () => {
     const list = [
         {
@@ -86,14 +84,18 @@ const HistoryBoxList = () => {
             return (
                 <HistoryBox key={itemlist.id} type={itemlist.type}>
                     <Section type={itemlist.type}>
+
                         <Year type={itemlist.type}>{itemlist.year}</Year>
+
                         {itemlist.contents.map((idx => {
                             return (
+
                                 <Record type={itemlist.type}>
                                     {(itemlist.type ==='left') 
                                     ? <><Dots type={itemlist.type} />{idx}</>
                                     : <>{idx}<Dots /></>}
                                 </Record>
+                                
                             )
                         }))}
                         {itemlist.img}
@@ -112,59 +114,6 @@ const Ab_history_01 = () => {
            <Title>HISTORY</Title>
            <Inner>
                <HistoryBoxList />
-
-
-               {/* <HistoryBox type="left">
-                    <Section type="left">
-                        <Year type="left">2020</Year>
-                        <Record type="left"><Dots type="left"/>(주)현대그림푸드 공급</Record>
-                        <Record type="left"><Dots type="left"/>쿠팡(주) 2차벤더 공급</Record>
-                    </Section>
-               </HistoryBox>
-               <HistoryBox>
-                   <Section>
-                        <Year>2019</Year>
-                        <Record>(주)동원에프엔비 공급<Dots /></Record>
-                        <Record>(주)신세계푸드 공급<Dots /></Record>
-                        <Img src={history_img01} alt="이미지" />
-                    </Section>
-               </HistoryBox>
-               <HistoryBox type="left">
-                    <Section type="left">
-                        <Year type="left">2018</Year>
-                        <Record type="left"><Dots type="left"/>(주)동원홈푸드 공급</Record>
-                        <Record type="left"><Dots type="left"/>B2B 브랜드 “바다닷” 런칭</Record>
-                    </Section>
-               </HistoryBox>
-               <HistoryBox>
-                   <Section>
-                        <Year>2017</Year>
-                        <Record>낙지, 주꾸미요리 프렌차이즈 업체 공급<Dots /></Record>
-                    </Section>
-               </HistoryBox>
-               <HistoryBox type="left">
-                    <Section type="left">
-                        <Year type="left">2016</Year>
-                        <Record type="left"><Dots type="left"/>베트남 호치민 현지 지사 설립</Record>
-                        <Img src={history_img02} alt="이미지" />
-                    </Section>
-               </HistoryBox>
-               <HistoryBox>
-                   <Section>
-                        <Year>2015</Year>
-                        <Record>(주)삼성웰스토리 공급<Dots /></Record>
-                    </Section>
-               </HistoryBox>
-               <HistoryBox type="left">
-                    <Section type="left">
-                        <Year type="left">2014</Year>
-                        <Record type="left"><Dots type="left"/>(주) 바이오션 설립</Record>
-                        <Record type="left"><Dots type="left"/>글로벌 파트너 MOU체결(베트남 5社, 중국3社, 태국1社)</Record>
-                        <Record type="left"><Dots type="left"/>학교 급식 공급</Record>
-                        <Record type="left"><Dots type="left"/>(주)동원홈푸드 2차벤더 공급</Record>
-                        <Record type="left"><Dots type="left"/>(주)신세계푸드 2차벤더</Record>
-                    </Section>
-               </HistoryBox> */}
            </Inner>
         </Wrapper>
     )

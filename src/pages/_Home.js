@@ -6,7 +6,6 @@ import Homepage_02 from '../components/organism/home/Homepage_02'
 import Homepage_03 from '../components/organism/home/Homepage_03'
 import Homepage_04 from '../components/organism/home/Homepage_04'
 import Homepage_05 from '../components/organism/home/Homepage_05'
-import Menubar from '../components/organism/Menubar';
 import Homebtn from '../components/atom/Homebtn';
 
 const _Home = () => {
@@ -46,7 +45,7 @@ const _Home = () => {
         verticalSwiping :true,
         arrows : false,
         draggable : false,
-        ref :homeimges,
+        ref : homeimges,
         afterChange: function(currentSlide) {
             setNumber(currentSlide)
         }
