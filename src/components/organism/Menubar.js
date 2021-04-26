@@ -61,10 +61,6 @@ const MenuArea = styled.div`
     width : 80vw;
     height : 100%;
     display : flex;
-
-    &:hover {
-        border-bottom : 2px solid #ffffff;
-    }
 `
 
 export default Menubar

@@ -15,11 +15,13 @@ const Menubtn = ({key, children}) => {
 const Wrapper = styled.div`
     width : 100%;
     height : 100%;
-    /* border-bottom : 1px solid blue; */
     display : flex;
     justify-content : center;
     align-items : center;
     cursor: pointer;
+    &:hover {
+        ${(props) => (props.key === props.key) ? 'border-bottom : 2px solid #ffffff;' : null}
+    }
 `
 
 const Item = styled.div`

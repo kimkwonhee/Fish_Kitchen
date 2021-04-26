@@ -46,9 +46,10 @@ const Wrapper = styled.div`
     display : flex;
     justify-content : center;
     align-items : center;
+    /* background-color : red; */
 `
 const Section = styled.div`
-    position : absolute;
+    position : relative;
     margin : 0 auto;
     width: 1200px;
     height : 829px;
