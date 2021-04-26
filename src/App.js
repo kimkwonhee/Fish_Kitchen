@@ -17,9 +17,9 @@ const App = () => {
       {/* <_About_store /> */}
       {/* <_About_vision /> */}
       {/* <_About_company /> */}
-      {/* <_About_history /> */}
+      <_About_history />
       {/* <_Product /> */}
-      <_Inquiry />
+      {/* <_Inquiry /> */}
     </Wrapper>
   )
 }

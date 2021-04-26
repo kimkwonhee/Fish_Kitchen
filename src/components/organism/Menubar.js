@@ -6,7 +6,7 @@ import Menubtn from '../atom/Menubtn'
 const Menubar = ({name}) => {
     
     const menulist = [
-        { title : 'Home'},
+        { title : 'HOME'},
         { title : 'ABOUT'},
         { title : 'PRODUCT'},
         { title : 'SHOP'},
