@@ -1,28 +1,61 @@
-import React from 'react'
+import React , { useEffect }from 'react'
 import styled from 'styled-components'
 import Logoimg from '../../images/menu_logo01.png'
 import Menubtn from '../atom/Menubtn'
+import { Link, withRouter } from 'react-router-dom'
 
-const Menubar = ({name}) => {
+const Menubar = ({ location }) => {
+
+    const pathname = location.path;
     
     const menulist = [
-        { title : 'HOME'},
-        { title : 'ABOUT'},
-        { title : 'PRODUCT'},
-        { title : 'SHOP'},
-        { title : 'INQUIRY'},
+        {   
+            id  : 1,
+            title : 'HOME',
+            link : '/'
+        },
+        {   
+            id : 2,
+            title : 'ABOUT',
+            link : '/store'
+        },
+        { 
+            id : 3,
+            title : 'PRODUCT',
+            link : '/product'
+        },
+        { 
+            id : 4,
+            title : 'SHOP',
+            link : '/',
+        },
+        { 
+            id : 5,
+            title : 'INQUIRY',
+            link : '/inquiry'
+        },
     ]
 
     return (
         <Wrapper>
             <Inner>
                 <LogoArea>
-                    <img src={Logoimg} alt="menu logo" />
+                    <Link to="/">
+                        <img src={Logoimg} alt="menu logo" />
+                    </Link>
                 </LogoArea>
                 <MenuArea>
                     {menulist.map(index => {
                         return (
-                            <Menubtn key={index}>{index.title}</Menubtn>
+                            <LinkTag to={index.link} >
+                                <Menubtn 
+                                    key={index.id} 
+                                    link={index.link}
+                                    path={pathname}
+                                >
+                                    {index.title}
+                                </Menubtn>
+                            </LinkTag>
                         )
                     })}
                 </MenuArea>
@@ -45,22 +78,26 @@ const Inner = styled.div`
     width : 70.5vw;
     height : 100%;
     margin-left : 14.8vw;
-    margin-right : 245px;
     display : flex;
+    justify-content : center;
+    /* background-color : gray; */
 `
 const LogoArea = styled.div`
+    width : 470px;
     height : 100%;
     display : flex;
     align-items : center;
-    justify-content : center;
-    margin-right : 3vw;
+    /* background-color : black; */
+`
+
+const LinkTag = styled(Link)`
+    text-decoration : none !important;
 `
 
 const MenuArea = styled.div`
     /* background-color : green; */
-    width : 80vw;
     height : 100%;
     display : flex;
 `
 
-export default Menubar
+export default withRouter(Menubar)

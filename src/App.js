@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styled from 'styled-components'
 import Menubar from './components/organism/Menubar'
@@ -8,18 +9,19 @@ import _About_vision from './pages/_About_vision'
 import _home from './pages/_Home'
 import _Inquiry from './pages/_Inquiry'
 import _Product from './pages/_Product'
+import { Route } from 'react-router-dom'
 
 const App = () => {
   return (
     <Wrapper>
-      <Menubar name="home"/>
-      {/* <_home /> */}
-      {/* <_About_store /> */}
-      {/* <_About_vision /> */}
-      {/* <_About_company /> */}
-      <_About_history />
-      {/* <_Product /> */}
-      {/* <_Inquiry /> */}
+      <Menubar />
+      <Route path="/" component={_home} exact/>
+      <Route path="/store" component={_About_store}/>      
+      <Route path="/vision" component={_About_vision}/>
+      <Route path="/company" component={_About_company}/>
+      <Route path="/history" component={_About_history}/>
+      <Route path="/product" component={_Product}/>
+      <Route path="/inquiry" component={_Inquiry}/>
     </Wrapper>
   )
 }
