@@ -50,7 +50,7 @@ const _Home = () => {
             setNumber(currentSlide)
         }
     }
-    const item = [{id : 0}, {id : 1},{id : 2},{id : 3},{id : 4}]
+    const item = [0,1,2,3,4]
       
     return (
         <Wrapper>
@@ -65,7 +65,7 @@ const _Home = () => {
                 {item.map(index => {
                     return (
                         <Homebtn 
-                            key={index.id} 
+                            key={index} 
                             number={number} 
                             onClick={() => onClick(index)} 
                             indexnumber={index}

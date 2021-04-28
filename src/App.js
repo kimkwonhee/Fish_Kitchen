@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import Menubar from './components/organism/Menubar'
@@ -10,11 +9,11 @@ import _home from './pages/_Home'
 import _Inquiry from './pages/_Inquiry'
 import _Product from './pages/_Product'
 import { Route } from 'react-router-dom'
-
+ 
 const App = () => {
   return (
     <Wrapper>
-      <Menubar />
+      <Nav />
       <Route path="/" component={_home} exact/>
       <Route path="/store" component={_About_store}/>      
       <Route path="/vision" component={_About_vision}/>
@@ -29,6 +28,9 @@ const App = () => {
 const Wrapper = styled.div`
   width : 100%;
   height : 100vh;
+`
+const Nav = styled(Menubar)`
+ 
 `
 
 export default App;
