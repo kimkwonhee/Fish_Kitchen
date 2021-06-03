@@ -8,8 +8,10 @@ const Homepage_03= () => {
         <Wrapper>
             <BackImg>
                 <Section>
-                    <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
-                    <HomeSub>검증된 위생 관리 시스템으로 안심하고 드실수 있습니다</HomeSub>
+                    <Fade left cascade>
+                        <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
+                        <HomeSub>검증된 위생 관리 시스템으로 안심하고 드실수 있습니다</HomeSub>
+                    </Fade>
                 </Section>
             </BackImg>
         </Wrapper>
@@ -42,28 +44,22 @@ const Section = styled.div`
 `
 
 const HomeTitle = styled.div`
-     width : 97%;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 3.25rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
+    width : 97%;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: 1.04px;
     color: #ffffff;
     margin-bottom : 8px;
-    /* background-color : green; */
     margin-right : 2vw;
-    /* text-align : right; */
 `
 
 const HomeSub = styled.div`
     width : 97%;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
-    font-weight: 400;
-    letter-spacing: 0.4px;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.44px;
     text-align: left;
-    line-height: 1.72;
-    /* background-color : blue; */
-    /* text-align : right; */
+    line-height: 1.73;
     color: #ffffff;
 `
 

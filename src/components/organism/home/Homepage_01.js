@@ -9,9 +9,11 @@ const Homepage_01 = () => {
         <Wrapper>
             <BackImg>
                 <Empty />
-                <Logoimg src={logo} alt="logo"/>
-                <HomeTitle>어부 키친</HomeTitle>
-                <HomeSub>사람들의 아침 식탁에 올라갈 신선한 물고기를 위해</HomeSub>
+                    <Fade top cascade>
+                        <Logoimg src={logo} alt="logo"/>
+                        <HomeTitle>어부 키친</HomeTitle>
+                        <HomeSub>사람들의 아침 식탁에 올라갈 신선한 물고기를 위해</HomeSub>
+                    </Fade>
             </BackImg>
         </Wrapper>
     )
@@ -50,20 +52,14 @@ const Logoimg = styled.img`
 `
 
 const HomeTitle = styled.div`
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 60px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    text-align: center;
+    height: 75px;
+    font-size: 52px;
+    font-weight: 500;
     color: #ffffff;
 `
 
 const HomeSub = styled.div`
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 0.4px;
-    text-align: center;
+    font-size: 22px;
     color: #ffffff;
 `
 

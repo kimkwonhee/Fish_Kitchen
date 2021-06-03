@@ -1,21 +1,23 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-const Menubtn = ({key, link, path, children}) => {
+const Menubtn = ({link, path, children, onMouseOver}) => {
 
-    // useEffect(() => {
-    //     console.log(submenu);
-    // }, []);
-
-    const subitem = [0,1,2,3]
-
+    console.log(path);
     return (
         <Wrapper
-            key={key}
-            link={link}
-            path={path}
+            onMouseOver={onMouseOver}
         >
-            <Item>{children}</Item>
+            <Inner 
+                link={link}
+                path={path}>
+                <Item 
+                    link={link}
+                    path={path}
+                >
+                    {children}
+                </Item>
+            </Inner>
         </Wrapper>
     )
 }
@@ -26,33 +28,30 @@ const Wrapper = styled.div`
     height : 100%;
     display : flex;
     justify-content : center;
-    align-items : center;
+`
+
+const Inner = styled.div`
     cursor: pointer;
-    border-bottom : ${(props) => (props.path === props.link) ? '2px solid #ffffff;' : null};
+    width : 84px;
+    height : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    border-bottom : ${(props) => (props.path === props.link) ? '3px solid #ffffff;' : null};
+    transition: 0.5s; 
+    transform: translateX(-50%);
 
     &:hover {
-        border-bottom : ${(props) => (props.key === props.key) ? '2px solid #ffffff;' : null}
+        border-bottom : 3px solid #ffffff;
     };
-    /* background-color : red; */
 `
-
 const Item = styled.div`
-    font-size: 20px;
-    line-height: 1;
-    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight :  ${(props) => (props.path === props.link) ? '500' : '300'};
+    /* font-weight :  ${(props) => (props.path === props.link) ? 'bold' : 'normal'}; */
+    color: ${(props) => (props.path === '/inquiry') ? '#05103d' : '#ffffff'};
 `
 
-const SubMenuArea = styled.div`
-    width : 100%;
-    height : 100px;
-    background : red;
-`
-
-const SubMenu = styled.div`
-    width : 100%;
-    height : 100px;
-    background : blue;
-    display : none;
-`
 
 export default Menubtn;

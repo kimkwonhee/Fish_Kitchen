@@ -62,7 +62,7 @@ const ContentsArea = styled.div`
 `
 
 const HeaderTitle = styled.div`
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: bold;
     line-height: 1.42;
     letter-spacing: 0.96px;
@@ -72,23 +72,23 @@ const HeaderTitle = styled.div`
 
 const LogoArea = styled.div`
     width : 100%;
-    height : 27.03vh;
-    margin-top : 12.31vh;
+    height : 292px;
+    margin-top : 133px;
     display : flex;
     justify-content :center;
      /* background-color : red; */
 `
 
 const Logoimg = styled.img`
-    width : 11.04vw;
-    height : 100%;
+    width: 212px;
+    height: 292px;
     /* background-color : green; */
 `
 
 const VerticalimgArea = styled.div`
     width : 100%;
     height : 20.55vh;
-    margin-top : 4.62vh;
+    margin-top : 50px;
     display : flex;
     justify-content : center;
     /* background-color : green; */
@@ -107,7 +107,7 @@ const FooterContents = styled.div`
     letter-spacing: 0.48px;
     text-align: center;
     color: #ffffff;
-    margin-top : 4.62vh;
+    margin-top : 50px;
 `
 
 export default Ab_store_01

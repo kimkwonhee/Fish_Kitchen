@@ -8,9 +8,11 @@ const Homepage_02 = () => {
         <Wrapper>
             <BackImg>
                 <Section>
+                <Fade right cascade>
                     <HomeTitle>신선함을 고스란히</HomeTitle>
                     <HomeSub>어부키친은 최신식 생산 시설로 제품 생산성 및 품질에<br />
                         최선의 노력을 기울이고 있습니다</HomeSub>
+                </Fade>
                 </Section>
             </BackImg>
         </Wrapper>
@@ -44,26 +46,22 @@ const Section = styled.div`
 
 const HomeTitle = styled.div`
     width : 97%;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 3.25rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
+    font-size: 52px;
+    font-weight: 500;
+    letter-spacing: 1.04px;
     color: #ffffff;
     margin-bottom : 8px;
-    /* background-color : green; */
     margin-right : 2vw;
     text-align : right;
 `
 
 const HomeSub = styled.div`
     width : 97%;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
-    font-weight: 400;
-    letter-spacing: 0.4px;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0.44px;
     text-align: left;
-    line-height: 1.72;
-    /* background-color : blue; */
+    line-height: 1.73;
     text-align : right;
     color: #ffffff;
 `
