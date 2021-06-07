@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import homeimg_04 from '../../../images/home_img04.jpg'
+import mo_homeimg_04 from '../../../images/mo_home_img04.png'
 import Fade from 'react-reveal/Fade'
 
 const Homepage_04 = () => {
@@ -10,7 +11,9 @@ const Homepage_04 = () => {
                 <Section>
                     <Fade right cascade>
                     <HomeTitle>7년간의 노하우</HomeTitle>
-                    <HomeSub>7년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다</HomeSub>
+                    <HomeSub>
+                        <HomeSubText>7년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다</HomeSubText>
+                    </HomeSub>
                     </Fade>
                 </Section>
             </BackImg>
@@ -29,22 +32,31 @@ const BackImg = styled.div`
     height : 100vh;
     background : url(${homeimg_04});
     background-repeat : no-repeat;
-    min-height: 100%;
     background-position: center center;
     background-size: cover;
     display : flex;
     justify-content : center;
+
+    @media all and (max-width:1200px) {
+        background : url(${mo_homeimg_04});
+        background-position: center center;
+        background-size: cover;
+        justify-content : flex-end;
+        display : flex;
+        justify-content : center;
+    }
 `
 
 const Section = styled.div`
-    width : 62.5vw;
-    height : 150px;
+    width : 1200px;
     margin-top : 67.4vh;
-    /* background-color : red; */
+
+    @media all and (max-width:1200px) {
+        width : 90%;
+    }
 `
 
 const HomeTitle = styled.div`
-    width : 97%;
     font-size: 52px;
     font-weight: 500;
     letter-spacing: 1.04px;
@@ -52,17 +64,35 @@ const HomeTitle = styled.div`
     margin-bottom : 8px;
     margin-right : 2vw;
     text-align : right;
+    
+    @media all and (max-width:1200px) {
+        font-size: 24px;
+    }
 `
 
 const HomeSub = styled.div`
-    width : 97%;
     font-size: 22px;
     font-weight: 300;
     letter-spacing: 0.44px;
-    text-align: left;
     line-height: 1.73;
+    display : flex;
+    justify-content : flex-end;
     text-align : right;
     color: #ffffff;
+    margin-right : 2vw;
+    word-break : keep-all;
+
+    @media all and (max-width:1200px) {
+        font-size: 14px;
+    }
+`
+
+const HomeSubText = styled.div`
+    width : 600px;
+
+    @media all and (max-width:1200px) {
+        width : 200px;
+    }
 `
 
 export default Homepage_04;

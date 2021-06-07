@@ -28,6 +28,12 @@ const Dotbtn = styled.div`
         margin-bottom : 0;
     }
 
+    @media all and (max-width:1200px) {
+        width: 6px;
+        height: 6px;
+        margin-bottom : 15px;
+    }
+
 `
 
 export default Homebtn

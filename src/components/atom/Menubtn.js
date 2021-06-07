@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Menubtn = ({id, link, path, children, top, onMouseOver}) => {
+const Menubtn = ({className, id, link, path, children, top, onMouseOver}) => {
 
     let menu_status = 0;
 
@@ -24,6 +24,7 @@ const Menubtn = ({id, link, path, children, top, onMouseOver}) => {
 
     return (
         <Wrapper
+            className={className}
             onMouseOver={onMouseOver}
         >
             <Inner 

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import homeimg_05 from '../../../images/home_img05.jpg'
+import mo_homeimg_05 from '../../../images/mo_home_img05.png'
 import Fade from 'react-reveal/Fade'
 
 const Homepage_05= () => {
@@ -10,7 +11,9 @@ const Homepage_05= () => {
                 <Section>
                     <Fade left cascade>
                         <HomeTitle>믿고 받아보세요</HomeTitle>
-                        <HomeSub>어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다</HomeSub>
+                        <HomeSub>
+                            <HomeSubText>어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다</HomeSubText>
+                        </HomeSub>
                     </Fade>
                 </Section>
             </BackImg>
@@ -30,38 +33,58 @@ const BackImg = styled.div`
     height : 100vh;
     background : url(${homeimg_05});
     background-repeat : no-repeat;
-    min-height: 100%;
     background-position: center center;
     background-size: cover;
     display : flex;
     justify-content : center;
+
+    @media all and (max-width:1200px) {
+        background : url(${mo_homeimg_05});
+        background-position: center center;
+        background-size: cover;
+    }
 `
 
 const Section = styled.div`
-   width : 62.5vw;
-    height : 150px;
+    width : 1200px;
     margin-top : 67.4vh;
-    /* background-color : red; */
+
+    @media all and (max-width:1200px) {
+        width : 90%;
+    }  
 `
 
 const HomeTitle = styled.div`
-    width : 97%;
     font-size: 52px;
     font-weight: 500;
     letter-spacing: 1.04px;
     color: #ffffff;
     margin-bottom : 8px;
-    margin-right : 2vw;
+
+    @media all and (max-width:1200px) {
+        font-size: 24px;
+    }
 `
 
 const HomeSub = styled.div`
-    width : 97%;
     font-size: 22px;
     font-weight: 300;
     letter-spacing: 0.44px;
-    text-align: left;
     line-height: 1.73;
     color: #ffffff;
+    word-break : keep-all;
+
+    @media all and (max-width:1200px) {
+        font-size: 14px;
+    }
+`
+
+const HomeSubText = styled.div`
+    width : 600px;
+
+    @media all and (max-width:1200px) {
+        width : 210px;
+    }
 `
 
 export default Homepage_05;

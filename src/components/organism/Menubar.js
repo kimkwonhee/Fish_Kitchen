@@ -2,6 +2,10 @@ import React , { useEffect, useState, useRef }from 'react'
 import styled from 'styled-components'
 import Logoimg1 from '../../images/menu_logo01.png'
 import Logoimg2 from '../../images/menu_logo02.png'
+import mLogoimg1 from '../../images/mo_menu_logo01.png'
+import mLogoimg2 from '../../images/mo_menu_logo02.png'
+import mMenubtn1 from '../../images/mo_menu_btn_white.png'
+import mMenubtn2 from '../../images/mo_menu_btn_blue.png'
 import Menubtn from '../atom/Menubtn'
 import { Link, withRouter } from 'react-router-dom'
 import SubMenubtn from '../atom/SubMenubtn'
@@ -51,14 +55,14 @@ const Menubar = ({ location }) => {
                 <Inner>
                     <LogoArea>
                         <Link to="/home">
-                        <LogoImg path={pathname} top={scrollTop}/>
+                            <LogoImg path={pathname} top={scrollTop}/>
                         </Link>
                     </LogoArea>
                     <MenuArea>
                         {menulist.map(index => {
                             return (
                                 <LinkTag key={index.id} to={index.link} >
-                                    <Menubtn 
+                                    <Menu 
                                         id={index.id}
                                         link={index.link}
                                         path={pathname}
@@ -69,10 +73,11 @@ const Menubar = ({ location }) => {
                                                             : setMouseOver(false)}}
                                     >
                                         {index.title}
-                                    </Menubtn>
+                                    </Menu>
                                 </LinkTag>
                             )
                         })}
+                        <MMenubtn src={scrollTop ? mMenubtn1 : mMenubtn2}/>
                     </MenuArea>
                 </Inner>
             </Mainmenu>
@@ -109,39 +114,42 @@ const Wrapper = styled.div`
     left : 0;
     z-index : 10;
     transition: .3s;
+
+    @media all and (max-width:1200px) {
+        height : 68px;
+    }
 `
 const Mainmenu = styled.div`
     width : 100%;
     height : 100px;
     display : flex;
-    flex-direction : column;
-    align-items : center;
+    justify-content : center;
     border-bottom : 0.5px solid ${props => props.top ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.2)'};
     background-color : ${props => props.top ? 'transparent' : '#ffffff'};
+    @media all and (max-width:1200px) {
+        height : 68px;
+    }
 `
 
 const Inner = styled.div`
     width : 1200px;
-    height : 200px;
     display : flex;
     justify-content : space-between;
-`
 
-const SubInner = styled.div`
-    display : ${props => props.subdisplay === true ? 'flex' : 'none'};
-    background-color : ${props => props.top ? 'transparent' : '#ffffff'};
-`
-const SubMenuSection = styled.div`
-    display: flex;
-    width: 463px;
-    position: relative;
-    right: 10p;
-    left: 900px;
+    @media all and (max-width:1200px) {
+        width : 100%;
+    }
 `
 
 const LogoArea = styled.div`
     width : 154px;
     height : 100px;
+
+    @media all and (max-width:1200px) {
+        height : 68px;
+        display: flex;
+        align-items: center;
+    }
 `
 
 const LogoImg = styled.div`
@@ -152,15 +160,59 @@ const LogoImg = styled.div`
                         : props.top ? `url(${Logoimg1});` :`url(${Logoimg2});`};
     background-repeat : no-repeat;
     background-size : cover;
+
+    @media all and (max-width:1200px) {
+        width : 111px;
+        height : 32px;
+        margin-left : 20px;
+
+        background-image : ${(props) => (props.path === '/inquiry') 
+                        ? `url(${mLogoimg2});` 
+                        : props.top ? `url(${mLogoimg1});` :`url(${mLogoimg2});`};
+    }
+`
+
+const SubInner = styled.div`
+    display : ${props => props.subdisplay === true ? 'flex' : 'none'};
+    justify-content : center;
+    background-color : ${props => props.top ? 'transparent' : '#ffffff'};
+`
+const SubMenuSection = styled.div`
+    display: flex;
+    width: 800px;
+    justify-content : flex-end;
+`
+
+const MenuArea = styled.div`
+    display : flex;
+
+    @media all and (max-width:1200px) {
+        cursor: pointer;
+        display : black;
+        width : 24px;
+        height : 68px;
+        margin-right : 20px;
+    }
+`
+
+const MMenubtn = styled.img`
+    display : none;
+
+    @media all and (max-width:1200px) {
+        display : block;
+    }
 `
 
 const LinkTag = styled(Link)`
     text-decoration : none !important;
 `
 
-const MenuArea = styled.div`
-    height : 100px;
-    display : flex;
+const Menu = styled(Menubtn)`
+    @media all and (max-width:1200px) {
+        display : none;
+    }
 `
+
+
 
 export default withRouter(Menubar)
