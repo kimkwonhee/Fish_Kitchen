@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Ab_store_01 from '../components/organism/about/Ab_store_01'
 import Ab_store_02 from '../components/organism/about/Ab_store_02'
@@ -6,6 +6,11 @@ import Ab_store_03 from '../components/organism/about/Ab_store_03'
 import Footer from '../components/organism/Footer'
 
 const _About_store = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[]);
+
     return (
         <Wrapper>
             <Ab_store_01 />

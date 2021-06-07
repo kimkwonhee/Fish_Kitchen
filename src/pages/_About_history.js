@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import HeaderBackgroud from '../components/organism/HeaderBackgroud'
 import Footer from '../components/organism/Footer'
@@ -6,6 +6,11 @@ import Imgbg from '../images/ab_history_bg01-1.jpg'
 import Ab_history_01 from '../components/organism/about/Ab_history_01'
 
 const _About_history = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[]);
+
     return (
         <Wrapper>
             <HeaderBackgroud img={Imgbg}>바이오션의<br />히스토리를 소개합니다</HeaderBackgroud>

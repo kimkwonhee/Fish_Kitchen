@@ -2,11 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import {withRouter} from 'react-router-dom'
 
-const SubMenubtn = ({className, link, children, location}) => {
+const SubMenubtn = ({className, link, children, location, top, onMouseOver, onMouseOut}) => {
     let pathname = location.pathname
     return (
-        <Wrapper>
-            <Text link={link} pathname={pathname}>{children}</Text>
+        <Wrapper onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+            <Text link={link} 
+                  pathname={pathname}
+                  top={top}
+            >
+                    {children}</Text>
         </Wrapper>
     )
 }
@@ -23,7 +27,9 @@ const Wrapper = styled.div`
 const Text = styled.div`
     font-size: 16px;
     font-weight : ${props => props.link === props.pathname ? 'bold' : 'normal'};
-    color: #ffffff;
+    color: ${(props) => (props.pathname === '/inquiry') 
+                        ? '#05103d' 
+                        : props.top ? '#ffffff' :'#05103d'};
 `
 
 export default withRouter(SubMenubtn)

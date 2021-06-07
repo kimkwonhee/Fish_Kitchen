@@ -5,34 +5,42 @@ import Listimg2 from '../../../images/ab_store_img05.png'
 import Listimg3 from '../../../images/ab_store_img06.png'
 import Listbar1 from '../../../images/ab_store_imgbar01.png'
 import Listbar2 from '../../../images/ab_store_imgbar02.png'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom';
 
 const Ab_store_03 = () => {
     return (
         <Wrapper>
             <Section>
                 <List1>
+                <Zoom>
                     <Img1 src={Listimg1} alt="냉동새유류" />
                     <Imgbar1 src={Listbar1} alt="리스트바" />
                     <ContentsArea1>
                         <ListTitle1>냉동 새우류</ListTitle1>
                         <ListSub1>생새우살, 홍새우살, 칵테일새우살 등</ListSub1>
                     </ContentsArea1>
+                </Zoom>
                 </List1>
                 <List2>
+                <Zoom>
                     <ContentsArea2>
                         <ListTitle2>냉동 연체류</ListTitle2>
                         <ListSub2>쭈꾸미, 낙지, 갑오징어 등</ListSub2>
                     </ContentsArea2>
                     <Imgbar2 src={Listbar2} alt="리스트바" />
                     <Img2 src={Listimg2} alt="냉동연체류" />
+                </Zoom>
                 </List2>
                 <List3>
+                <Zoom>
                     <Img3 src={Listimg3} alt="냉동어류" />
                     <Imgbar3 src={Listbar1} alt="리스트바" />
                     <ContentsArea3>
                         <ListTitle1>냉동 어류</ListTitle1>
                         <ListSub1>고등어, 갈치, 굴비, 도미 등</ListSub1>
                     </ContentsArea3>
+                </Zoom>
                 </List3>
             </Section>
         </Wrapper>

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import about_bg01_2 from '../../../images/about_bg01-2.png'
 import logo from '../../../images/logo_02.png'
+import Fade from 'react-reveal/Fade'
 
 const Ab_store_01 = () => {
     return (
@@ -10,14 +11,22 @@ const Ab_store_01 = () => {
             <BackgroudArea>
                 <Bgimg />
                 <ContentsArea>
+                <Fade top cascade>
                     <HeaderTitle>사람들의 아침식탁에 올라갈<br />신선한 물고기를 위해</HeaderTitle>
+                </Fade>
+                <Fade top cascade>
                     <LogoArea>
                         <Logoimg src={logo} alt="logo"/>
                     </LogoArea>
+                </Fade>
+                <Fade top cascade>
                     <VerticalimgArea>
                         <Vertical />
                     </VerticalimgArea>
+                </Fade>
+                <Fade cascade>
                     <FooterContents>“어부키친은 7년간의 노하우를 바탕으로<br />소비자에게 신선한 수산물을 제공하기 위해 만들어진 브랜드입니다.”</FooterContents>
+                </Fade>
                 </ContentsArea>
             </BackgroudArea>
         </Wrapper>

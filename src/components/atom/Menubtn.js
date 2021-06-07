@@ -1,19 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Menubtn = ({link, path, children, onMouseOver}) => {
+const Menubtn = ({id, link, path, children, top, onMouseOver}) => {
 
-    console.log(path);
+    let menu_status = 0;
+
+    if(path === '/home') {
+        menu_status = 1;
+    } else if (path === '/about_store' 
+            || path === '/about_vision'
+            || path === '/about_company'
+            || path === '/about_history') {
+        menu_status = 2;
+    } else if (path === '/product') {
+        menu_status = 3;
+    } 
+    // else if (path === '/') {
+    //     menu_status = 4;
+    // } 
+    else if (path === '/inquiry') {
+        menu_status = 5;
+    }
+
     return (
         <Wrapper
             onMouseOver={onMouseOver}
         >
             <Inner 
                 link={link}
-                path={path}>
+                path={menu_status}
+                id={id}
+                top={top}
+            >
                 <Item 
                     link={link}
-                    path={path}
+                    path={menu_status}
+                    id={id}
+                    top={top}
                 >
                     {children}
                 </Item>
@@ -31,26 +54,32 @@ const Wrapper = styled.div`
 `
 
 const Inner = styled.div`
+    z-index : 10;
     cursor: pointer;
     width : 84px;
     height : 100%;
     display : flex;
     justify-content : center;
     align-items : center;
-    border-bottom : ${(props) => (props.path === props.link) ? '3px solid #ffffff;' : null};
+    border-bottom : ${(props) => (props.path === props.id) 
+                    ? props.top ? '3px solid #ffffff' : '3px solid #05103d' 
+                    : 'transparent'};
     transition: 0.5s; 
     transform: translateX(-50%);
 
     &:hover {
-        border-bottom : 3px solid #ffffff;
+        border-bottom : ${props => props.top ? '3px solid #ffffff' : '3px solid #05103d'};
     };
 `
 const Item = styled.div`
     font-size: 18px;
     letter-spacing: 1px;
-    font-weight :  ${(props) => (props.path === props.link) ? '500' : '300'};
-    /* font-weight :  ${(props) => (props.path === props.link) ? 'bold' : 'normal'}; */
-    color: ${(props) => (props.path === '/inquiry') ? '#05103d' : '#ffffff'};
+    font-weight :  ${(props) => (props.path === props.id) 
+                    ? '500' 
+                    : '300'};
+    color: ${(props) => (props.path === 5) 
+                        ? '#05103d' 
+                        : props.top ? '#ffffff' :'#05103d'};
 `
 
 

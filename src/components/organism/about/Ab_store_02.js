@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ab_storeimg1 from '../../../images/ab_store_img01.png'
 import ab_storeimg2 from '../../../images/ab_store_img02.png'
 import ab_storeimg3 from '../../../images/ab_store_img03.png'
+import Fade from 'react-reveal/Fade'
 
 
 const Ab_store_02 = () => {
@@ -10,21 +11,29 @@ const Ab_store_02 = () => {
         <Wrapper>
             <Section1>
                 <Inner1>
+                <Fade left>
                     <Img_01 src={ab_storeimg1} alt="어부키친이야기 img1" />
-                    <ContentsArea1>
+                </Fade>
+                <ContentsArea1>
+                    <Fade right>
                         <Title1>7년간의 노하우로<br />신선함을 고스란히</Title1>
                         <SubContents1>7년간 운영하며 얻은 노하우를 제품의<br />생산성과 품질에 최선의 노력을 기울이고 있습니다</SubContents1>
-                    </ContentsArea1>
+                    </Fade>
+                </ContentsArea1>
                 </Inner1>
             </Section1>
             <Section2>
                 <Inner2>
                     <ContentsArea2>
+                    <Fade left>
                         <Title2>안전한 먹거리를 위한<br />위생적인 시스템</Title2>
                         <SubContents2>항상 고객에게 안전하고 믿을 수 있는 기업이 되기 위해<br />품질에 문제가 없도록 관리를 철저히 하고 있습니다. </SubContents2>
                         <Img_02 src={ab_storeimg2} alt="어부키친이야기 img2"/>
+                    </Fade>
                     </ContentsArea2>
-                    <Img_03 src={ab_storeimg3} alt="어부키친이야기 img1" />
+                    <Fade right>
+                        <Img_03 src={ab_storeimg3} alt="어부키친이야기 img1" />
+                    </Fade>
                 </Inner2>
             </Section2>
         </Wrapper>

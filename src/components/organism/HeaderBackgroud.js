@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 
 const HeaderBackgroud = ({img, children}) => {
     return (
         <Wrapper img={img}>
             <Inner>
-                <Title>{children}</Title>
+                <Fade top cascade>
+                    <Title>{children}</Title>
+                </Fade>
             </Inner>
         </Wrapper>
     )

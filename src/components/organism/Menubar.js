@@ -22,8 +22,11 @@ const Menubar = ({ location }) => {
     }
 
     useEffect(() => {
-        // setScrollTop(pathname === '/home' ? false : true)
-        window.addEventListener('scroll', onScrollChange)
+        setMouseOver(false)
+        setScrollTop(pathname !== '/home' || pathname !== '/inquiry' ? true : false)
+        if (pathname !== '/home' || pathname !== '/inquiry') {
+            window.addEventListener('scroll', onScrollChange)
+        }
         return () => window.removeEventListener('scroll', onScrollChange)
     }, [pathname])
 
@@ -42,42 +45,52 @@ const Menubar = ({ location }) => {
         {   id : 4, title : '히스토리', link : '/about_history' },
     ]
 
-    // console.log(pathname);
     return (
-        <Wrapper top={scrollTop} >
-            <Inner>
-                <LogoArea>
-                    {/* <Link to="/"> */}
-                        {pathname !== '/inquiry'
-                        ? <LogoImg src={Logoimg1} alt="menu_logo" />
-                        : <LogoImg src={Logoimg2} alt="menu_logo" />}
-                    {/* </Link> */}
-                </LogoArea>
-                <MenuArea>
-                    {menulist.map(index => {
-                        return (
-                            <LinkTag key={index.id} to={index.link} >
-                                <Menubtn 
-                                    id={index.id}
-                                    link={index.link}
-                                    path={pathname}
-                                    ref={btnstatus}
-                                    onMouseOver={(e) => {index.id == 2 
-                                                        ? setMouseOver(true) 
-                                                        : setMouseOver(false)}}
-                                >
-                                    {index.title}
-                                </Menubtn>
-                            </LinkTag>
-                        )
-                    })}
-                </MenuArea>
-            </Inner>
-            <SubInner top={scrollTop} subdisplay={mouseOver}>
+        <Wrapper top={scrollTop}>
+            <Mainmenu top={scrollTop}>
+                <Inner>
+                    <LogoArea>
+                        <Link to="/home">
+                        <LogoImg path={pathname} top={scrollTop}/>
+                        </Link>
+                    </LogoArea>
+                    <MenuArea>
+                        {menulist.map(index => {
+                            return (
+                                <LinkTag key={index.id} to={index.link} >
+                                    <Menubtn 
+                                        id={index.id}
+                                        link={index.link}
+                                        path={pathname}
+                                        ref={btnstatus}
+                                        top={scrollTop}
+                                        onMouseOver={(e) => {index.id == 2 
+                                                            ? setMouseOver(true) 
+                                                            : setMouseOver(false)}}
+                                    >
+                                        {index.title}
+                                    </Menubtn>
+                                </LinkTag>
+                            )
+                        })}
+                    </MenuArea>
+                </Inner>
+            </Mainmenu>
+            <SubInner
+                top={scrollTop} 
+                subdisplay={mouseOver}
+                onMouseOver={(e)=> setMouseOver(true)}
+                onMouseOut={(e) => setMouseOver(false)}
+                >
                 <SubMenuSection>
                     {submenulist.map(list => {
                         return <LinkTag key={list.id} to={list.link}>
-                                    <SubMenubtn link={list.link}>
+                                    <SubMenubtn 
+                                        link={list.link} 
+                                        top={scrollTop} 
+                                        onMouseOver={(e)=> setMouseOver(true)}
+                                        onMouseOut={(e) => setMouseOver(false)}
+                                        >
                                         {list.title}
                                     </SubMenubtn>
                                 </LinkTag>
@@ -90,16 +103,20 @@ const Menubar = ({ location }) => {
 
 const Wrapper = styled.div`
     width : 100%;
-    height : 100px;
+    height : 200px;
     position : fixed;
     top : 0;
     left : 0;
     z-index : 10;
+    transition: .3s;
+`
+const Mainmenu = styled.div`
+    width : 100%;
+    height : 100px;
     display : flex;
     flex-direction : column;
     align-items : center;
-    border-bottom : 0.5px solid rgba(255,255,255,0.4);
-    transition: .3s;
+    border-bottom : 0.5px solid ${props => props.top ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.2)'};
     background-color : ${props => props.top ? 'transparent' : '#ffffff'};
 `
 
@@ -111,10 +128,7 @@ const Inner = styled.div`
 `
 
 const SubInner = styled.div`
-    position : absolute;
-    top : 100px;
-    width : 100%;
-    display : ${props => props.subdisplay == true ? 'flex' : 'none'};
+    display : ${props => props.subdisplay === true ? 'flex' : 'none'};
     background-color : ${props => props.top ? 'transparent' : '#ffffff'};
 `
 const SubMenuSection = styled.div`
@@ -130,9 +144,14 @@ const LogoArea = styled.div`
     height : 100px;
 `
 
-const LogoImg = styled.img`
+const LogoImg = styled.div`
     width : 154px;
     height : 100px;
+    background-image : ${(props) => (props.path === '/inquiry') 
+                        ? `url(${Logoimg2});` 
+                        : props.top ? `url(${Logoimg1});` :`url(${Logoimg2});`};
+    background-repeat : no-repeat;
+    background-size : cover;
 `
 
 const LinkTag = styled(Link)`

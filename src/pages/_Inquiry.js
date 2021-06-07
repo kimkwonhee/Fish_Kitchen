@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Footer from '../components/organism/Footer'
 import Inquiry_01 from '../components/organism/inquiry/Inquiry_01'
 
 
 const _Inquiry = () => {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    },[]);
+    
     return (
         <Wrapper>
             <Inquiry_01 />
