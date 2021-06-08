@@ -9,6 +9,7 @@ import _home from './pages/_Home'
 import _Inquiry from './pages/_Inquiry'
 import _Product from './pages/_Product'
 import { Route, Switch } from 'react-router-dom'
+import "antd/dist/antd.css";
 
 
 const Globalstyles = createGlobalStyle`

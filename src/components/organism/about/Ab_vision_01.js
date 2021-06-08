@@ -5,28 +5,65 @@ import img_02 from '../../../images/ab_vision_img02.png'
 import img_03 from '../../../images/ab_vision_img03.png'
 import img_04 from '../../../images/ab_vision_img04.png'
 import img_05 from '../../../images/ab_vision_img05.png'
+import mo_img_01 from '../../../images/mo_ab_vision_img01.png'
+import Fade from 'react-reveal/Fade'
 
 const Ab_vision_01 = () => {
     return (
         <Wrapper>
             <DiscriptionArea>
-                <Title>BRAND STORY</Title>
-                <Discription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데, 흔들거리는 배 위에서,<br />
-                무거운 어구를 던지고 당기는 작업을 수십 시간 동안 쉬지 않고 하는게 어부의 일입니다.<br />
-                아침 식탁에 올라갈 신선한 물고기를 잡기 위해<br />
-                어부들은 사람들이 자는 시간에도 물고기 사냥을 나섭니다.</Discription>
+                <Fade duration={2000}>
+                    <Title>BRAND STORY</Title>
+                </Fade>
+                <Fade duration={2000}>
+                    <Discription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데, 흔들거리는 배 위에서,<br />
+                    무거운 어구를 던지고 당기는 작업을 수십 시간 동안 쉬지 않고 하는게 어부의 일입니다.<br />
+                    아침 식탁에 올라갈 신선한 물고기를 잡기 위해<br />
+                    어부들은 사람들이 자는 시간에도 물고기 사냥을 나섭니다.
+                    </Discription>
+                </Fade>
+                <Fade duration={2000}>
+                    <MODiscription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데,<br/>
+                    흔들거리는 배 위에서,무거운 어구를 던지고<br />
+                    당기는 작업을 수십 시간 동안 쉬지 않고<br/>
+                    하는게 어부의 일입니다.<br /><br/>
+                    아침 식탁에 올라갈 신선한 물고기를 잡기 위해<br />
+                    어부들은 사람들이 자는 시간에도<br/>물고기 사냥을 나섭니다.
+                    </MODiscription>
+                </Fade>
             </DiscriptionArea>
             <ImgArea>
-                <Circle1 />
-                <Circle2 />
-                <Circle3 src={img_01} alt="바다"/>
-                <Circle4 src={img_02} alt="별빛"/>
-                <Circle5 src={img_03} alt="어선"/>
-                <Circle6 src={img_04} alt="어부"/>
-                <Circle7 />
-                <Circle8 src={img_05} alt="어부"/>
-                <Circle9 />
+                <Fade delay={500} duration={2000}>
+                    <Circle1 />
+                </Fade>
+                <Fade delay={800} duration={2000}>
+                    <Circle2 />
+                </Fade>
+                <Fade delay={1100} duration={2000}>
+                    <Circle3 src={img_01} alt="바다"/>
+                </Fade>
+                <Fade delay={1300} duration={2000}>
+                    <Circle4 src={img_02} alt="별빛"/>
+                </Fade>
+                <Fade delay={1500} duration={2000}>
+                    <Circle5 src={img_03} alt="어선"/>
+                </Fade>
+                <Fade delay={1500} duration={2000}>
+                    <Circle6 src={img_04} alt="어부"/>
+                </Fade>
+                <Fade delay={1300} delay={1100} duration={2000}>
+                    <Circle7 />
+                </Fade>
+                <Fade delay={800} duration={2000}>
+                    <Circle8 src={img_05} alt="어부"/>
+                </Fade>
+                <Fade delay={500} duration={2000}>
+                    <Circle9 />
+                </Fade>
             </ImgArea>
+            <Fade duration={2000}>
+                <MobileBgimg src={mo_img_01} alt="mobile img"/>
+            </Fade>
         </Wrapper>
     )
 }
@@ -38,26 +75,62 @@ const Wrapper = styled.div`
     flex-direction : column;
     align-items : center;
     /* background : red; */
+    
+    @media all and (max-width:1200px) {
+        height : auto;
+    }
 `
 // Discription
 const DiscriptionArea = styled.div`
     width : 1200px;
-    height : 214px;
+    /* height : 214px; */
     margin-top : 100px;
     margin-bottom : 40px;
     /* background : grey; */
+
+    @media all and (max-width:1200px) {
+        width : 92%;
+        margin-top : 60px;
+        margin-bottom : 0px;
+    }
 `
 const Title = styled.div`
     font-size: 48px;
     font-weight: 900;
     line-height: 1.42;
     color: #05103d;
+    margin-bottom : 25px;
     /* background : green; */
+
+    @media all and (max-width:1200px) {
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.33;
+        text-align : center;
+        margin-bottom : 30px;
+        color: #000000;
+    }
 `
 const Discription = styled.div`
     font-size: 20px;
     line-height: 1.7;
     color: #000000;
+
+    @media all and (max-width:1200px) {
+        display : none;
+    }
+`
+const MODiscription = styled.div`
+    display : none;
+
+    @media all and (max-width:1200px) {
+        display : block;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        color: #000000;
+    }
 `
 
 // Circle Area
@@ -67,8 +140,22 @@ const ImgArea = styled.div`
     height : 924px;
     margin-top : 354px;
     margin-bottom : 25px;
-    /* background : red; */
+    overflow-x : hidden;
+    
+    @media all and (max-width:1200px) {
+        display : none;
+    }
 `
+const MobileBgimg = styled.img`
+    display : none;
+
+    @media all and (max-width:1200px) {
+        display : block;
+        margin-top : 30px;
+        width : 100%;
+    }
+`
+
 const Circle1 = styled.div`
     position : absolute;
     top : 254px;

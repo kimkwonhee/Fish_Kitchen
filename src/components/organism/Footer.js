@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Inquirebtn from '../atom/Inquirebtn'
+import gpsimg from '../../images/footer_gps_icon.png'
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
             <Inner>
                 <TextArea>
                     <CompanyName>(주)바이오션</CompanyName>
-                    <CompanyAddress>경기도 용인시 기흥구 동백중앙로 16번길, 16-25 403호</CompanyAddress>
+                    <CompanyAddress>경기도 용인시 기흥구 동백중앙로 16번길, 16-25 403호<Gpsimg src={gpsimg} alt="gps"/></CompanyAddress>
                     <CompanyTel>info@mystie.com  |  (031) 548. 0022</CompanyTel>
                 </TextArea>
                 <Inquirebtn>문의하기</Inquirebtn>
@@ -54,6 +55,13 @@ const CompanyAddress = styled.div`
     font-size: 18px;
     line-height: 1.78;
     color: #c1c1c1;
+`
+
+const Gpsimg = styled.img`
+    width : 14px;
+    height : 21px;
+    margin-bottom: 8px;
+    margin-left: 10px;
 `
 
 const CompanyTel = styled.div`

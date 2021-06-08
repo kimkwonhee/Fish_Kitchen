@@ -10,7 +10,7 @@ const Homepage_01 = () => {
         <Wrapper>
             <BackImg>
                 <Empty />
-                    <Fade top cascade>
+                    <Fade top duration={2000}>
                         <Logoimg src={logo} alt="logo"/>
                         <HomeTitle>어부 키친</HomeTitle>
                         <HomeSub>사람들의 아침 식탁에 올라갈 신선한 물고기를 위해</HomeSub>

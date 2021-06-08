@@ -5,6 +5,7 @@ import Ab_vision_01 from '../components/organism/about/Ab_vision_01'
 import Ab_vision_02 from '../components/organism/about/Ab_vision_02'
 import Footer from '../components/organism/Footer'
 import Imgbg from '../images/ab_vision_bg01-1.jpg'
+import mImgbg from '../images/mo_ab_vision_bg01.png'
 
 const _About_vision = () => {
 
@@ -14,7 +15,12 @@ const _About_vision = () => {
 
     return (
         <Wrapper>
-            <HeaderBackgroud img={Imgbg}>어부漁父<br/>물고기를 잡는 것을 업으로 사는 사람들.</HeaderBackgroud>
+            <HeaderBackgroud 
+                img={Imgbg} 
+                moimg={mImgbg}
+                >
+                    어부漁父<br/>물고기를 잡는 것을 업으로 사는 사람들.
+            </HeaderBackgroud>
             <Ab_vision_01 />
             <Ab_vision_02 />
             <Footer />

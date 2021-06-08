@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import HeaderBackgroud from '../components/organism/HeaderBackgroud'
 import Footer from '../components/organism/Footer'
 import Imgbg from '../images/ab_company_bg01-1.jpg'
+import mImgbg from '../images/mo_ab_company_bg01.png'
 import Ab_company_01 from '../components/organism/about/Ab_company_01'
 import Ab_company_02 from '../components/organism/about/Ab_company_02'
 import Ab_company_03 from '../components/organism/about/Ab_company_03'
@@ -15,7 +16,11 @@ const _About_company = () => {
     
     return (
         <Wrapper>
-            <HeaderBackgroud img={Imgbg}>소비자의 건강을 위해<br />매일 신선하고 안전한 식재료를 공급합니다.</HeaderBackgroud>
+            <HeaderBackgroud 
+                img={Imgbg}
+                moimg={mImgbg}>
+                    소비자의 건강을 위해<br />매일 신선하고 안전한 식재료를 공급합니다.
+            </HeaderBackgroud>
             <Ab_company_01 />
             <Ab_company_02 />
             <Ab_company_03 />

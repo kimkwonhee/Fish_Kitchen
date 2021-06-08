@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import company_img from '../../../images/ab_store_img01.png'
+import company_img from '../../../images/ab_store01.png'
 
 const Ab_company_01 = () => {
     return (

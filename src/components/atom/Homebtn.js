@@ -33,7 +33,6 @@ const Dotbtn = styled.div`
         height: 6px;
         margin-bottom : 15px;
     }
-
 `
 
 export default Homebtn

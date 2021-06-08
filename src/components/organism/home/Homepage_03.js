@@ -9,12 +9,16 @@ const Homepage_03= () => {
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade left cascade>
+                    <Fade left duration={2000}>
                         <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
-                        <HomeSub>
-                            <HomeSubText>검증된 위생 관리 시스템으로 안심하고 드실수 있습니다</HomeSubText>
-                        </HomeSub>
                     </Fade>
+                        <HomeSub>
+                            <HomeSubText>
+                                <Fade left duration={2000}>
+                                    검증된 위생 관리 시스템으로 안심하고 드실수 있습니다
+                                </Fade>
+                            </HomeSubText>
+                        </HomeSub>
                 </Section>
             </BackImg>
         </Wrapper>

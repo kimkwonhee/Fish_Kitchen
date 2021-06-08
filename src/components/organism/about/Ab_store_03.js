@@ -5,42 +5,54 @@ import Listimg2 from '../../../images/ab_store_img05.png'
 import Listimg3 from '../../../images/ab_store_img06.png'
 import Listbar1 from '../../../images/ab_store_imgbar01.png'
 import Listbar2 from '../../../images/ab_store_imgbar02.png'
+import mListbar1 from '../../../images/mo_ab_store_imgbar01.png'
 import Fade from 'react-reveal/Fade'
-import Zoom from 'react-reveal/Zoom';
 
 const Ab_store_03 = () => {
     return (
         <Wrapper>
             <Section>
                 <List1>
-                <Zoom>
-                    <Img1 src={Listimg1} alt="냉동새유류" />
-                    <Imgbar1 src={Listbar1} alt="리스트바" />
+                    <Fade delay={800} duration={2000}>
+                        <Img1 src={Listimg1} alt="냉동새유류" />
+                    </Fade>
+                    <Fade delay={500} duration={2000}>
+                        <Imgbar1 />
+                    </Fade>
                     <ContentsArea1>
-                        <ListTitle1>냉동 새우류</ListTitle1>
-                        <ListSub1>생새우살, 홍새우살, 칵테일새우살 등</ListSub1>
+                        <Fade duration={2000}>
+                            <ListTitle1>냉동 새우류</ListTitle1>
+                            <ListSub1>생새우살, 홍새우살, 칵테일새우살 등</ListSub1>
+                        </Fade>
                     </ContentsArea1>
-                </Zoom>
                 </List1>
                 <List2>
-                <Zoom>
                     <ContentsArea2>
-                        <ListTitle2>냉동 연체류</ListTitle2>
-                        <ListSub2>쭈꾸미, 낙지, 갑오징어 등</ListSub2>
+                        <Fade duration={2000}>
+                            <ListTitle2>냉동 연체류</ListTitle2>
+                            <ListSub2>쭈꾸미, 낙지, 갑오징어 등</ListSub2>
+                        </Fade>
                     </ContentsArea2>
-                    <Imgbar2 src={Listbar2} alt="리스트바" />
-                    <Img2 src={Listimg2} alt="냉동연체류" />
-                </Zoom>
+                    <Fade delay={500} duration={2000}>
+                        <Imgbar2 src={Listbar2} alt="리스트바" />
+                    </Fade>
+                    <Fade delay={800} duration={2000}>
+                        <Img2 src={Listimg2} alt="냉동연체류" />
+                    </Fade>
                 </List2>
                 <List3>
-                <Zoom>
-                    <Img3 src={Listimg3} alt="냉동어류" />
-                    <Imgbar3 src={Listbar1} alt="리스트바" />
+                    <Fade delay={800} duration={2000}>
+                        <Img3 src={Listimg3} alt="냉동어류" />
+                    </Fade>
+                    <Fade delay={500} duration={2000}>
+                        <Imgbar3 src={Listbar1} alt="리스트바" />
+                    </Fade>
                     <ContentsArea3>
-                        <ListTitle1>냉동 어류</ListTitle1>
-                        <ListSub1>고등어, 갈치, 굴비, 도미 등</ListSub1>
+                        <Fade duration={2000}>
+                            <ListTitle1>냉동 어류</ListTitle1>
+                            <ListSub1>고등어, 갈치, 굴비, 도미 등</ListSub1>
+                        </Fade>
                     </ContentsArea3>
-                </Zoom>
                 </List3>
             </Section>
         </Wrapper>
@@ -49,37 +61,63 @@ const Ab_store_03 = () => {
 
 const Wrapper = styled.div`
     width : 100%;
-    height : 1125px;
-    background : #05103d;
+    padding : 148px 0px;
     display : flex;
     justify-content : center;
     align-items : center;
-    /* background-color : red; */
+    background : #05103d;
+
+    @media all and (max-width:1200px) {
+        padding : 60px 0px;
+    }
 `
 const Section = styled.div`
     position : relative;
-    margin : 0 auto;
     width: 1200px;
     height : 829px;
     /* background : red; */
+    
+    @media all and (max-width:1200px) {
+        width: 92%;
+    }
 `
 // 냉동새우류
 const List1 = styled.div`
     position :  absolute;
     width : 100%;
     height : 366px;
-    /* background : grey; */
+    /* background-color : blue; */
+
+    @media all and (max-width:1200px) {
+        height : 206px;
+    }
 `
 const Img1 = styled.img`
     position : absolute;
+    width : 280px;
+    height : 366px;
     left : 10px;
     /* background : green; */
+    @media all and (max-width:1200px) {
+        width : 154px;
+        height : 206px;
+    }
 `
-const Imgbar1 = styled.img`
+const Imgbar1 = styled.div`
     position : absolute;
+    width : 144px;
+    height : 5px;
+    background : url(${Listbar1});
+    background-repeat : no-repeat;
     top : 244px;
     left : 310px;
-    /* background : purple; */
+    
+    @media all and (max-width:1200px) {
+        background : url(${mListbar1});
+        background-repeat : no-repeat;
+        width : 70px;
+        height : 5px;
+    }
 `
 const ContentsArea1 = styled.div`
     position : absolute;
@@ -91,18 +129,26 @@ const ContentsArea1 = styled.div`
 `
 const ListTitle1 = styled.div`
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 0.83;
     letter-spacing: 0.8px;
     color: #ffffff;
     margin-bottom : 12px;
-    /* background: red; */
+    
+    @media all and (max-width:1200px) {
+        font-size: 16px;
+    }
 `
 const ListSub1 = styled.div`
     font-size: 18px;
     line-height: 1.6;
     letter-spacing: 0.4px;
     color: #ffffff;
+
+    @media all and (max-width:1200px) {
+        font-size: 14px;
+        line-height: 1.57;
+    }
 `
 
 // 냉동 연체류

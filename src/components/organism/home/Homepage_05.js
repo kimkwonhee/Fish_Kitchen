@@ -9,12 +9,16 @@ const Homepage_05= () => {
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade left cascade>
+                    <Fade left duration={2000}>
                         <HomeTitle>믿고 받아보세요</HomeTitle>
-                        <HomeSub>
-                            <HomeSubText>어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다</HomeSubText>
-                        </HomeSub>
                     </Fade>
+                        <HomeSub>
+                            <HomeSubText>
+                                <Fade left duration={2000}>
+                                    어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다
+                                </Fade>
+                            </HomeSubText>
+                        </HomeSub>
                 </Section>
             </BackImg>
             

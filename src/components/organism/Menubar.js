@@ -4,11 +4,14 @@ import Logoimg1 from '../../images/menu_logo01.png'
 import Logoimg2 from '../../images/menu_logo02.png'
 import mLogoimg1 from '../../images/mo_menu_logo01.png'
 import mLogoimg2 from '../../images/mo_menu_logo02.png'
+import mLogoimg3 from '../../images/mo_menu_logo03.png'
 import mMenubtn1 from '../../images/mo_menu_btn_white.png'
 import mMenubtn2 from '../../images/mo_menu_btn_blue.png'
+import mMenuClose from '../../images/mo_menu_close_btn.png'
 import Menubtn from '../atom/Menubtn'
 import { Link, withRouter } from 'react-router-dom'
 import SubMenubtn from '../atom/SubMenubtn'
+import { Drawer } from 'antd';
 
 const Menubar = ({ location }) => {
     const pathname = location.pathname;   
@@ -16,6 +19,7 @@ const Menubar = ({ location }) => {
 
     const [mouseOver, setMouseOver]  = useState(false);
     const [scrollTop, setScrollTop] = useState(false);
+    const [visible, setVisible] = useState(false);
 
     const onScrollChange = () => {
         if (window.pageYOffset <= 0) {
@@ -50,59 +54,106 @@ const Menubar = ({ location }) => {
     ]
 
     return (
-        <Wrapper top={scrollTop}>
-            <Mainmenu top={scrollTop}>
-                <Inner>
-                    <LogoArea>
-                        <Link to="/home">
-                            <LogoImg path={pathname} top={scrollTop}/>
-                        </Link>
-                    </LogoArea>
-                    <MenuArea>
-                        {menulist.map(index => {
-                            return (
-                                <LinkTag key={index.id} to={index.link} >
-                                    <Menu 
-                                        id={index.id}
-                                        link={index.link}
-                                        path={pathname}
-                                        ref={btnstatus}
-                                        top={scrollTop}
-                                        onMouseOver={(e) => {index.id == 2 
-                                                            ? setMouseOver(true) 
-                                                            : setMouseOver(false)}}
-                                    >
-                                        {index.title}
-                                    </Menu>
-                                </LinkTag>
-                            )
-                        })}
-                        <MMenubtn src={scrollTop ? mMenubtn1 : mMenubtn2}/>
-                    </MenuArea>
-                </Inner>
-            </Mainmenu>
-            <SubInner
-                top={scrollTop} 
-                subdisplay={mouseOver}
-                onMouseOver={(e)=> setMouseOver(true)}
-                onMouseOut={(e) => setMouseOver(false)}
-                >
-                <SubMenuSection>
-                    {submenulist.map(list => {
-                        return <LinkTag key={list.id} to={list.link}>
-                                    <SubMenubtn 
-                                        link={list.link} 
-                                        top={scrollTop} 
-                                        onMouseOver={(e)=> setMouseOver(true)}
-                                        onMouseOut={(e) => setMouseOver(false)}
+        <>
+            <Wrapper top={scrollTop}>
+                <Mainmenu top={scrollTop}>
+                    <Inner>
+                        <LogoArea>
+                            <Link to="/home">
+                                <LogoImg path={pathname} top={scrollTop}/>
+                            </Link>
+                        </LogoArea>
+                        <MenuArea>
+                            {menulist.map(index => {
+                                return (
+                                    <LinkTag key={index.id} to={index.link} >
+                                        <Menu 
+                                            id={index.id}
+                                            link={index.link}
+                                            path={pathname}
+                                            ref={btnstatus}
+                                            top={scrollTop}
+                                            onMouseOver={(e) => {index.id == 2 
+                                                                ? setMouseOver(true) 
+                                                                : setMouseOver(false)}}
                                         >
-                                        {list.title}
-                                    </SubMenubtn>
-                                </LinkTag>
-                    })}
-                </SubMenuSection>
-            </SubInner>
-        </Wrapper>
+                                            {index.title}
+                                        </Menu>
+                                    </LinkTag>
+                                )
+                            })}
+                            <MMenubtn 
+                                src={scrollTop ? mMenubtn1 : mMenubtn2} 
+                                alt="menu btn"
+                                onClick={(e) => setVisible(true)}
+                            />
+                        </MenuArea>
+                    </Inner>
+                </Mainmenu>
+                <SubInner
+                    top={scrollTop} 
+                    subdisplay={mouseOver}
+                    onMouseOver={(e)=> setMouseOver(true)}
+                    onMouseOut={(e) => setMouseOver(false)}
+                    >
+                    <SubMenuSection>
+                        {submenulist.map(list => {
+                            return <LinkTag key={list.id} to={list.link}>
+                                        <SubMenubtn 
+                                            link={list.link} 
+                                            top={scrollTop} 
+                                            onMouseOver={(e)=> setMouseOver(true)}
+                                            onMouseOut={(e) => setMouseOver(false)}
+                                            >
+                                            {list.title}
+                                        </SubMenubtn>
+                                    </LinkTag>
+                        })}
+                    </SubMenuSection>
+                </SubInner>
+            </Wrapper>
+            <Drawer
+                title={null}
+                placement={'right'}
+                closable={false}
+                visible={visible}
+                footer={null}
+                width={'100%'}
+                bodyStyle={{padding:0}}
+                >
+                    <DrawerWrapper>
+                        <DrawerMenu>
+                            <DrawerClose 
+                                src={mMenuClose} 
+                                alt="close"
+                                onClick={(e)=> {setVisible(false)}}
+                            />
+                        </DrawerMenu>
+                        <DrawerInner>
+                            <DrawerMenuList>ABOUT</DrawerMenuList>
+                                <DrawerSubMenu >
+                                    {submenulist.map(mlist => {
+                                        return <LinkTag to={mlist.link} key={mlist.id}
+                                                        onClick={(e) => {setVisible(false)}}>
+                                                    <SubMenuList>{mlist.title}</SubMenuList>
+                                               </LinkTag>
+                                    })}          
+                                </DrawerSubMenu>
+                            <LinkTag to='/product' onClick={(e) => {setVisible(false)}}>
+                                <DrawerMenuList>PRODUCT</DrawerMenuList>
+                            </LinkTag>
+                            <DrawerMenuList>SHOP</DrawerMenuList>
+                            <DrawerMenuList>INQUIRY</DrawerMenuList>
+                        </DrawerInner>
+                        <DrawerFooter>
+                            <DrawerMenuLogo src={mLogoimg3} alt="어부키친"/>
+                            <DrawerFooterText>
+                                COPYRIGHT 2014-2021 BY.OCEAN. ALL RIGHTS RESERVED.
+                            </DrawerFooterText>
+                        </DrawerFooter>
+                    </DrawerWrapper>
+            </Drawer>
+        </>
     )
 }
 
@@ -211,6 +262,74 @@ const Menu = styled(Menubtn)`
     @media all and (max-width:1200px) {
         display : none;
     }
+`
+
+//Drawer
+const DrawerWrapper = styled.div`
+  width: 100%;
+  height : 100vh;
+  background-color : #05103d;
+`
+const DrawerMenu = styled.div`
+    display : flex;
+    justify-content : flex-end;
+`
+const DrawerClose = styled.img`
+    cursor: pointer;
+    width : 24px;
+    height : 68px;
+    margin-right: 20px;
+`
+const DrawerInner = styled.div`
+    width : 100%;
+    height : 81%;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    color : #ffffff;
+`
+
+const DrawerMenuList = styled.div`
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom : 30px;
+
+    &:first-child {
+        margin-bottom : 15px;
+    }
+`
+
+const DrawerSubMenu = styled.div`
+    cursor: pointer;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    transition : .5s;
+`
+const SubMenuList = styled.div`
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom : 15px;
+`
+
+
+const DrawerFooter = styled.div`
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+`
+
+const DrawerMenuLogo = styled.img`
+    height : 32px;
+    margin-bottom : 10px;
+`
+const DrawerFooterText = styled.div`
+    opacity: 0.3;
+    color : #ffffff;
+    font-size: 10px;
 `
 
 
