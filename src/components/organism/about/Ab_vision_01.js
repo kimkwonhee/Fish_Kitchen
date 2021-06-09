@@ -12,10 +12,10 @@ const Ab_vision_01 = () => {
     return (
         <Wrapper>
             <DiscriptionArea>
-                <Fade duration={2000}>
+                <Fade top duration={2000}>
                     <Title>BRAND STORY</Title>
                 </Fade>
-                <Fade duration={2000}>
+                <Fade delay={700} duration={2000}>
                     <Discription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데, 흔들거리는 배 위에서,<br />
                     무거운 어구를 던지고 당기는 작업을 수십 시간 동안 쉬지 않고 하는게 어부의 일입니다.<br />
                     아침 식탁에 올라갈 신선한 물고기를 잡기 위해<br />
@@ -152,6 +152,7 @@ const MobileBgimg = styled.img`
     @media all and (max-width:1200px) {
         display : block;
         margin-top : 30px;
+        margin-bottom : 30px;
         width : 100%;
     }
 `

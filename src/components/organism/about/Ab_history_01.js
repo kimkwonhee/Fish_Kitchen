@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import dots from '../../../images/dot.png'
 import history_img01 from '../../../images/ab_history_img01.jpg'
 import history_img02 from '../../../images/ab_history_img02.jpg'
+import Fade from 'react-reveal/Fade'
 
 const HistoryBoxList = () => {
     const list = [
@@ -69,7 +70,7 @@ const HistoryBoxList = () => {
             year : '2014',
             contents : [
                 '(주) 바이오션 설립',
-                '글로벌 파트너 MOU체결(베트남 5社, 중국3社, 태국1社)',
+                '글로벌 파트너 MOU체결\n(베트남 5社, 중국3社, 태국1社)',
                 '학교 급식 공급',
                 '(주)동원홈푸드 2차벤더 공급',
                 '(주)신세계푸드 2차벤더'
@@ -84,18 +85,27 @@ const HistoryBoxList = () => {
             return (
                 <HistoryBox key={itemlist.id} type={itemlist.type}>
                     <Section type={itemlist.type}>
-
-                        <Year type={itemlist.type}>{itemlist.year}</Year>
-
-                        {itemlist.contents.map((idx => {
+                        <Fade top duration={2000}>
+                            <Year type={itemlist.type}>{itemlist.year}</Year>
+                        </Fade>
+                        {itemlist.contents.map(((idx, index) => {
                             return (
-
-                                <Record type={itemlist.type}>
-                                    {(itemlist.type ==='left') 
-                                    ? <><Dots type={itemlist.type} />{idx}</>
-                                    : <>{idx}<Dots /></>}
-                                </Record>
-                                
+                                <>
+                                    <Fade delay={800} duration={2000}>
+                                        <Record type={itemlist.type}>
+                                            {(itemlist.type ==='left') 
+                                            ? <><Dots type={itemlist.type} /><Text>{idx}</Text></>
+                                            : <><Text>{idx}</Text><Dots /></>}
+                                        </Record>
+                                    </Fade>
+                                    <Fade right duration={2000}>
+                                        <MobileRecord>
+                                            <MobileDots number={index}
+                                                        id={itemlist.id} 
+                                                        type={itemlist.type} /><Text>{idx}</Text>
+                                        </MobileRecord>
+                                    </Fade>
+                                </>
                             )
                         }))}
                         {itemlist.img}
@@ -111,48 +121,66 @@ const Ab_history_01 = () => {
 
     return (
         <Wrapper>
-           <Title>HISTORY</Title>
-           <Inner>
-               <HistoryBoxList />
-           </Inner>
+            <Fade delay={800} duration={2000}>
+                <Title>HISTORY</Title>
+            </Fade>
+            <Inner>
+                <HistoryBoxList />
+            </Inner>
         </Wrapper>
     )
 }
 
 const Wrapper = styled.div`
     width : 100%;
-    height : 2600px;
+    height : auto;
     display : flex;
     flex-direction : column;
     align-items : center;
-    /* background : grey; */
 `
 const Title = styled.div`
     font-size: 48px;
     font-weight: 900;
-    line-height: 3.13;
     text-align: center;
     color: #05103d;
-    margin-bottom : 100px;
+    margin : 100px 0px;
+
+    @media all and (max-width:1200px) {
+        font-size: 24px;
+        line-height: 1.33;
+        color: #000000;
+        margin : 60px 0px;
+    }
+
 `
 const Inner = styled.div`
     position : relative;
     width : 981px;
-    height : 2194px;
-    /* background : red; */
+    height : auto;
 
     &:before {
         content: "";
         position: absolute;
         width: 2px;
-        height : 1990px; 
-        top: 0;
-        bottom: 0;
+        height : 2000px; 
         left: 50%;
         margin-left: -2px;
         margin-top : 9px;
-        background: #333;
+        background: #c1c1c1;
         z-index : 2;
+    }
+
+    @media all and (max-width:1200px) {
+        width : 92%;
+        &:before {
+            content: "";
+            width: 2px;
+            height : 1320px; 
+            left: 0;
+            margin-top : 9px;
+            background: #c1c1c1;
+            z-index : 2;
+        }
     }
 `
 const HistoryBox = styled.div`
@@ -161,7 +189,6 @@ const HistoryBox = styled.div`
     left : ${(props) => (props.type === 'left')? '50%' : '0'};
     box-sizing : border-box;
     margin-bottom : 95.5px;
-    /* background : green; */
 
     &:before {
         content: "";
@@ -170,16 +197,33 @@ const HistoryBox = styled.div`
         height: 25px;
         ${(props) => (props.type === 'left')? 'left : -14px;' : 'right : -11px;'};
         background: url(${dots});
+        background-repeat : no-repeat;
+        background-size : cover;
         border-radius: 50%;
         margin-top : 9px;
         z-index: 2;
+    }
+
+    @media all and (max-width:1200px) {
+        left : 5px;
+        margin-bottom : 60px;
+
+        &:before {
+            left : -14px;
+            width: 16px;
+            height: 16px;
+        }
     }
 `
 const Section = styled.div`
     width: 438px;
     height : auto;
     margin-left : ${(props) => (props.type === 'left')? '52.5px;' : '0px'};
-    /* background : grey; */
+
+    @media all and (max-width:1200px) {
+        width: 320px;
+        margin-left : 14px;
+    }
 `
 const Year = styled.div`
     font-size: 34px;
@@ -188,14 +232,14 @@ const Year = styled.div`
     margin-bottom : 20px;
     text-align : ${(props) => (props.type === 'left')? 'left' : 'right'};
     color: #000000;
+
+    @media all and (max-width:1200px) {
+        text-align : left;
+        font-size: 20px;
+        margin-bottom : 10px;
+    }
 `
-const Dots = styled.div`
-    width : 6px;
-    height : 6px;
-    ${(props) => (props.type === 'left')? 'margin-right : 14px;' : 'margin-left : 14px;'};
-    background : #000000;
-    border-radius : 50%;
-`
+
 const Record = styled.div`
     font-size: 17px;
     line-height: 1.78;
@@ -203,9 +247,58 @@ const Record = styled.div`
     display : flex;
     align-items : center;
     justify-content : ${(props) => (props.type === 'left')? 'flex-start' : 'flex-end'};
+
+    @media all and (max-width:1200px) {
+        display : none;
+    }
 `
+
+const MobileRecord = styled.div`
+    display : none;
+
+    @media all and (max-width:1200px) {
+        display : flex;
+        align-items : center;
+    }
+`
+const Dots = styled.div`
+    width : 6px;
+    height : 6px;
+    ${(props) => (props.type === 'left')? 'margin-right : 14px;' : 'margin-left : 14px;'};
+    background : #000000;
+    border-radius : 50%;
+
+    @media all and (max-width:1200px) {
+        display : none;
+    }
+`
+
+const MobileDots = styled.div`
+    display : none;
+
+    @media all and (max-width:1200px) {
+        display : block;
+        width : 4px;
+        height : 4px;
+        margin-top : ${props =>(props.id === 7) && (props.number === 1) ? '-23px': '0px' };
+        margin-right : 4px;
+        background : #000000;
+        border-radius : 50%;
+    }
+`
+
 const Img = styled.img`
     margin-top : 40px;
+
+    @media all and (max-width:1200px) {
+        width: 100%;
+        margin-top : 10px;
+    }
 `
+
+const Text = styled.div`
+    white-space : pre-line;
+`
+
 
 export default Ab_history_01

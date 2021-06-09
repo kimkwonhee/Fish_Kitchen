@@ -18,10 +18,10 @@ const Ab_store_02 = () => {
                         <Img_01 />
                     </Fade>
                     <ContentsArea1>
-                        <Fade right duration={2000}>
+                        <Fade top duration={2000}>
                             <Title1>7년간의 노하우로<br />신선함을 고스란히</Title1>
                         </Fade>
-                        <Fade right duration={2000}>
+                        <Fade delay={700} duration={2000}>
                             <SubContents1>7년간 운영하며 얻은 노하우를 제품의<br />생산성과 품질에 최선의 노력을 기울이고 있습니다</SubContents1>
                         </Fade>
                     </ContentsArea1>
@@ -32,14 +32,14 @@ const Ab_store_02 = () => {
                     <InnerOrder1>
                             <ContentsArea2>
                                 <Title2>
-                                    <Fade duration={2000}>
+                                    <Fade top duration={2000}>
                                         <Title2Text>
                                             안전한 먹거리를 위한<br />위생적인 시스템
                                         </Title2Text>
                                     </Fade>
                                 </Title2>
                                 <SubContents2>
-                                    <Fade duration={2000}>
+                                    <Fade delay={700} duration={2000}>
                                         <SubContents2Text>
                                             항상 고객에게 안전하고 믿을 수 있는 기업이 되기 위해<br />품질에 문제가 없도록 관리를 철저히 하고 있습니다.
                                         </SubContents2Text>
@@ -119,7 +119,7 @@ const ContentsArea1 = styled.div`
 `
 const Title1 = styled.div`
     font-size: 48px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1.42;
     letter-spacing: 0.96px;
     color: #05103d;
@@ -185,7 +185,7 @@ const Title2 = styled.div`
 `
 const Title2Text = styled.div`
     font-size: 43px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 1.42;
     letter-spacing: 0.96px;
     color: #05103d;

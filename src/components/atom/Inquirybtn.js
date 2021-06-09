@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Inquirybtn = ({children}) => {
+const Inquirybtn = ({className, children}) => {
     return (
-        <Wrapper>
+        <Wrapper className={className}>
             <Text>{children}</Text>
         </Wrapper>
     )
@@ -21,9 +21,13 @@ const Wrapper = styled.div`
 `
 
 const Text = styled.div`
-  font-size: 18px;
-  font-weight: bold;
-  color: #05103d;
+    font-size: 18px;
+    font-weight: 500;
+    color: #05103d;
+
+    @media all and (max-width:1200px) {
+        font-size: 14px;
+    }
 `
 
 export default Inquirybtn

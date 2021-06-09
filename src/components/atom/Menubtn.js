@@ -63,13 +63,21 @@ const Inner = styled.div`
     justify-content : center;
     align-items : center;
     border-bottom : ${(props) => (props.path === props.id) 
-                    ? props.top ? '3px solid #ffffff' : '3px solid #05103d' 
+                    ? (props.path === 5)
+                        ? '3px solid #05103d'
+                        : props.top 
+                            ? '3px solid #ffffff' 
+                            : '3px solid #05103d' 
                     : 'transparent'};
     transition: 0.5s; 
     transform: translateX(-50%);
 
     &:hover {
-        border-bottom : ${props => props.top ? '3px solid #ffffff' : '3px solid #05103d'};
+        border-bottom : ${props => (props.path === 5)
+                        ? '3px solid #05103d'
+                        : props.top 
+                            ? '3px solid #ffffff' 
+                            : '3px solid #05103d'};
     };
 `
 const Item = styled.div`
@@ -80,8 +88,9 @@ const Item = styled.div`
                     : '300'};
     color: ${(props) => (props.path === 5) 
                         ? '#05103d' 
-                        : props.top ? '#ffffff' :'#05103d'};
+                        : props.top 
+                            ? '#ffffff' 
+                            :'#05103d'};
 `
-
 
 export default Menubtn;

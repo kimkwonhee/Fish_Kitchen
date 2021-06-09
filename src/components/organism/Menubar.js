@@ -56,7 +56,7 @@ const Menubar = ({ location }) => {
     return (
         <>
             <Wrapper top={scrollTop}>
-                <Mainmenu top={scrollTop}>
+                <Mainmenu top={scrollTop} path={pathname}>
                     <Inner>
                         <LogoArea>
                             <Link to="/home">
@@ -175,8 +175,13 @@ const Mainmenu = styled.div`
     height : 100px;
     display : flex;
     justify-content : center;
-    border-bottom : 0.5px solid ${props => props.top ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.2)'};
+    border-bottom : 0.5px solid ${props => (props.path === '/inquiry') 
+                                    ? 'rgba(0,0,0,0.2)' 
+                                    :  props.top 
+                                        ? 'rgba(255,255,255,0.5)' 
+                                        : 'rgba(0,0,0,0.2)'};
     background-color : ${props => props.top ? 'transparent' : '#ffffff'};
+    
     @media all and (max-width:1200px) {
         height : 68px;
     }

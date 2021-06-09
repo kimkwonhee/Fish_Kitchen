@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Inquirybtn from '../atom/Inquirebtn'
+import Inquirybtn from '../atom/Inquirybtn'
 import InquiryCheckBox from '../atom/InquiryCheckBox'
 import InquiryInput from '../atom/InquiryInput'
 import InquiryTextarea from '../atom/InquiryTextarea'
