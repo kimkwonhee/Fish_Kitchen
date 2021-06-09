@@ -15,10 +15,10 @@ const Menubtn = ({className, id, link, path, children, top, onMouseOver}) => {
     } else if (path === '/product') {
         menu_status = 3;
     } 
-    // else if (path === '/') {
-    //     menu_status = 4;
-    // } 
-    else if (path === '/inquiry') {
+    else if (path === '/shop') {
+        menu_status = 4;
+    } 
+    else if (path === '/inquiry' || path === '/inquiry/policy') {
         menu_status = 5;
     }
 
@@ -63,7 +63,7 @@ const Inner = styled.div`
     justify-content : center;
     align-items : center;
     border-bottom : ${(props) => (props.path === props.id) 
-                    ? (props.path === 5)
+                    ? (props.path === 5) || (props.path === 4)
                         ? '3px solid #05103d'
                         : props.top 
                             ? '3px solid #ffffff' 
@@ -73,7 +73,7 @@ const Inner = styled.div`
     transform: translateX(-50%);
 
     &:hover {
-        border-bottom : ${props => (props.path === 5)
+        border-bottom : ${props => (props.path === 5) || (props.path === 4)
                         ? '3px solid #05103d'
                         : props.top 
                             ? '3px solid #ffffff' 
@@ -86,7 +86,7 @@ const Item = styled.div`
     font-weight :  ${(props) => (props.path === props.id) 
                     ? '500' 
                     : '300'};
-    color: ${(props) => (props.path === 5) 
+    color: ${(props) => (props.path === 5) || (props.path === 4)
                         ? '#05103d' 
                         : props.top 
                             ? '#ffffff' 

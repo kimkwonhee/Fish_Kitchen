@@ -31,8 +31,15 @@ const Menubar = ({ location }) => {
 
     useEffect(() => {
         setMouseOver(false)
-        setScrollTop(pathname !== '/home' || pathname !== '/inquiry' ? true : false)
-        if (pathname !== '/home' || pathname !== '/inquiry') {
+        setScrollTop(pathname !== '/home' 
+                    || pathname !== '/inquiry' 
+                    || pathname !== '/shop'
+                    || pathname !== '/inquiry/policy' ? true : false)
+        if (pathname !== '/home' 
+            || pathname !== '/inquiry' 
+            || pathname !== '/shop' 
+            || pathname !== '/inquiry/policy') 
+        {
             window.addEventListener('scroll', onScrollChange)
         }
         return () => window.removeEventListener('scroll', onScrollChange)
@@ -43,7 +50,7 @@ const Menubar = ({ location }) => {
         {   id : 1, title : 'HOME', link : '/home' },
         {   id : 2, title : 'ABOUT', link : '/about_store' },
         {   id : 3, title : 'PRODUCT', link : '/product' },
-        {   id : 4, title : 'SHOP', link : '' },
+        {   id : 4, title : 'SHOP', link : '/shop' },
         {   id : 5, title : 'INQUIRY', link : '/inquiry' },
     ]
     const submenulist = [
@@ -83,8 +90,8 @@ const Menubar = ({ location }) => {
                                 )
                             })}
                             <MMenubtn 
-                                src={scrollTop ? mMenubtn1 : mMenubtn2} 
-                                alt="menu btn"
+                                top={scrollTop} 
+                                path={pathname}
                                 onClick={(e) => setVisible(true)}
                             />
                         </MenuArea>
@@ -143,7 +150,9 @@ const Menubar = ({ location }) => {
                                 <DrawerMenuList>PRODUCT</DrawerMenuList>
                             </LinkTag>
                             <DrawerMenuList>SHOP</DrawerMenuList>
-                            <DrawerMenuList>INQUIRY</DrawerMenuList>
+                            <LinkTag to='/inquiry' onClick={(e) => {setVisible(false)}}>
+                                <DrawerMenuList>INQUIRY</DrawerMenuList>
+                            </LinkTag>
                         </DrawerInner>
                         <DrawerFooter>
                             <DrawerMenuLogo src={mLogoimg3} alt="어부키친"/>
@@ -175,7 +184,7 @@ const Mainmenu = styled.div`
     height : 100px;
     display : flex;
     justify-content : center;
-    border-bottom : 0.5px solid ${props => (props.path === '/inquiry') 
+    border-bottom : 0.5px solid ${props => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '//inquiry/policy')
                                     ? 'rgba(0,0,0,0.2)' 
                                     :  props.top 
                                         ? 'rgba(255,255,255,0.5)' 
@@ -211,7 +220,7 @@ const LogoArea = styled.div`
 const LogoImg = styled.div`
     width : 154px;
     height : 100px;
-    background-image : ${(props) => (props.path === '/inquiry') 
+    background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
                         ? `url(${Logoimg2});` 
                         : props.top ? `url(${Logoimg1});` :`url(${Logoimg2});`};
     background-repeat : no-repeat;
@@ -222,7 +231,7 @@ const LogoImg = styled.div`
         height : 32px;
         margin-left : 20px;
 
-        background-image : ${(props) => (props.path === '/inquiry') 
+        background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
                         ? `url(${mLogoimg2});` 
                         : props.top ? `url(${mLogoimg1});` :`url(${mLogoimg2});`};
     }
@@ -251,11 +260,18 @@ const MenuArea = styled.div`
     }
 `
 
-const MMenubtn = styled.img`
+const MMenubtn = styled.div`
     display : none;
 
     @media all and (max-width:1200px) {
+        width : 24px;
+        height : 68px;
         display : block;
+        
+        background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
+                        ? `url(${mMenubtn2});` 
+                        : props.top ? `url(${mMenubtn1});` :`url(${mMenubtn2});`};
+        background-size : cover;
     }
 `
 

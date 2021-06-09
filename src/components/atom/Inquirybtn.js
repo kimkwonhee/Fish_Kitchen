@@ -1,10 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Inquirybtn = ({className, children}) => {
+const Inquirybtn = ({className, bgcolor, ftcolor, children}) => {
     return (
-        <Wrapper className={className}>
-            <Text>{children}</Text>
+        <Wrapper 
+            className={className} 
+            bgcolor={bgcolor}
+        >
+            <Text ftcolor={ftcolor}>
+                {children}
+            </Text>
         </Wrapper>
     )
 }
@@ -17,13 +22,13 @@ const Wrapper = styled.div`
     align-items : center;
     border-radius : 5px;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: ${props => props.bgcolor || '#ffffff'};
 `
 
 const Text = styled.div`
     font-size: 18px;
     font-weight: 500;
-    color: #05103d;
+    color: ${props => props.ftcolor || '#05103d'};
 
     @media all and (max-width:1200px) {
         font-size: 14px;
