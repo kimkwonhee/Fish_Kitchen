@@ -4,6 +4,7 @@ import Inquirybtn from '../../atom/Inquirybtn'
 import { Link } from 'react-router-dom'
 
 const Inquiry_01 = () => {
+
     return (
         <Wrapper>
             <InquiryTextArea>

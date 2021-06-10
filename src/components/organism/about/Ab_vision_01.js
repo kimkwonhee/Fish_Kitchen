@@ -22,7 +22,7 @@ const Ab_vision_01 = () => {
                     어부들은 사람들이 자는 시간에도 물고기 사냥을 나섭니다.
                     </Discription>
                 </Fade>
-                <Fade duration={2000}>
+                <Fade delay={700} duration={2000}>
                     <MODiscription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데,<br/>
                     흔들거리는 배 위에서,무거운 어구를 던지고<br />
                     당기는 작업을 수십 시간 동안 쉬지 않고<br/>
@@ -61,7 +61,7 @@ const Ab_vision_01 = () => {
                     <Circle9 />
                 </Fade>
             </ImgArea>
-            <Fade duration={2000}>
+            <Fade delay={700} duration={2000}>
                 <MobileBgimg src={mo_img_01} alt="mobile img"/>
             </Fade>
         </Wrapper>

@@ -10,11 +10,11 @@ const Homepage_01 = () => {
         <Wrapper>
             <BackImg>
                 <Empty />
-                    <Fade top duration={2000}>
+                    <Fade top distance="10%" duration={1000}>
                         <Logoimg src={logo} alt="logo"/>
                         <HomeTitle>어부 키친</HomeTitle>
                     </Fade>
-                    <Fade delay={700} duration={2000}>
+                    <Fade delay={400} duration={1000}>
                         <HomeSub>사람들의 아침 식탁에 올라갈 신선한 물고기를 위해</HomeSub>
                     </Fade>
             </BackImg>

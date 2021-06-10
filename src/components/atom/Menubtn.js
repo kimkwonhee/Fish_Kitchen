@@ -68,7 +68,7 @@ const Inner = styled.div`
                         : props.top 
                             ? '3px solid #ffffff' 
                             : '3px solid #05103d' 
-                    : 'transparent'};
+                    : '3px solid transparent'};
     transition: 0.5s; 
     transform: translateX(-50%);
 

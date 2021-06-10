@@ -12,12 +12,12 @@ const Ab_store_01 = () => {
             <BackgroudArea>
                 <Bgimg />
                     <ContentsArea>
-                        <Fade duration={2000}>
+                        <Fade duration={1000}>
                             <HeaderTitle>
                                 사람들의 아침식탁에 올라갈<br />신선한 물고기를 위해
                             </HeaderTitle>
                         </Fade>
-                        <Fade delay={900} duration={2000}>
+                        <Fade delay={500} duration={1000}>
                             <LogoArea>
                                 <Logoimg src={logo} alt="logo"/>
                             </LogoArea>

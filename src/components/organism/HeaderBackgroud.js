@@ -53,6 +53,7 @@ const Title = styled.div`
     line-height: 1.46;
     letter-spacing: 1.04px;
     color: #ffffff;
+    word-break : keep-all;
     /* background : red; */
 
     @media all and (max-width:1200px) {

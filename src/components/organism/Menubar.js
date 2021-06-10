@@ -1,4 +1,4 @@
-import React , { useEffect, useState, useRef }from 'react'
+import React , { useEffect, useState }from 'react'
 import styled from 'styled-components'
 import Logoimg1 from '../../images/menu_logo01.png'
 import Logoimg2 from '../../images/menu_logo02.png'
@@ -15,7 +15,6 @@ import { Drawer } from 'antd';
 
 const Menubar = ({ location }) => {
     const pathname = location.pathname;   
-    const btnstatus = useRef(null);
 
     const [mouseOver, setMouseOver]  = useState(false);
     const [scrollTop, setScrollTop] = useState(false);
@@ -31,16 +30,11 @@ const Menubar = ({ location }) => {
 
     useEffect(() => {
         setMouseOver(false)
-        setScrollTop(pathname !== '/home' 
-                    || pathname !== '/inquiry' 
-                    || pathname !== '/shop'
-                    || pathname !== '/inquiry/policy' ? true : false)
-        if (pathname !== '/home' 
-            || pathname !== '/inquiry' 
-            || pathname !== '/shop' 
-            || pathname !== '/inquiry/policy') 
-        {
+        if (pathname === '/shop' || pathname === '/inquiry/policy') {
+            setScrollTop(false);
+        } else {
             window.addEventListener('scroll', onScrollChange)
+            setScrollTop(true);
         }
         return () => window.removeEventListener('scroll', onScrollChange)
     }, [pathname])
@@ -78,9 +72,8 @@ const Menubar = ({ location }) => {
                                             id={index.id}
                                             link={index.link}
                                             path={pathname}
-                                            ref={btnstatus}
                                             top={scrollTop}
-                                            onMouseOver={(e) => {index.id == 2 
+                                            onMouseOver={(e) => {index.id === 2 
                                                                 ? setMouseOver(true) 
                                                                 : setMouseOver(false)}}
                                         >
@@ -149,7 +142,9 @@ const Menubar = ({ location }) => {
                             <LinkTag to='/product' onClick={(e) => {setVisible(false)}}>
                                 <DrawerMenuList>PRODUCT</DrawerMenuList>
                             </LinkTag>
-                            <DrawerMenuList>SHOP</DrawerMenuList>
+                            <LinkTag to='/shop' onClick={(e) => {setVisible(false)}}>
+                                <DrawerMenuList>SHOP</DrawerMenuList>
+                            </LinkTag>
                             <LinkTag to='/inquiry' onClick={(e) => {setVisible(false)}}>
                                 <DrawerMenuList>INQUIRY</DrawerMenuList>
                             </LinkTag>
@@ -184,12 +179,15 @@ const Mainmenu = styled.div`
     height : 100px;
     display : flex;
     justify-content : center;
-    border-bottom : 0.5px solid ${props => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '//inquiry/policy')
-                                    ? 'rgba(0,0,0,0.2)' 
-                                    :  props.top 
-                                        ? 'rgba(255,255,255,0.5)' 
-                                        : 'rgba(0,0,0,0.2)'};
+    border-bottom : 0.5px solid ${props => ((props.path === '/inquiry') || 
+                                           (props.path === '/shop') || 
+                                           (props.path === '/inquiry/policy'))
+                                                ? 'rgba(0,0,0,0.2)' 
+                                                :  props.top 
+                                                    ? 'rgba(255,255,255,0.5)' 
+                                                    : 'rgba(0,0,0,0.2)'};
     background-color : ${props => props.top ? 'transparent' : '#ffffff'};
+    transition : .5s;
     
     @media all and (max-width:1200px) {
         height : 68px;
@@ -280,6 +278,8 @@ const LinkTag = styled(Link)`
 `
 
 const Menu = styled(Menubtn)`
+    display : block;
+
     @media all and (max-width:1200px) {
         display : none;
     }

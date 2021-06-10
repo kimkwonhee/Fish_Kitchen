@@ -9,12 +9,12 @@ const Homepage_02 = () => {
         <Wrapper>
             <BackImg>
                 <Section>
-                <Fade right duration={2000}>
+                <Fade right distance="10%" duration={1000}>
                     <HomeTitle>신선함을 고스란히</HomeTitle>
                 </Fade>
                     <HomeSub>
                         <HomeSubText>
-                            <Fade right duration={2000}>
+                            <Fade right distance="10%" duration={1000}>
                             어부키친은 최신식 생산 시설로 제품 생산성 및 품질에 최선의 노력을 기울이고 있습니다
                             </Fade>
                         </HomeSubText>

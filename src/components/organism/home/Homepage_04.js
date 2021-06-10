@@ -9,12 +9,12 @@ const Homepage_04 = () => {
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade right duration={2000}>
+                    <Fade right distance="10%" duration={1000}>
                         <HomeTitle>7년간의 노하우</HomeTitle>
                     </Fade>
                     <HomeSub>
                         <HomeSubText>
-                            <Fade right duration={2000}>
+                            <Fade right distance="10%" duration={1000}>
                                 7년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다
                             </Fade>
                         </HomeSubText>
