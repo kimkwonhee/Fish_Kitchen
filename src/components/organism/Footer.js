@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Inquirybtn from '../atom/Inquirybtn'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import gpsimg from '../../images/footer_gps_icon.png'
 
-const Footer = () => {
+const Footer = ({location}) => {
+
+    let pathname = location.pathname;
+
     return (
         <Wrapper>
             <Inner>
@@ -15,7 +18,7 @@ const Footer = () => {
                 </TextArea>
                 <InquiryArea>
                     <LinkTag to='/inquiry'>
-                        <Inquiry>문의하기</Inquiry>
+                        <Inquiry path={pathname}>문의하기</Inquiry>
                     </LinkTag>
                 </InquiryArea>
             </Inner>
@@ -50,6 +53,7 @@ const Inner = styled.div`
         width : 92%;
         padding: 60px 0px 40px 0px;
         display : block;
+        /* background-color : green; */
     }
 `
 
@@ -115,14 +119,18 @@ const CompanyTel = styled.div`
 
 const InquiryArea = styled.div`
     @media all and (max-width:1200px) {
+        width : 100%;
         display : flex;
         justify-content : center;
+        /* background-color : red; */
     }
 `
 
 const Inquiry = styled(Inquirybtn)`
+    display : ${props => props.path === '/inquiry' ? 'none' : 'flex'};
+
     @media all and (max-width:1200px) {
-        width : 200px;
+        width : 100%;
         height : 44px;
     }
 `
@@ -144,6 +152,7 @@ const FooterText = styled.div`
 
 const LinkTag = styled(Link)`
     text-decoration : none !important;
+    width : 100%;
 `
 
-export default Footer
+export default withRouter(Footer)

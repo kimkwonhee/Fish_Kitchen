@@ -8,7 +8,9 @@ const Ab_company_01 = () => {
         <Wrapper>
             <Inner>
                 <Fade duration={2000}>
-                    <ImgCircle src={company_img} alt="company img"/>
+                    <ImgArea>
+                        <ImgCircle src={company_img} alt="company img"/>
+                    </ImgArea>
                 </Fade>
                 <Fade right delay={500} duration={2000}>
                     <TextArea>㈜바이오션은 주로 베트남, 중국, 인도 등의 수산물을<br />
@@ -45,7 +47,6 @@ const Wrapper = styled.div`
    align-items : center;
 
    @media all and (max-width:1200px) {
-        
     }
 `
 
@@ -55,12 +56,19 @@ const Inner = styled.div`
     display : flex;
     align-items : center;
     margin : 100px 0px;
-    /* background-color : grey; */
+    /* background-color : green; */
     
     @media all and (max-width:1200px) {
         width : 92%;
         display : block;
         margin : 60px 0px;
+    }
+`
+
+const ImgArea = styled.div`
+    @media all and (max-width:1200px) {
+        display : flex;
+        justify-content : center;
     }
 `
 
@@ -85,7 +93,6 @@ const TextArea = styled.div`
     color: #000000;
     display : flex;
     align-items : center;
-    /* background : green; */
     
     @media all and (max-width:1200px) {
         display : none;

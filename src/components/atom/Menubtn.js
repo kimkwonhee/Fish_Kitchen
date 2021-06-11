@@ -84,8 +84,8 @@ const Item = styled.div`
     font-size: 16px;
     letter-spacing: 1px;
     font-weight :  ${(props) => (props.path === props.id) 
-                    ? '500' 
-                    : '300'};
+                    ? props.top ? '500' :'600' 
+                    : props.top ? '300' :'400'};
     color: ${(props) => (props.path === 5) || (props.path === 4)
                         ? '#05103d' 
                         : props.top 

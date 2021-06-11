@@ -23,6 +23,10 @@ const Wrapper = styled.div`
     border-radius : 3px;
     cursor: pointer;
     background-color: ${props => props.bgcolor || '#ffffff'};
+    
+    @media all and (max-width:1200px) {
+
+    }
 `
 
 const Text = styled.div`
