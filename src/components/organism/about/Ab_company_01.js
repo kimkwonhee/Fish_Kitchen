@@ -13,11 +13,9 @@ const Ab_company_01 = () => {
                 <Fade right delay={500} duration={2000}>
                     <TextArea>㈜바이오션은 주로 베트남, 중국, 인도 등의 수산물을<br />
                         직수입하여 공급하는 업체로서 올해로 경력이 7년이 되었습니다.<br />
-                        주요거래처로부터 우수협력사로 선정되고 있으며,<br />
-                        품질, 단가, 미입 및 상황처리 등 납품에 문제가 없도록<br />
-                        관리를 철저히 하고 있습니다.<br />
-                        항상 고객에게 안전하고 믿을 수 있는 기업이 되고자<br />
-                        노력할 것입니다.
+                        주요거래처로부터 우수협력사로 선정되고 있으며, 품질, 단가, 미입<br />
+                        및 상황처리 등 납품에 문제가 없도록 관리를 철저히 하고 있습니다.<br />
+                        항상 고객에게 안전하고 믿을 수 있는 기업이 되고자 노력할 것입니다.
                     </TextArea>
                 </Fade>
                 <Fade delay={2000} duration={2000}>
@@ -45,6 +43,10 @@ const Wrapper = styled.div`
    display : flex;
    justify-content : center;
    align-items : center;
+
+   @media all and (max-width:1200px) {
+        
+    }
 `
 
 const Inner = styled.div`
@@ -63,22 +65,22 @@ const Inner = styled.div`
 `
 
 const ImgCircle = styled.img`
-    width : 500px;
-    height : 500px;
+    width : 400px;
+    height : 400px;
     border-radius : 50%;
     
     @media all and (max-width:1200px) {
-        width : 100%;
+        width : 80%;
         height : auto;
         margin-bottom : 30px;
     }
 `
 
 const TextArea = styled.div`
-    width : 630px;
+    width : 100%;
     height : 100%;
     margin-left : 70px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.75;
     color: #000000;
     display : flex;
@@ -94,11 +96,6 @@ const MobileTextArea = styled.div`
 
     @media all and (max-width:1200px) {
         display : block;
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 1.5;
-        color: #000000;
-        text-align : center;
     }
 `
 
@@ -107,8 +104,8 @@ const MobileText = styled.div`
     
     @media all and (max-width:1200px) {
         display : block;
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1.5;
         color: #000000;
         text-align : center;

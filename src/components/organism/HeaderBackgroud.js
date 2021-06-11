@@ -18,7 +18,7 @@ const Wrapper = styled.div`
     position : relative;
     width : 100%;
     max-height : 800px;
-    height : 800px;
+    height : 700px;
     background : url(${(props) => props.img});
     background-repeat : no-repeat;
     background-position : center center;
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
     width : 1200px;
-    padding-top : 500px;
+    padding-top : 460px;
     margin : 0 auto;
     
     @media all and (max-width:1200px) {
@@ -48,7 +48,7 @@ const Inner = styled.div`
 `
 
 const Title = styled.div`
-    font-size: 52px;
+    font-size: 45px;
     font-weight: 500;
     line-height: 1.46;
     letter-spacing: 1.04px;

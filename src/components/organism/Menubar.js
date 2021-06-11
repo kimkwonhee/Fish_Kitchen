@@ -242,7 +242,7 @@ const SubInner = styled.div`
 `
 const SubMenuSection = styled.div`
     display: flex;
-    width: 800px;
+    width: 685px;
     justify-content : flex-end;
 `
 
@@ -263,8 +263,9 @@ const MMenubtn = styled.div`
 
     @media all and (max-width:1200px) {
         width : 24px;
-        height : 68px;
+        height : 63px;
         display : block;
+        margin-top : 4px;
         
         background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
                         ? `url(${mMenubtn2});` 
@@ -315,10 +316,10 @@ const DrawerMenuList = styled.div`
     font-size: 24px;
     font-weight: 500;
     color: #ffffff;
-    margin-bottom : 30px;
+    /* margin-bottom : 20px; */
 
     &:first-child {
-        margin-bottom : 15px;
+        margin-bottom : 20px;
     }
 `
 
@@ -333,6 +334,7 @@ const SubMenuList = styled.div`
     font-size: 14px;
     color: #ffffff;
     margin-bottom : 15px;
+    font-weight : 300;
 `
 
 

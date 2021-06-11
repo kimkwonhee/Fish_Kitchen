@@ -95,7 +95,7 @@ const DiscriptionArea = styled.div`
     }
 `
 const Title = styled.div`
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 900;
     line-height: 1.42;
     color: #05103d;
@@ -103,16 +103,16 @@ const Title = styled.div`
     /* background : green; */
 
     @media all and (max-width:1200px) {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 900;
         line-height: 1.33;
         text-align : center;
-        margin-bottom : 30px;
-        color: #000000;
+        margin-bottom : 20px;
+        color: #05103d;
     }
 `
 const Discription = styled.div`
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
     color: #000000;
 
@@ -125,8 +125,8 @@ const MODiscription = styled.div`
 
     @media all and (max-width:1200px) {
         display : block;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1.5;
         text-align: center;
         color: #000000;

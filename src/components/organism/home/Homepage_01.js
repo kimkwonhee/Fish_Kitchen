@@ -77,12 +77,13 @@ const HomeTitle = styled.div`
 `
 
 const HomeSub = styled.div`
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 300;
     color: #ffffff;
 
     @media all and (max-width:1200px) {
         width : 170px;
-        font-size: 0.875rem;
+        font-size: 14px;
         margin : 0 auto;
     }
 `

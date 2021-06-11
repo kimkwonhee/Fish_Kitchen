@@ -39,8 +39,7 @@ const Ab_vision_02 = () => {
                 <MobileContentArea>
                     <Fade delay={700} duration={2000}>
                         <MobileDesc>신선한 물고기를 위해 태양이 지고,<br />
-                        어둠이 가득한 밤 바다를 나아가는<br />
-                        그들의 이야기.
+                        어둠이 가득한 밤 바다를 나아가는 그들의 이야기.
                         </MobileDesc>
                     </Fade>
                     <Fade delay={1200}duration={2000}>
@@ -76,7 +75,7 @@ const Inner = styled.div`
 `
 
 const Title = styled.div`
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 1.42;
     letter-spacing: 0.96px;
@@ -87,7 +86,7 @@ const Title = styled.div`
 
     @media all and (max-width:1200px) {
         margin-top : 86px;
-        font-size: 20px;
+        font-size: 22px;
         margin-bottom : 20px;
     }
 `
@@ -123,10 +122,12 @@ const PlusArea = styled.div`
     width : 120px;
 `
 const Plus = styled.div`
-    font-size : 50px;
+    font-size : 60px;
     color : #05103d;
     text-align : center;
-    margin-top : 80px;
+    margin-top : 70px;
+    margin-left: 20px;
+    margin-right: 20px;
 `
 const KitchenArea = styled.div`
     width : 236px;
@@ -140,13 +141,14 @@ const TextArea = styled.div`
 `
 const Text = styled.div`
     width : 430px;
-    margin-left : 60px;
-    font-size: 28px;
+    margin-left : 80px;
+    font-size: 26px;
     line-height: 1.64;
     color: #000000;
+    font-weight : 400;
 `
 const BoldText = styled.span`
-    font-weight: 900;
+    font-weight: 700;
     color: #05103d;
 `
 
@@ -160,8 +162,8 @@ const MobileContentArea = styled.div`
 `
 const MobileDesc = styled.div`
     @media all and (max-width:1200px) {
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1.5;
         color: #000000;
         text-align : center;

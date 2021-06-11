@@ -25,8 +25,9 @@ const Wrapper = styled.div`
 `
 
 const Text = styled.div`
-    font-size: 16px;
-    font-weight : ${props => props.link === props.pathname ? 'bold' : 'normal'};
+    font-size: 14px;
+    font-weight : ${props => props.link === props.pathname ? '400' : '200'};
+    letter-spacing: 1px;
     color: ${(props) => (props.pathname === '/inquiry') 
                         ? '#05103d' 
                         : props.top ? '#ffffff' :'#05103d'};

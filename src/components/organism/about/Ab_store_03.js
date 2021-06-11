@@ -143,7 +143,7 @@ const ContentsArea1 = styled.div`
 `
 const ListTitle1 = styled.div`
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 0.83;
     letter-spacing: 0.8px;
     color: #ffffff;
@@ -155,7 +155,7 @@ const ListSub1 = styled.div`
     line-height: 1.6;
     letter-spacing: 0.4px;
     color: #ffffff;
-
+    font-weight : 300px;
 `
 
 // 냉동 연체류
@@ -189,7 +189,7 @@ const ContentsArea2 = styled.div`
 `
 const ListTitle2 = styled.div`
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 0.83;
     letter-spacing: 0.8px;
     color: #ffffff;
@@ -200,6 +200,7 @@ const ListSub2 = styled.div`
     line-height: 1.6;
     letter-spacing: 0.4px;
     color: #ffffff;
+    font-weight : 300px;
 `
 const Imgbar2 = styled.img`
     position : absolute;

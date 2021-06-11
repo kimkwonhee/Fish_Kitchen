@@ -19,12 +19,12 @@ const _Home = () => {
                 const currentWhell = e.wheelDelta;
                 if (currentWhell < 0) {
                     homeimges.current.slickNext();
-                }
-                else {
+                } else {
                     homeimges.current.slickPrev();
                 }
             }
         }
+
         window.addEventListener("mousewheel", handleWhell);
         return () => window.removeEventListener("mousewheel", handleWhell);       
     }, []);
@@ -68,8 +68,7 @@ const _Home = () => {
                             key={index} 
                             number={number} 
                             onClick={() => onClick(index)} 
-                            indexnumber={index}
-                        />
+                            indexnumber={index} />
                     )
                 })}
             </DotsArea>
@@ -78,9 +77,9 @@ const _Home = () => {
 }
 
 const Wrapper = styled.div`
-  width : 100%;
-  overflow-x : hidden;
-  overflow-y : hidden;
+    width : 100%;
+    overflow-x : hidden;
+    overflow-y : hidden;
 `
 
 const DotsArea = styled.div`

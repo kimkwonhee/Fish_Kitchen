@@ -22,13 +22,13 @@ const Ab_store_01 = () => {
                                 <Logoimg src={logo} alt="logo"/>
                             </LogoArea>
                         </Fade>
-                        <Fade delay={2000} duration={2000}>
+                        <Fade top distance="20%" delay={1000} duration={1000}>
                             <VerticalimgArea>
                                 <Vertical />
                             </VerticalimgArea>
                         </Fade>
-                        <Fade delay={900} duration={2000}>
-                            <FooterContents>“어부키친은 7년간의 노하우를 바탕으로<br />소비자에게 신선한 수산물을 제공하기 위해 만들어진 브랜드입니다.”</FooterContents>
+                        <Fade delay={900} duration={1000}>
+                            <FooterContents>어부키친은 7년간의 노하우를 바탕으로<br />소비자에게 신선한 수산물을 제공하기 위해 만들어진 브랜드입니다.</FooterContents>
                         </Fade>
                     </ContentsArea>
             </BackgroudArea>
@@ -41,7 +41,7 @@ const Wrapper = styled.div`
    background : #05103d;
 
    @media all and (max-width:1200px) {
-        height : 713px;
+        height : auto;
     }
 `
 
@@ -70,7 +70,7 @@ const Bgimg = styled.div`
     background-size: cover;
 
     @media all and (max-width:1200px) {
-        margin-top : 95px;
+        margin-top : 50px;
         width : 92%;
         height : 46.5%;
         background : url(${mo_about_bg01});
@@ -81,17 +81,17 @@ const Bgimg = styled.div`
 
 const ContentsArea = styled.div`
     width : 100%;
-    margin-top : 235px;
+    margin-top : 180px;
     margin-bottom : 100px;
     
     @media all and (max-width:1200px) {
-        margin-top : 40px;
+        margin-top : 125px;
         margin-bottom : 50px;
     }
 `
 
 const HeaderTitle = styled.div`
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 500;
     line-height: 1.42;
     letter-spacing: 0.96px;
@@ -111,7 +111,7 @@ const LogoArea = styled.div`
     justify-content :center;
 
     @media all and (max-width:1200px) {
-        margin-top : 110px;
+        margin-top : 82px;
     }
 `
 
@@ -127,13 +127,13 @@ const Logoimg = styled.img`
 
 const VerticalimgArea = styled.div`
     width : 100%;
-    height : 222px;
+    height : 260px;
     margin-top : 50px;
     display : flex;
     justify-content : center;
 
     @media all and (max-width:1200px) {
-        height : 100px;
+        height : 120px;
         margin-top : 20px;
     }
 
@@ -151,12 +151,13 @@ const Vertical = styled.div`
 `
 
 const FooterContents = styled.div`
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.75;
     letter-spacing: 0.48px;
     text-align: center;
     color: #ffffff;
     margin-top : 50px;
+    font-weight : 300;
 
     @media all and (max-width:1200px) {
         width : 280px;

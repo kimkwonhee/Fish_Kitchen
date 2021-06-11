@@ -44,11 +44,11 @@ const Inner = styled.div`
     margin-bottom : 20px;
     border-bottom : 1px solid #555555;
     display : flex;
-    padding : 60px 0px 54px 0px;
+    padding : 70px 0px 45px 0px;
     
     @media all and (max-width:1200px) {
         width : 92%;
-        padding : 50px 0px 40px 0px;
+        padding: 60px 0px 40px 0px;
         display : block;
     }
 `
@@ -64,7 +64,7 @@ const TextArea = styled.div`
 `
 
 const CompanyName = styled.div`
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.8;
     color: #ffffff;
@@ -76,23 +76,23 @@ const CompanyName = styled.div`
 `
 
 const CompanyAddress = styled.div`
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.78;
     color: #c1c1c1;
     
     @media all and (max-width:1200px) {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.57;
-        margin-bottom : 11px;
+        margin-bottom : 8px;
     }
 `
 
 const Gpsimg = styled.img`
-    width : 14px;
-    height : 21px;
-    margin-bottom: 8px;
-    margin-left: 10px;
+    width: 10px;
+    height: 16px;
+    margin-bottom: 3px;
+    margin-left: 6px;
     
     @media all and (max-width:1200px) {
         width : 10px;
@@ -102,12 +102,12 @@ const Gpsimg = styled.img`
 `
 
 const CompanyTel = styled.div`
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.78;
     color: #c1c1c1;
 
     @media all and (max-width:1200px) {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.57;
     }
@@ -128,7 +128,7 @@ const Inquiry = styled(Inquirybtn)`
 `
 
 const FooterText = styled.div`
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 300;
     line-height: 1.88;
     color: #555555;
@@ -138,6 +138,7 @@ const FooterText = styled.div`
         margin-bottom : 50px;
         font-size: 10px;
         color: #c1c1c1;
+        letter-spacing: 1.1px;
     }
 `
 

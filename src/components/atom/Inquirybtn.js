@@ -16,22 +16,23 @@ const Inquirybtn = ({className, bgcolor, ftcolor, children}) => {
 
 const Wrapper = styled.div`
     width : 240px;
-    height : 56px;
+    height : 48px;
     display : flex;
     justify-content : center;
     align-items : center;
-    border-radius : 5px;
+    border-radius : 3px;
     cursor: pointer;
     background-color: ${props => props.bgcolor || '#ffffff'};
 `
 
 const Text = styled.div`
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: ${props => props.ftcolor || '#05103d'};
 
     @media all and (max-width:1200px) {
         font-size: 14px;
+        font-weight: 400;
     }
 `
 

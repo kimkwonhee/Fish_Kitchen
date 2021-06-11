@@ -59,7 +59,7 @@ const Section = styled.div`
 
 const HomeTitle = styled.div`
     font-size: 52px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1.04px;
     color: #ffffff;
     margin-bottom : 8px;
@@ -70,7 +70,7 @@ const HomeTitle = styled.div`
 `
 
 const HomeSub = styled.div`
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: 0.44px;
     line-height: 1.73;

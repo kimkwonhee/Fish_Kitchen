@@ -63,28 +63,28 @@ const Inner = styled.div`
     }
 `
 const Title = styled.div`
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 900;
     text-align: center;
     color: #000000;
     margin-bottom : 12px;
 
     @media all and (max-width:1200px) {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 1.33;
         margin-bottom : 20px;
     }
 `
 
 const SubTitle = styled.div`
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #000000;
     margin-bottom : 100px;
     
     @media all and (max-width:1200px) {
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 400;
         line-height: 1.5;
         margin-bottom : 0px;
     }

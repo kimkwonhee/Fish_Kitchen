@@ -118,12 +118,12 @@ const ContentsArea1 = styled.div`
     }
 `
 const Title1 = styled.div`
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 1.42;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.35;
     letter-spacing: 0.96px;
     color: #05103d;
-    margin-bottom : 30px;
+    margin-bottom : 23px;
     
     @media all and (max-width:1200px) {
         margin-bottom : 10px;
@@ -132,7 +132,7 @@ const Title1 = styled.div`
     }
 `
 const SubContents1 = styled.div`
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
     letter-spacing: normal;
     color: #000000;
@@ -184,12 +184,12 @@ const Title2 = styled.div`
     }
 `
 const Title2Text = styled.div`
-    font-size: 43px;
-    font-weight: bold;
-    line-height: 1.42;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.35;
     letter-spacing: 0.96px;
     color: #05103d;
-    margin-bottom : 30px;
+    margin-bottom : 23px;
 
     @media all and (max-width:1200px) {
         order : 1;
@@ -207,7 +207,6 @@ const SubContents2 = styled.div`
 `
 
 const SubContents2Text = styled.div`
-    height : auto;
     font-size: 18px;
     line-height: 1.7;
     color: #000000;

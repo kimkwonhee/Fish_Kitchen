@@ -113,11 +113,11 @@ const TextArea = styled.div`
     }
 `
 const Title = styled.div`
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 1.42;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.35;
     letter-spacing: 0.96px;
-    margin-bottom : 30px;
+    margin-bottom : 23px;
     color: #05103d;
 
     @media all and (max-width:1200px) {
@@ -128,7 +128,7 @@ const Title = styled.div`
     }
 `
 const Discription = styled.div`
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.7;
     color: #000000;
 

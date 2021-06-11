@@ -46,7 +46,7 @@ const Inquiry_01 = () => {
                             <LinkTag to="/inquiry/policy">
                                 <Policy>개인정보방침</Policy>
                             </LinkTag>
-                            에 동의합니다.<Accent>(필수)</Accent>
+                            에 동의합니다.&nbsp;<Accent>(필수)</Accent>
                         </PolicyTextArea>
                     </CheckBoxArea>
                     <InquirybtnArea>
@@ -73,19 +73,19 @@ const Wrapper = styled.div`
 
 const InquiryTextArea = styled.div`
     width : 1200px;
-    padding-bottom : 49px;
+    padding-bottom : 40px;
     margin-top : 250px;
-    border-bottom : 3px solid #05103d;
+    border-bottom : 2px solid #05103d;
     
     @media all and (max-width:1200px) {
         width : 92%;
         margin-top : 128px;
-        padding-bottom : 30px;
+        padding-bottom : 20px;
     }
 `
 const IqTitle = styled.div`
-    font-size: 52px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: 600;
     line-height: 1.46;
     color: #05103d;
     margin-bottom : 20px;
@@ -98,7 +98,7 @@ const IqTitle = styled.div`
 
 `
 const IqContents1 = styled.div`
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.71;
     color: #000000;
 
@@ -109,7 +109,7 @@ const IqContents1 = styled.div`
     }
 `
 const IqContents2 = styled.div`
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.9;
     color: #000000;
 
@@ -135,6 +135,7 @@ const DetailArea = styled.div`
 
 const Section = styled.div`
     width : 600px;
+    /* background-color : red; */
     
     @media all and (max-width:1200px) {
         width : 100%;
@@ -149,7 +150,7 @@ const CheckBoxArea = styled.div`
     height: 24px;
     display : flex;
     align-items : center;
-    margin-bottom : 70px;
+    margin-bottom : 40px;
 
     @media all and (max-width:1200px) {
         margin-bottom : 51px;
@@ -167,13 +168,17 @@ const InquirybtnArea = styled.div`
 const Iqbtn = styled(Inquirybtn)`
     @media all and (max-width:1200px) {
         width : 100%;
+        height : 45px;
     }
 `
 
 const InquiryInput = styled.div`
     width : auto;
     margin-bottom : 20px;
-    /* background : green; */
+    
+    &:last-child {
+        margin-bottom : 0px;
+    }
 
     @media all and (max-width:1200px) {
         margin-bottom : 30px;
@@ -181,21 +186,21 @@ const InquiryInput = styled.div`
 `
 
 const Title = styled.div`
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 1.83;
     color: #000000;
-    margin-bottom : 15px;
+    margin-bottom : 10px;
 
     @media all and (max-width:1200px) {
         font-size: 14px;
         line-height: 1.57;
-        margin-bottom : 16px;
+        margin-bottom : 10px;
     }
 `
 const Input = styled.input`
     width : 550px;
-    height : 56px;
+    height : 48px;
     border : solid 1px #c1c1c1;
 
     @media all and (max-width:1200px) {
@@ -205,13 +210,14 @@ const Input = styled.input`
 `
 
 const TextAreaText = styled.div`
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600;
     line-height: 1.83;
     color: #000000;
-    margin-bottom : 15px;
+    margin-bottom : 10px;
 
     @media all and (max-width:1200px) {
+        margin-top : 20px;
         font-size: 14px;
         line-height: 1.57;
     }
@@ -219,7 +225,7 @@ const TextAreaText = styled.div`
 
 const TextBox = styled.textarea`
     width : 100%;
-    height : 354px;
+    height : 358px;
     border : solid 1px #c1c1c1;
 
     @media all and (max-width:1200px) {

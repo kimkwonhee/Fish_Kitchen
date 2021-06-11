@@ -13,7 +13,7 @@ const HistoryBoxList = () => {
             year : '2020',
             contents : [
                 '(주)현대그림푸드 공급',
-                '쿠팡(주) 2차벤더 공급'
+                '(주)쿠팡 2차벤더 공급'
             ],
             img : ''
         },
@@ -70,7 +70,7 @@ const HistoryBoxList = () => {
             year : '2014',
             contents : [
                 '(주) 바이오션 설립',
-                '글로벌 파트너 MOU체결\n(베트남 5社, 중국3社, 태국1社)',
+                '글로벌 파트너 MOU체결 (베트남 5社, 중국3社, 태국1社)',
                 '학교 급식 공급',
                 '(주)동원홈푸드 2차벤더 공급',
                 '(주)신세계푸드 2차벤더'
@@ -139,17 +139,16 @@ const Wrapper = styled.div`
     align-items : center;
 `
 const Title = styled.div`
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 900;
     text-align: center;
     color: #05103d;
     margin : 100px 0px;
 
     @media all and (max-width:1200px) {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 1.33;
-        color: #000000;
-        margin : 60px 0px;
+        margin : 60px 0px 40px 0px;
     }
 
 `
@@ -162,10 +161,10 @@ const Inner = styled.div`
         content: "";
         position: absolute;
         width: 2px;
-        height : 2000px; 
+        height : 1945px; 
         left: 50%;
         margin-left: -2px;
-        margin-top : 9px;
+        margin-top : 20px;
         background: #c1c1c1;
         z-index : 2;
     }
@@ -175,7 +174,7 @@ const Inner = styled.div`
         &:before {
             content: "";
             width: 2px;
-            height : 1320px; 
+            height : 1337px; 
             left: 0;
             margin-top : 9px;
             background: #c1c1c1;
@@ -200,7 +199,7 @@ const HistoryBox = styled.div`
         background-repeat : no-repeat;
         background-size : cover;
         border-radius: 50%;
-        margin-top : 9px;
+        margin-top : 15px;
         z-index: 2;
     }
 
@@ -209,6 +208,7 @@ const HistoryBox = styled.div`
         margin-bottom : 60px;
 
         &:before {
+            margin-top: 8px;
             left : -14px;
             width: 16px;
             height: 16px;
@@ -226,23 +226,23 @@ const Section = styled.div`
     }
 `
 const Year = styled.div`
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 900;
     letter-spacing: 0.68px;
-    margin-bottom : 20px;
+    margin-bottom : 10px;
     text-align : ${(props) => (props.type === 'left')? 'left' : 'right'};
     color: #000000;
 
     @media all and (max-width:1200px) {
         text-align : left;
-        font-size: 20px;
-        margin-bottom : 10px;
+        font-size: 18px;
+        margin-bottom : 8px;
     }
 `
 
 const Record = styled.div`
-    font-size: 17px;
-    line-height: 1.78;
+    font-size: 16px;
+    line-height: 2;
     color: #000000;
     display : flex;
     align-items : center;
@@ -262,9 +262,9 @@ const MobileRecord = styled.div`
     }
 `
 const Dots = styled.div`
-    width : 6px;
-    height : 6px;
-    ${(props) => (props.type === 'left')? 'margin-right : 14px;' : 'margin-left : 14px;'};
+    width : 5px;
+    height : 5px;
+    ${(props) => (props.type === 'left')? 'margin-right : 10px;' : 'margin-left : 10px;'};
     background : #000000;
     border-radius : 50%;
 
@@ -280,8 +280,8 @@ const MobileDots = styled.div`
         display : block;
         width : 4px;
         height : 4px;
-        margin-top : ${props =>(props.id === 7) && (props.number === 1) ? '-23px': '0px' };
-        margin-right : 4px;
+        margin-top : ${props =>(props.id === 7) && (props.number === 1) ? '-23px': '3px' };
+        margin-right : 6px;
         background : #000000;
         border-radius : 50%;
     }
@@ -292,12 +292,17 @@ const Img = styled.img`
 
     @media all and (max-width:1200px) {
         width: 100%;
-        margin-top : 10px;
+        margin-top : 20px;
     }
 `
 
 const Text = styled.div`
     white-space : pre-line;
+    
+    @media all and (max-width:1200px) {
+        font-size : 14px;
+        line-height : 2;
+    }
 `
 
 

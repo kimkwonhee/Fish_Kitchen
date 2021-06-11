@@ -49,7 +49,7 @@ const Menubtn = ({className, id, link, path, children, top, onMouseOver}) => {
 
 const Wrapper = styled.div`
     width : 164px;
-    height : 100%;
+    height : 101px;
     display : flex;
     justify-content : center;
 `
@@ -81,7 +81,7 @@ const Inner = styled.div`
     };
 `
 const Item = styled.div`
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     font-weight :  ${(props) => (props.path === props.id) 
                     ? '500' 
