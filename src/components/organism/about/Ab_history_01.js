@@ -6,12 +6,17 @@ import history_img02 from '../../../images/ab_history_img02.jpg'
 import Fade from 'react-reveal/Fade'
 
 const HistoryBoxList = () => {
+    
     const list = [
         {
             id : 1,
             type : 'left',
             year : '2020',
             contents : [
+                '(주)현대그림푸드 공급',
+                '(주)쿠팡 2차벤더 공급'
+            ],
+            mcontents : [
                 '(주)현대그림푸드 공급',
                 '(주)쿠팡 2차벤더 공급'
             ],
@@ -25,6 +30,10 @@ const HistoryBoxList = () => {
                 '(주)동원에프엔비 공급',
                 '(주)신세계푸드 공급'
             ],
+            mcontents : [
+                '(주)동원에프엔비 공급',
+                '(주)신세계푸드 공급'
+            ],
             img : <Img src={history_img01} alt="이미지" />
         },
         {
@@ -32,6 +41,10 @@ const HistoryBoxList = () => {
             type : 'left',
             year : '2018',
             contents : [
+                '(주)동원홈푸드 공급',
+                'B2B 브랜드 “바다닷” 런칭'
+            ],
+            mcontents : [
                 '(주)동원홈푸드 공급',
                 'B2B 브랜드 “바다닷” 런칭'
             ],
@@ -44,6 +57,9 @@ const HistoryBoxList = () => {
             contents : [
                 '낙지, 주꾸미요리 프렌차이즈 업체 공급'
             ],
+            mcontents : [
+                '낙지, 주꾸미요리 프렌차이즈 업체 공급'
+            ],
             img : ''
         },
         {
@@ -53,6 +69,9 @@ const HistoryBoxList = () => {
             contents : [
                 '베트남 호치민 현지 지사 설립'
             ],
+            mcontents : [
+                '베트남 호치민 현지 지사 설립'
+            ],
             img : <Img src={history_img02} alt="이미지" />
         },
         {
@@ -60,6 +79,9 @@ const HistoryBoxList = () => {
             type : 'right',
             year : '2015',
             contents : [
+                '(주)삼성웰스토리 공급'
+            ],
+            mcontents : [
                 '(주)삼성웰스토리 공급'
             ],
             img : ''
@@ -75,30 +97,43 @@ const HistoryBoxList = () => {
                 '(주)동원홈푸드 2차벤더 공급',
                 '(주)신세계푸드 2차벤더'
             ],
+            mcontents : [
+                '(주) 바이오션 설립',
+                '글로벌 파트너 MOU체결\n(베트남 5社, 중국3社, 태국1社)',
+                '학교 급식 공급',
+                '(주)동원홈푸드 2차벤더 공급',
+                '(주)신세계푸드 2차벤더'
+            ],
             img : ''
         }
     ]
-    
+         
     return (
        <>
         {list.map((itemlist) => {
             return (
                 <HistoryBox key={itemlist.id} type={itemlist.type}>
                     <Section type={itemlist.type}>
-                        <Fade top duration={2000}>
+                        <Fade top distance="20%" duration={1000}>
                             <Year type={itemlist.type}>{itemlist.year}</Year>
                         </Fade>
                         {itemlist.contents.map(((idx, index) => {
                             return (
                                 <>
-                                    <Fade delay={800} duration={2000}>
+                                    <Fade delay={500} duration={1000}>
                                         <Record type={itemlist.type}>
                                             {(itemlist.type ==='left') 
                                             ? <><Dots type={itemlist.type} /><Text>{idx}</Text></>
                                             : <><Text>{idx}</Text><Dots /></>}
                                         </Record>
                                     </Fade>
-                                    <Fade right duration={2000}>
+                                </>
+                            )
+                        }))}
+                        {itemlist.mcontents.map(((idx, index) => {
+                            return (
+                                <>
+                                    <Fade delay={500} duration={1000}>
                                         <MobileRecord>
                                             <MobileDots number={index}
                                                         id={itemlist.id} 
@@ -121,7 +156,7 @@ const Ab_history_01 = () => {
 
     return (
         <Wrapper>
-            <Fade delay={800} duration={2000}>
+            <Fade top distance="10%" duration={1000}>
                 <Title>HISTORY</Title>
             </Fade>
             <Inner>

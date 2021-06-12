@@ -16,10 +16,10 @@ const Ab_store_03 = () => {
         <Wrapper>
             <Section>
                 <List1>
-                    <Fade duration={2000}>
+                    <Fade duration={1000}>
                         <Img1 src={Listimg1} alt="냉동새유류" />
                     </Fade>
-                    <Fade delay={1000} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <Imgbar1 src={Listbar1} alt="리스트바"/>
                         <ContentsArea1>
                                 <ListTitle1>냉동 새우류</ListTitle1>
@@ -28,32 +28,32 @@ const Ab_store_03 = () => {
                     </Fade>
                 </List1>
                 <MList1>
-                    <Fade delay={500} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <MListItem src={MListimg1} alt="냉동새우류"/>
                     </Fade>
                 </MList1>
                 <List2>
-                    <Fade delay={1000} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <ContentsArea2>
                             <ListTitle2>냉동 연체류</ListTitle2>
                             <ListSub2>쭈꾸미, 낙지, 갑오징어 등</ListSub2>
                         </ContentsArea2>
                         <Imgbar2 src={Listbar2} alt="리스트바" />
                     </Fade>
-                    <Fade duration={2000}>
+                    <Fade duration={1000}>
                         <Img2 src={Listimg2} alt="냉동연체류" />
                     </Fade>
                 </List2>
                 <MList2>
-                    <Fade delay={500} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <MListItem src={MListimg2} alt="냉동연채류"/>
                     </Fade>
                 </MList2>
                 <List3>
-                    <Fade duration={2000}>
+                    <Fade duration={1000}>
                         <Img3 src={Listimg3} alt="냉동어류" />
                     </Fade>
-                    <Fade delay={1000} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <Imgbar3 src={Listbar1} alt="리스트바" />
                         <ContentsArea3>
                             <ListTitle1>냉동 어류</ListTitle1>
@@ -62,7 +62,7 @@ const Ab_store_03 = () => {
                     </Fade>
                 </List3>
                 <MList3>
-                    <Fade delay={500} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <MListItem src={MListimg3} alt="냉동어류"/>
                     </Fade>
                 </MList3>

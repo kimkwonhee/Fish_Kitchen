@@ -20,23 +20,25 @@ const Ab_company_03 = () => {
     return (
         <Wrapper>
             <Inner>
-                <Fade top duration={2000}>
+                <Fade top distance="20%" duration={1000}>
                     <Title>PARTNERS</Title>
                 </Fade>
-                <Fade delay={700} duration={2000}>
+                <Fade delay={500} duration={1000}>
                     <SubTitle>바이오션은 서로 신뢰하며 파트너사와 함께합니다</SubTitle>
                 </Fade>
-                <Fade delay={1200} duration={2000}>
+            </Inner>
+            <Fade duration={1000}>
+                <LogoInner>
                     <LogoArea>
                         {imglist.map((logo) => {
                             return <img key={logo.id} src={logo.img} alt={logo.company}/>
                         })}
                     </LogoArea>
-                </Fade>
-                <Fade delay={1500} duration={2000}>
-                    <MobileLogo src={mobile_company_01} alt="company"/>
-                </Fade>
-            </Inner>
+                    <MLogoArea>
+                        <MobileLogo src={mobile_company_01} alt="company"/>
+                    </MLogoArea>
+                </LogoInner>
+            </Fade>
         </Wrapper>
     )
 }
@@ -45,23 +47,25 @@ const Wrapper = styled.div`
     width : 100%;
     height : auto;
     display : flex;
+    flex-direction : column;
+    align-items : center;
     justify-content : center;
-
-    @media all and (max-width:1200px) {
-        
-    }
 `
 
 const Inner = styled.div`
     width : 1200px;
-    margin : 100px 0px 44px 0px;
-    /* background : green; */
+    height : 265px;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
     
     @media all and (max-width:1200px) {
         width : 92%;
-        margin : 60px 0px 0px 0px;
+        height : 173px;
     }
 `
+
 const Title = styled.div`
     font-size: 40px;
     font-weight: 900;
@@ -80,7 +84,7 @@ const SubTitle = styled.div`
     font-size: 20px;
     text-align: center;
     color: #000000;
-    margin-bottom : 100px;
+    /* margin-bottom : 100px; */
     
     @media all and (max-width:1200px) {
         font-size: 14px;
@@ -90,15 +94,36 @@ const SubTitle = styled.div`
     }
 `
 
+const LogoInner = styled.div`
+    width : 100%;
+    height : 180px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    background : #fcfcfc;
+    /* background-color : red; */
+
+    @media all and (max-width:1200px) {
+        height : auto;
+    }
+`
+
 const LogoArea = styled.div`
     width : 100%;
     height : auto;
     display : flex;
     justify-content : center;
-    /* background : grey; */
     
     @media all and (max-width:1200px) {
         display : none;
+    }
+`
+
+const MLogoArea = styled.div`
+    display : none;
+    @media all and (max-width:1200px) {
+        display : flex;
+        justify-content : center;
     }
 `
 
@@ -107,6 +132,7 @@ const MobileLogo = styled.img`
     @media all and (max-width:1200px) {
         display : block;
         width : 100%;
+        height : auto;
     }
 `
 

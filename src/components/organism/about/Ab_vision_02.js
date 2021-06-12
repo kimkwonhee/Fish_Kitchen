@@ -9,40 +9,40 @@ const Ab_vision_02 = () => {
     return (
         <Wrapper>
             <Inner>
-                <Fade top duration={2000}>
+                <Fade top distance="20%" duration={1000}>
                     <Title>바다에서 갓 잡은 신선한 물고기</Title>
                 </Fade>
                 <ContentArea>
                     <FishArea>
-                        <Fade delay={800} duration={2000}>
+                        <Fade delay={500} duration={1000}>
                             <Img_01 src={img_01} alt="어부" />
                             <Discription1>행위가 주체가되는 대상</Discription1>
                         </Fade>
                     </FishArea>
                     <PlusArea>
-                        <Fade delay={1500} duration={2000}>
+                        <Fade delay={800} duration={1000}>
                             <Plus>+</Plus>
                         </Fade>
                     </PlusArea>
                     <KitchenArea>
-                        <Fade delay={2000} duration={2000}>
+                        <Fade delay={1100} duration={1000}>
                             <Img_01 src={img_02} alt="키친" />
                             <Discription1>행위가 이루어지는 공간</Discription1>
                         </Fade>
                     </KitchenArea>
                     <TextArea>
-                    <Fade right delay={2000} duration={2000}>
+                    <Fade right distance="5%" delay={1400} duration={1000}>
                         <Text><BoldText>신선한 물고기</BoldText>를 위해 태양이 지고,<br />어둠이 가득한 <BoldText>밤 바다</BoldText>를 나아가는<br/><BoldText>그들의 이야기.</BoldText></Text>
                     </Fade>
                     </TextArea>
                 </ContentArea>
                 <MobileContentArea>
-                    <Fade delay={700} duration={2000}>
+                    <Fade delay={500} duration={1000}>
                         <MobileDesc>신선한 물고기를 위해 태양이 지고,<br />
                         어둠이 가득한 밤 바다를 나아가는 그들의 이야기.
                         </MobileDesc>
                     </Fade>
-                    <Fade delay={1200}duration={2000}>
+                    <Fade delay={800}duration={1000}>
                         <MobileImg1 src={mimg_01}/>
                     </Fade>
                 </MobileContentArea>

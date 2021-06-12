@@ -13,50 +13,50 @@ const Ab_company_02 = () => {
         <Wrapper>
             <Inner>
                 <Section>
-                    <Fade duration={2000}>
+                    <Fade duration={1000}>
                         <MobileCompanyImg src={mo_company_img01} alt="company img1"/>
                     </Fade>
                     <TextArea>
-                        <Fade top duration={2000}>
+                        <Fade top distance="20%" duration={1000}>
                             <Title>세계 각국의 회사와<br />글로벌 파트너 체결</Title>
                         </Fade>
-                        <Fade delay={700} duration={2000}>
+                        <Fade delay={500} duration={1000}>
                             <Discription>7년동안 신뢰를 바탕으로 베트남, 중국, 인도, 태국 등과<br />협력하여 신선한 수산물을 공급하고 있습니다</Discription>
                         </Fade>
                     </TextArea>
-                    <Fade right duration={2000}>
+                    <Fade right distance="8%" duration={1000}>
                         <CompanyImg src={company_img01} alt="company img1"/>
                     </Fade>
                 </Section>
                 <Section>
-                    <Fade duration={2000}>
+                    <Fade duration={1000}>
                         <MobileCompanyImg src={mo_company_img02} alt="company img2"/>
                     </Fade>
-                    <Fade left duration={2000}>
+                    <Fade left distance="8%" duration={1000}>
                         <CompanyImg src={company_img02} alt="company img2" align="right"/>
                     </Fade>
                     <TextArea>
-                        <Fade top duration={2000}>
+                        <Fade top distance="20%" duration={1000}>
                             <Title>A등급<br />최우수협력사 선정</Title>
                         </Fade>
-                        <Fade delay={700} duration={2000}>
+                        <Fade delay={500} duration={1000}>
                             <Discription>협력업체평가에서 최우수협력업체로 선정되었고<br />14년도에는 식약청 HACCP인증을 획득하였습니다</Discription>
                         </Fade>
                     </TextArea>  
                 </Section>
                 <Section>
-                    <Fade duration={2000}>
+                    <Fade duration={1000}>
                         <MobileCompanyImg src={mo_company_img03} alt="company img3"/>
                     </Fade>
                     <TextArea>
-                        <Fade top duration={2000}>
+                        <Fade top distance="20%" duration={1000}>
                             <Title>베트남<br />현지 지사 설립</Title>
                         </Fade>
-                        <Fade delay={700} duration={2000}>
+                        <Fade delay={500} duration={1000}>
                             <Discription>2016년, 베트남 호치민에 현지 지사를 설립했고<br />현지 직원을 채용하여 품질 관리를 하고 있습니다.</Discription>
                         </Fade>
                     </TextArea>
-                    <Fade right duration={2000}>
+                    <Fade right distance="8%" duration={1000}>
                         <CompanyImg src={company_img03} alt="company img3"/>
                     </Fade>
                 </Section>

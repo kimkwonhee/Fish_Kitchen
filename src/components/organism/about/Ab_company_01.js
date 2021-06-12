@@ -7,12 +7,12 @@ const Ab_company_01 = () => {
     return (
         <Wrapper>
             <Inner>
-                <Fade duration={2000}>
+                <Fade duration={1000}>
                     <ImgArea>
                         <ImgCircle src={company_img} alt="company img"/>
                     </ImgArea>
                 </Fade>
-                <Fade right delay={500} duration={2000}>
+                <Fade bottom distance="10%" duration={1000}>
                     <TextArea>㈜바이오션은 주로 베트남, 중국, 인도 등의 수산물을<br />
                         직수입하여 공급하는 업체로서 올해로 경력이 7년이 되었습니다.<br />
                         주요거래처로부터 우수협력사로 선정되고 있으며, 품질, 단가, 미입<br />
@@ -20,19 +20,19 @@ const Ab_company_01 = () => {
                         항상 고객에게 안전하고 믿을 수 있는 기업이 되고자 노력할 것입니다.
                     </TextArea>
                 </Fade>
-                <Fade delay={2000} duration={2000}>
-                <MobileTextArea>
-                    <MobileText>
-                        ㈜바이오션은 주로 베트남, 중국, 인도 등의<br />
-                        수산물을 직수입하여 공급하는 업체로서<br />
-                        올해로 경력이 7년이 되었습니다.<br /><br />
-                        주요거래처로부터 우수협력사로 선정되고 있으며,<br />
-                        품질, 단가, 미입 및 상황처리 등 납품에 문제가 없도록<br />
-                        관리를 철저히 하고 있습니다.<br />
-                        항상 고객에게 안전하고 믿을 수 있는<br />
-                        기업이 되고자 노력할 것입니다.
-                    </MobileText>
-                </MobileTextArea>
+                <Fade duration={1000}>
+                    <MobileTextArea>
+                        <MobileText>
+                            ㈜바이오션은 주로 베트남, 중국, 인도 등의<br />
+                            수산물을 직수입하여 공급하는 업체로서<br />
+                            올해로 경력이 7년이 되었습니다.<br /><br />
+                            주요거래처로부터 우수협력사로 선정되고 있으며,<br />
+                            품질, 단가, 미입 및 상황처리 등 납품에 문제가 없도록<br />
+                            관리를 철저히 하고 있습니다.<br />
+                            항상 고객에게 안전하고 믿을 수 있는<br />
+                            기업이 되고자 노력할 것입니다.
+                        </MobileText>
+                    </MobileTextArea>
                 </Fade>
             </Inner>
         </Wrapper>

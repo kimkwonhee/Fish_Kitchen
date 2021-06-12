@@ -12,17 +12,17 @@ const Ab_vision_01 = () => {
     return (
         <Wrapper>
             <DiscriptionArea>
-                <Fade top duration={2000}>
+                <Fade top distance="20%" duration={1000}>
                     <Title>BRAND STORY</Title>
                 </Fade>
-                <Fade delay={700} duration={2000}>
+                <Fade delay={500} duration={1000}>
                     <Discription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데, 흔들거리는 배 위에서,<br />
                     무거운 어구를 던지고 당기는 작업을 수십 시간 동안 쉬지 않고 하는게 어부의 일입니다.<br />
                     아침 식탁에 올라갈 신선한 물고기를 잡기 위해<br />
                     어부들은 사람들이 자는 시간에도 물고기 사냥을 나섭니다.
                     </Discription>
                 </Fade>
-                <Fade delay={700} duration={2000}>
+                <Fade delay={500} duration={1000}>
                     <MODiscription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데,<br/>
                     흔들거리는 배 위에서,무거운 어구를 던지고<br />
                     당기는 작업을 수십 시간 동안 쉬지 않고<br/>
@@ -33,35 +33,35 @@ const Ab_vision_01 = () => {
                 </Fade>
             </DiscriptionArea>
             <ImgArea>
-                <Fade delay={500} duration={2000}>
+                <Fade delay={500} duration={1000}>
                     <Circle1 />
                 </Fade>
-                <Fade delay={800} duration={2000}>
+                <Fade delay={700} duration={1000}>
                     <Circle2 />
                 </Fade>
-                <Fade delay={1100} duration={2000}>
+                <Fade delay={900} duration={1000}>
                     <Circle3 src={img_01} alt="바다"/>
                 </Fade>
-                <Fade delay={1300} duration={2000}>
+                <Fade delay={1100} duration={1000}>
                     <Circle4 src={img_02} alt="별빛"/>
                 </Fade>
-                <Fade delay={1500} duration={2000}>
+                <Fade delay={1300} duration={1000}>
                     <Circle5 src={img_03} alt="어선"/>
                 </Fade>
-                <Fade delay={1500} duration={2000}>
+                <Fade delay={1100} duration={1000}>
                     <Circle6 src={img_04} alt="어부"/>
                 </Fade>
-                <Fade delay={1300} delay={1100} duration={2000}>
+                <Fade delay={900} duration={1000}>
                     <Circle7 />
                 </Fade>
-                <Fade delay={800} duration={2000}>
+                <Fade delay={700} duration={1000}>
                     <Circle8 src={img_05} alt="어부"/>
                 </Fade>
-                <Fade delay={500} duration={2000}>
+                <Fade delay={500} duration={1000}>
                     <Circle9 />
                 </Fade>
             </ImgArea>
-            <Fade delay={700} duration={2000}>
+            <Fade duration={1000}>
                 <MobileBgimg src={mo_img_01} alt="mobile img"/>
             </Fade>
         </Wrapper>

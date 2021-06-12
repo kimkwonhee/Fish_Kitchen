@@ -6,7 +6,6 @@ import Img_item03 from '../../../images/product_item_03.jpg'
 import Img_item04 from '../../../images/product_item_04.jpg'
 import Img_item05 from '../../../images/product_item_05.jpg'
 import Img_item06 from '../../../images/product_item_06.jpg'
-import Fade from 'react-reveal/Fade'
 
 const Pro_item_01 = () => {
 
@@ -24,15 +23,9 @@ const Pro_item_01 = () => {
             <Section>
                 {itemlist.map((list => {
                     return  <Item key={list.id}>
-                                <Fade duration={2000}>
-                                    <ImgItem src={list.img} alt={list.name} />
-                                </Fade>
-                                <Fade top duration={2000}>
-                                    <ItemName>{list.name}</ItemName>
-                                </Fade>
-                                <Fade delay={800} duration={2000}>
-                                    <ItemEnName>{list.enname}</ItemEnName>
-                                </Fade>
+                                <ImgItem src={list.img} alt={list.name} />
+                                <ItemName>{list.name}</ItemName>
+                                <ItemEnName>{list.enname}</ItemEnName>
                             </Item>
                 }))}
             </Section>

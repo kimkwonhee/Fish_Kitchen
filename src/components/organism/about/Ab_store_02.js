@@ -14,14 +14,14 @@ const Ab_store_02 = () => {
         <Wrapper>
             <Section1>
                 <Inner1>
-                    <Fade left duration={2000}>
+                    <Fade left distance="10%" duration={1000}>
                         <Img_01 />
                     </Fade>
                     <ContentsArea1>
-                        <Fade top duration={2000}>
+                        <Fade top distance="20%" duration={1000}>
                             <Title1>7년간의 노하우로<br />신선함을 고스란히</Title1>
                         </Fade>
-                        <Fade delay={700} duration={2000}>
+                        <Fade delay={500} duration={1000}>
                             <SubContents1>7년간 운영하며 얻은 노하우를 제품의<br />생산성과 품질에 최선의 노력을 기울이고 있습니다</SubContents1>
                         </Fade>
                     </ContentsArea1>
@@ -32,28 +32,28 @@ const Ab_store_02 = () => {
                     <InnerOrder1>
                             <ContentsArea2>
                                 <Title2>
-                                    <Fade top duration={2000}>
+                                    <Fade top distance="20%" duration={1000}>
                                         <Title2Text>
                                             안전한 먹거리를 위한<br />위생적인 시스템
                                         </Title2Text>
                                     </Fade>
                                 </Title2>
                                 <SubContents2>
-                                    <Fade delay={700} duration={2000}>
+                                    <Fade delay={500} duration={1000}>
                                         <SubContents2Text>
                                             항상 고객에게 안전하고 믿을 수 있는 기업이 되기 위해<br />품질에 문제가 없도록 관리를 철저히 하고 있습니다.
                                         </SubContents2Text>
                                     </Fade>
                                 </SubContents2>
                                 <Img_02>
-                                    <Fade left duration={2000}>
+                                    <Fade left distance="10%" duration={1000}>
                                         <ImgItem />
                                     </Fade>
                                 </Img_02>
                             </ContentsArea2>
                     </InnerOrder1>
                     <InnerOrder2>
-                        <Fade right duration={2000}>
+                        <Fade right distance="10%" duration={1000}>
                             <Img_03  />
                         </Fade>
                     </InnerOrder2>

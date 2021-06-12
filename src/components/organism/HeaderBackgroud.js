@@ -6,7 +6,7 @@ const HeaderBackgroud = ({img, moimg, children}) => {
     return (
         <Wrapper img={img} moimg={moimg}>
             <Inner>
-                <Fade top duration={2000}>
+                <Fade top distance="10%" duration={1000}>
                     <Title>{children}</Title>
                 </Fade>
             </Inner>

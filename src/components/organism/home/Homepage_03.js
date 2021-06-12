@@ -9,12 +9,12 @@ const Homepage_03= () => {
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade left distance="10%" duration={1000}>
+                    <Fade top distance="20%" duration={1000}>
                         <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
                     </Fade>
                         <HomeSub>
                             <HomeSubText>
-                                <Fade left distance="10%" duration={1000}>
+                                <Fade delay={500} duration={1000}>
                                     검증된 위생 관리 시스템으로 안심하고 드실수 있습니다
                                 </Fade>
                             </HomeSubText>
