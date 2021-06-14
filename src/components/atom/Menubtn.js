@@ -5,7 +5,7 @@ const Menubtn = ({className, id, link, path, children, top, onMouseOver}) => {
 
     let menu_status = 0;
 
-    if(path === '/home') {
+    if(path === '/') {
         menu_status = 1;
     } else if (path === '/about_store' 
             || path === '/about_vision'

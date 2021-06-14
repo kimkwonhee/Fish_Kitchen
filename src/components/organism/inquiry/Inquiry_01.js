@@ -7,6 +7,7 @@ import { Modal } from 'antd';
 const Inquiry_01 = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [modalText, setModalText] = useState('');
+    const [modalWidth, setModalWidth] = useState(400);
 
     const subjectRef = useRef();
     const positionRef = useRef();
@@ -66,10 +67,33 @@ const Inquiry_01 = () => {
             + '회사명 : '+ company +'%0D%0A'
             + '상세 문의 내용 : '+ detailcontents
             + '&subject='+ subject;
+            
+            subjectRef.current.value = '';
+            positionRef.current.value = '';
+            telRef.current.value = '';
+            emailRef.current.value = '';
+            companyRef.current.value = '';
+            contentsRef.current.value = '';
+            checkboxRef.current.checked = false;
         }
     }
-   
 
+    const handleResize = () => {
+        if ( window.innerWidth < 1200) {
+            setModalWidth(window.innerWidth*0.90);
+        } else {
+            setModalWidth(400);
+        }
+    }
+      
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => { // cleanup 
+          window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+    
+   
     return (
         <>
             <Wrapper>
@@ -127,7 +151,7 @@ const Inquiry_01 = () => {
                 </DetailArea>            
             </Wrapper>
             <Modal
-                width="400px"
+                width={modalWidth+'px'}
                 closable={false}
                 centered={true}
                 footer={null}
@@ -350,6 +374,10 @@ const ModalInner = styled.div`
     width : 100%;
     height : 100%;
     padding : 20px;
+
+    @media all and (max-width:1200px) {
+        /* width : 92%; */
+    }
 `
 
 const ModalContents = styled.div`
