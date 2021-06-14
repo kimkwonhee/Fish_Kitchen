@@ -1,65 +1,157 @@
-import React from 'react'
+import React, { useState, useRef, useEffect} from 'react'
 import styled from 'styled-components'
 import Inquirybtn from '../../atom/Inquirybtn'
 import { Link } from 'react-router-dom'
+import { Modal } from 'antd';
 
 const Inquiry_01 = () => {
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [modalText, setModalText] = useState('');
+
+    const subjectRef = useRef();
+    const positionRef = useRef();
+    const telRef = useRef();
+    const emailRef = useRef();
+    const companyRef = useRef();
+    const contentsRef = useRef();
+    const checkboxRef = useRef();
+
+    const handleCancel = () => {
+        setIsModalVisible(false);
+    };
+
+    const eamilSend = (e) => {
+        let subject = subjectRef.current.value;
+        let position = positionRef.current.value;
+        let tel = telRef.current.value;
+        let eamil = emailRef.current.value;
+        let company = companyRef.current.value;
+        let detailcontents = contentsRef.current.value;
+        let check = checkboxRef.current.checked;
+
+        if (subject === '') {
+            setModalText('제목을 입력해주세요');
+            setIsModalVisible(true);
+            subjectRef.current.focus();
+        } else if(position === '') {
+            setModalText('담당자명 / 직책을 입력해주세요');
+            setIsModalVisible(true);
+            positionRef.current.focus();
+        } else if(tel === '') {
+            setModalText('연락처를 입력해주세요');
+            setIsModalVisible(true);
+            telRef.current.focus();
+        } else if(eamil === '') {
+            setModalText('이메일을 입력해주세요');
+            setIsModalVisible(true);
+            emailRef.current.focus();
+        } else if(company === '') {
+            setModalText('회사명을 입력해주세요');
+            setIsModalVisible(true);
+            companyRef.current.focus();
+        } else if(detailcontents === '') {
+            setModalText('상세 문의 내용을 입력해주세요');
+            setIsModalVisible(true);
+            contentsRef.current.focus();
+        } else if(check === false) {
+            setModalText('개인정보밤침에 동의해주세요');
+            setIsModalVisible(true);
+        }
+        else {
+            window.location = 'mailto:customersupport@example.com?body='
+            + '제목 : '+ subject +'%0D%0A'
+            + '담당자명/직책 : '+ position +'%0D%0A'
+            + '연락처 : '+ tel +'%0D%0A'
+            + '이메일 : '+ eamil +'%0D%0A'
+            + '회사명 : '+ company +'%0D%0A'
+            + '상세 문의 내용 : '+ detailcontents
+            + '&subject='+ subject;
+        }
+    }
+   
 
     return (
-        <Wrapper>
-            <InquiryTextArea>
-                <IqTitle>문의는 언제든 환영입니다.</IqTitle>
-                <IqContents1>유관 부서 검토 후 1주일 이내로 연락 드리겠습니다.</IqContents1>
-                <IqContents2>문의 메일 : info@mystie.com </IqContents2>
-            </InquiryTextArea>
-            <DetailArea>
-                <Section>
-                    <InquiryInput>
-                        <Title>제목</Title>
-                        <Input type="text"/>
-                    </InquiryInput>
-                    <InquiryInput>
-                        <Title>담당자명 / 직책</Title>
-                        <Input type="text"/>
-                    </InquiryInput>
-                    <InquiryInput>
-                        <Title>연락처</Title>
-                        <Input type="text"/>
-                    </InquiryInput>
-                    <InquiryInput>
-                        <Title>이메일</Title>
-                        <Input type="text"/>
-                    </InquiryInput>
-                    <InquiryInput>
-                        <Title>회사명</Title>
-                        <Input type="text"/>
-                    </InquiryInput>
-                </Section>
-                <Section>
-                    <TextArea>
-                        <TextAreaText>상세 문의 내용</TextAreaText>
-                        <TextBox />
-                    </TextArea>
-                    <CheckBoxArea>
-                        <input type="checkbox"/>
-                        <PolicyTextArea>
-                            <LinkTag to="/inquiry/policy">
-                                <Policy>개인정보방침</Policy>
-                            </LinkTag>
-                            에 동의합니다.&nbsp;<Accent>(필수)</Accent>
-                        </PolicyTextArea>
-                    </CheckBoxArea>
-                    <InquirybtnArea>
-                        <Iqbtn 
-                            bgcolor="#05103d" 
-                            ftcolor="#ffffff" 
-                        >
-                            문의 보내기
-                        </Iqbtn>
-                    </InquirybtnArea>
-                </Section>
-            </DetailArea>
-        </Wrapper>
+        <>
+            <Wrapper>
+                <InquiryTextArea>
+                    <IqTitle>문의는 언제든 환영입니다.</IqTitle>
+                    <IqContents1>유관 부서 검토 후 1주일 이내로 연락 드리겠습니다.</IqContents1>
+                    <IqContents2>문의 메일 : info@mystie.com </IqContents2>
+                </InquiryTextArea>
+                <DetailArea>
+                    <Section>
+                        <InquiryInput>
+                            <Title>제목</Title>
+                            <Input type="text" ref={subjectRef} />
+                        </InquiryInput>
+                        <InquiryInput>
+                            <Title>담당자명 / 직책</Title>
+                            <Input type="text" ref={positionRef}/>
+                        </InquiryInput>
+                        <InquiryInput>
+                            <Title>연락처</Title>
+                            <Input type="text" ref={telRef}/>
+                        </InquiryInput>
+                        <InquiryInput>
+                            <Title>이메일</Title>
+                            <Input type="text" ref={emailRef}/>
+                        </InquiryInput>
+                        <InquiryInput>
+                            <Title>회사명</Title>
+                            <Input type="text" ref={companyRef}/>
+                        </InquiryInput>
+                    </Section>
+                    <Section>
+                        <TextArea>
+                            <TextAreaText>상세 문의 내용</TextAreaText>
+                            <TextBox type="text" ref={contentsRef}/>
+                        </TextArea>
+                        <CheckBoxArea>
+                            <input type="checkbox" ref={checkboxRef} />
+                            <PolicyTextArea>
+                                <LinkTag to="/inquiry/policy">
+                                    <Policy>개인정보방침</Policy>
+                                </LinkTag>
+                                에 동의합니다.&nbsp;<Accent>(필수)</Accent>
+                            </PolicyTextArea>
+                        </CheckBoxArea>
+                        <InquirybtnArea onClick={eamilSend}>
+                            <Iqbtn 
+                                bgcolor="#05103d" 
+                                ftcolor="#ffffff"
+                            >
+                                문의 보내기
+                            </Iqbtn>
+                        </InquirybtnArea>
+                    </Section>
+                </DetailArea>            
+            </Wrapper>
+            <Modal
+                width="400px"
+                closable={false}
+                centered={true}
+                footer={null}
+                bodyStyle={{padding : '0'}}
+                title={null} 
+                visible={isModalVisible} 
+                onCancel={handleCancel}>
+                <ModalInner>
+                    <ModalContents>
+                        {/* <ModalTitle>문의 접수 완료</ModalTitle> */}
+                        <ModalDesc>
+                            {/* 문의내용이 접수되었습니다.<br />
+                            접수된 내용과 관련하여 담당자 확인 후<br />
+                            영업일 기준 3일 이내에 연락드리겠습니다.<br />
+                            감사합니다. */}
+                            {modalText}
+                        </ModalDesc>
+                    </ModalContents>
+                </ModalInner>
+                <ModalOkbtnArea onClick={handleCancel}>
+                    <ModalOk>확인</ModalOk>
+                </ModalOkbtnArea>
+            </Modal>
+        </>
     )
 }
 
@@ -252,6 +344,55 @@ const Accent = styled.span`
 
 const LinkTag = styled(Link)`
     text-decoration : none !important;
+`
+
+const ModalInner = styled.div`
+    width : 100%;
+    height : 100%;
+    padding : 20px;
+`
+
+const ModalContents = styled.div`
+    display : flex;
+    flex-direction : column;
+    width : 100%;
+`
+
+const ModalTitle = styled.div`
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-top : 40px;
+    margin-bottom : 20px;
+    text-align : center;
+`
+
+const ModalDesc = styled.div`
+    font-size: 16px;
+    line-height: 1.81;
+    text-align: center;
+    color: #555555;
+    /* margin-bottom : 20px; */
+`
+
+const ModalOkbtnArea = styled.div`
+    cursor: pointer;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+    border-top : 1px solid #f5f5f5;
+    transition : .5s;
+
+    &:hover {
+        background-color : #f5f5f5;
+    }
+`
+
+const ModalOk = styled.div`
+    margin : 15px 0px;
+    font-size: 18px;
+    line-height: 1.72;
+    color: #000000;
 `
 
 export default Inquiry_01

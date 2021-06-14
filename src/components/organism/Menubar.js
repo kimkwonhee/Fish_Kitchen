@@ -21,16 +21,18 @@ const Menubar = ({ location }) => {
     const [visible, setVisible] = useState(false);
 
     const onScrollChange = () => {
-        if (window.pageYOffset <= 0) {
-            setScrollTop(true)
-        } else {
-            setScrollTop(false)
+        if (window.pageYOffset <= 0) { 
+            setScrollTop(true) 
+        } else { 
+            setScrollTop(false) 
         }
     }
 
     useEffect(() => {
         setMouseOver(false)
-        if (pathname === '/shop' || pathname === '/inquiry/policy') {
+        if (pathname === '/shop' || 
+            pathname === '/inquiry' || 
+            pathname === '/inquiry/policy') {
             setScrollTop(false);
         } else {
             window.addEventListener('scroll', onScrollChange)
@@ -41,7 +43,7 @@ const Menubar = ({ location }) => {
 
 
     const menulist = [
-        {   id : 1, title : 'HOME', link : '/home' },
+        {   id : 1, title : 'HOME', link : '/' },
         {   id : 2, title : 'ABOUT', link : '/about_store' },
         {   id : 3, title : 'PRODUCT', link : '/product' },
         {   id : 4, title : 'SHOP', link : '/shop' },
@@ -60,7 +62,7 @@ const Menubar = ({ location }) => {
                 <Mainmenu top={scrollTop} path={pathname}>
                     <Inner>
                         <LogoArea>
-                            <Link to="/home">
+                            <Link to="/">
                                 <LogoImg path={pathname} top={scrollTop}/>
                             </Link>
                         </LogoArea>
@@ -93,6 +95,7 @@ const Menubar = ({ location }) => {
                 <SubInner
                     top={scrollTop} 
                     subdisplay={mouseOver}
+                    path={pathname}
                     onMouseOver={(e)=> setMouseOver(true)}
                     onMouseOut={(e) => setMouseOver(false)}
                     >
@@ -179,14 +182,18 @@ const Mainmenu = styled.div`
     height : 100px;
     display : flex;
     justify-content : center;
-    border-bottom : 0.5px solid ${props => ((props.path === '/inquiry') || 
-                                           (props.path === '/shop') || 
-                                           (props.path === '/inquiry/policy'))
+    border-bottom : 0.5px solid ${props => ((props.path === '/inquiry') 
+                                            || (props.path === '/shop') 
+                                            || (props.path === '/inquiry/policy'))
                                                 ? 'rgba(0,0,0,0.2)' 
                                                 :  props.top 
                                                     ? 'rgba(255,255,255,0.5)' 
                                                     : 'rgba(0,0,0,0.2)'};
-    background-color : ${props => props.top ? 'transparent' : '#ffffff'};
+    background-color : ${props => props.top 
+                                ? 'transparent' 
+                                : props.path === '/' 
+                                    ? 'transparent' 
+                                    : '#ffffff'};
     transition : .5s;
     
     @media all and (max-width:1200px) {
@@ -218,9 +225,15 @@ const LogoArea = styled.div`
 const LogoImg = styled.div`
     width : 154px;
     height : 100px;
-    background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
-                        ? `url(${Logoimg2});` 
-                        : props.top ? `url(${Logoimg1});` :`url(${Logoimg2});`};
+    background-image : ${(props) => (props.path === '/inquiry') 
+                                    || (props.path === '/shop') 
+                                    || (props.path === '/inquiry/policy')
+                                ? `url(${Logoimg2});` 
+                                : props.top 
+                                    ? `url(${Logoimg1});` 
+                                    : props.path === '/' 
+                                        ? `url(${Logoimg1});` 
+                                        : `url(${Logoimg2});`};
     background-repeat : no-repeat;
     background-size : cover;
 
@@ -229,16 +242,26 @@ const LogoImg = styled.div`
         height : 32px;
         margin-left : 20px;
 
-        background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
-                        ? `url(${mLogoimg2});` 
-                        : props.top ? `url(${mLogoimg1});` :`url(${mLogoimg2});`};
+        background-image : ${(props) => (props.path === '/inquiry') 
+                                        || (props.path === '/shop') 
+                                        || (props.path === '/inquiry/policy')
+                                        ? `url(${mLogoimg2});`
+                                        : props.top 
+                                            ? `url(${mLogoimg1});` 
+                                            : props.path === '/' 
+                                                ? `url(${mLogoimg1});` 
+                                                : `url(${mLogoimg2});`};
     }
 `
 
 const SubInner = styled.div`
     display : ${props => props.subdisplay === true ? 'flex' : 'none'};
     justify-content : center;
-    background-color : ${props => props.top ? 'transparent' : '#ffffff'};
+    background-color : ${props => props.top 
+                                ? 'transparent' 
+                                : props.path === '/' 
+                                    ? 'transparent' 
+                                    : '#ffffff'};
 `
 const SubMenuSection = styled.div`
     display: flex;
@@ -267,9 +290,15 @@ const MMenubtn = styled.div`
         display : block;
         margin-top : 4px;
         
-        background-image : ${(props) => (props.path === '/inquiry') || (props.path === '/shop') || (props.path === '/inquiry/policy')
-                        ? `url(${mMenubtn2});` 
-                        : props.top ? `url(${mMenubtn1});` :`url(${mMenubtn2});`};
+        background-image : ${(props) => (props.path === '/inquiry') 
+                                        || (props.path === '/shop') 
+                                        || (props.path === '/inquiry/policy')
+                                        ? `url(${mMenubtn2});` 
+                                        : props.top 
+                                            ? `url(${mMenubtn1});` 
+                                            : props.path === '/' 
+                                                ? `url(${mMenubtn1});` 
+                                                : `url(${mMenubtn2});`};
         background-size : cover;
     }
 `
@@ -289,7 +318,7 @@ const Menu = styled(Menubtn)`
 //Drawer
 const DrawerWrapper = styled.div`
   width: 100%;
-  height : 100vh;
+  height : auto;
   background-color : #05103d;
 `
 const DrawerMenu = styled.div`
@@ -304,12 +333,12 @@ const DrawerClose = styled.img`
 `
 const DrawerInner = styled.div`
     width : 100%;
-    height : 81%;
     display : flex;
     flex-direction : column;
     align-items : center;
     justify-content : center;
     color : #ffffff;
+    margin-top : 53px;
 `
 
 const DrawerMenuList = styled.div`
@@ -343,6 +372,7 @@ const DrawerFooter = styled.div`
     display : flex;
     flex-direction : column;
     align-items : center;
+    margin-top : 120px;
 `
 
 const DrawerMenuLogo = styled.img`
@@ -353,6 +383,7 @@ const DrawerFooterText = styled.div`
     opacity: 0.3;
     color : #ffffff;
     font-size: 10px;
+    margin-bottom : 50px;
 `
 
 

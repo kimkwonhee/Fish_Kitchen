@@ -28,7 +28,7 @@ const App = () => {
       <Globalstyles />
       <Menubar />
       <Switch>
-        <Route path="/home" component={_Home} exact/>
+        <Route path="/" component={_Home} exact/>
         <Route path="/about_store" component={_About_store}/>
         <Route path="/about_vision" component={_About_vision}/>
         <Route path="/about_company" component={_About_company}/>
