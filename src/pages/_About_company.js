@@ -7,6 +7,7 @@ import mImgbg from '../images/mo_ab_company_bg01.png'
 import Ab_company_01 from '../components/organism/about/Ab_company_01'
 import Ab_company_02 from '../components/organism/about/Ab_company_02'
 import Ab_company_03 from '../components/organism/about/Ab_company_03'
+import Ab_company_04 from '../components/organism/about/Ab_company_04'
 
 const _About_company = () => {
 
@@ -24,6 +25,7 @@ const _About_company = () => {
             <Ab_company_01 />
             <Ab_company_02 />
             <Ab_company_03 />
+            <Ab_company_04 />
             <Footer />
         </Wrapper>
     )
