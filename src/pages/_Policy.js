@@ -82,7 +82,6 @@ const Inner = styled.div`
     display : flex;
     align-items : center;
     margin-top : 245px;
-    /* background-color : grey; */
     
     @media all and (max-width:1200px) {
         width : 92%;
@@ -92,7 +91,6 @@ const Inner = styled.div`
 `
 
 const DataSection = styled.div`
-    /* background : red; */
     width : 100%;
     padding : 0px 110px;
     
@@ -287,9 +285,6 @@ const BackText = styled.div`
         font-weight: bold;
     }
 `
-
-
-
 
 
 export default withRouter(_Policy)
