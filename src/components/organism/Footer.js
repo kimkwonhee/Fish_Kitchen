@@ -14,7 +14,7 @@ const Footer = ({location}) => {
                 <TextArea>
                     <CompanyName>(주)바이오션</CompanyName>
                     <CompanyAddress>경기도 용인시 기흥구 동백중앙로 16번길, 16-25 403호<Gpsimg src={gpsimg} alt="gps"/></CompanyAddress>
-                    <CompanyTel>info@mystie.com  |  (031) 548. 0022</CompanyTel>
+                    <CompanyTel>director@fisherskitchen.co,kr  |  (031) 548. 0022</CompanyTel>
                 </TextArea>
                 <InquiryArea>
                     <LinkTag to='/inquiry'>

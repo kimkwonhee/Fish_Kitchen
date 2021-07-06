@@ -59,7 +59,7 @@ const Inquiry_01 = () => {
             setIsModalVisible(true);
         }
         else {
-            window.location = 'mailto:customersupport@example.com?body='
+            window.location = 'mailto:director@fisherskitchen.co,kr?body='
             + '제목 : '+ subject +'%0D%0A'
             + '담당자명/직책 : '+ position +'%0D%0A'
             + '연락처 : '+ tel +'%0D%0A'
@@ -100,7 +100,7 @@ const Inquiry_01 = () => {
                 <InquiryTextArea>
                     <IqTitle>문의는 언제든 환영입니다.</IqTitle>
                     <IqContents1>유관 부서 검토 후 1주일 이내로 연락 드리겠습니다.</IqContents1>
-                    <IqContents2>문의 메일 : info@mystie.com </IqContents2>
+                    <IqContents2>문의 메일 : director@fisherskitchen.co,kr </IqContents2>
                 </InquiryTextArea>
                 <DetailArea>
                     <Section>
