@@ -23,7 +23,7 @@ const Ab_store_03 = () => {
                         <Imgbar1 src={Listbar1} alt="리스트바"/>
                         <ContentsArea1>
                                 <ListTitle1>냉동 새우류</ListTitle1>
-                                <ListSub1>생칵테일새우살, 생새우살, 칵테일새우살, 자숙새우살, 홍새우살 등</ListSub1>
+                                <ListSub1>생칵테일새우살, 생새우살, 자숙새우살, 칵테일새우살, 홍새우살 등</ListSub1>
                         </ContentsArea1>
                     </Fade>
                 </List1>

@@ -21,7 +21,7 @@ const Ab_company_02 = () => {
                             <Title>세계 각국의 회사와<br />글로벌 파트너 체결</Title>
                         </Fade>
                         <Fade delay={500} duration={1000}>
-                            <Discription>7년동안 신뢰를 바탕으로 베트남, 중국, 인도, 태국 등과<br />협력하여 신선한 수산물을 공급하고 있습니다</Discription>
+                            <Discription>8년동안 신뢰를 바탕으로 베트남, 중국, 인도, 태국 등과<br />협력하여 신선한 수산물을 공급하고 있습니다</Discription>
                         </Fade>
                     </TextArea>
                     <Fade right distance="8%" duration={1000}>
