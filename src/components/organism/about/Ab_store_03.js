@@ -23,7 +23,7 @@ const Ab_store_03 = () => {
                         <Imgbar1 src={Listbar1} alt="리스트바"/>
                         <ContentsArea1>
                                 <ListTitle1>냉동 새우류</ListTitle1>
-                                <ListSub1>생새우살, 홍새우살, 칵테일새우살 등</ListSub1>
+                                <ListSub1>생칵테일새우살, 생새우살, 칵테일새우살, 자숙새우살, 홍새우살 등</ListSub1>
                         </ContentsArea1>
                     </Fade>
                 </List1>
@@ -36,7 +36,7 @@ const Ab_store_03 = () => {
                     <Fade delay={500} duration={1000}>
                         <ContentsArea2>
                             <ListTitle2>냉동 연체류</ListTitle2>
-                            <ListSub2>쭈꾸미, 낙지, 갑오징어 등</ListSub2>
+                            <ListSub2>주꾸미, 낙지, 갑오징어, 오징어 등</ListSub2>
                         </ContentsArea2>
                         <Imgbar2 src={Listbar2} alt="리스트바" />
                     </Fade>
@@ -57,7 +57,7 @@ const Ab_store_03 = () => {
                         <Imgbar3 src={Listbar1} alt="리스트바" />
                         <ContentsArea3>
                             <ListTitle1>냉동 어류</ListTitle1>
-                            <ListSub1>고등어, 갈치, 굴비, 도미 등</ListSub1>
+                            <ListSub1>가자미, 고등어, 동태 등</ListSub1>
                         </ContentsArea3>
                     </Fade>
                 </List3>
@@ -156,6 +156,7 @@ const ListSub1 = styled.div`
     letter-spacing: 0.4px;
     color: #ffffff;
     font-weight : 300px;
+    word-break : keep-all;
 `
 
 // 냉동 연체류

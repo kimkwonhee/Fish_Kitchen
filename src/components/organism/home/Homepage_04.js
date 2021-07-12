@@ -10,12 +10,12 @@ const Homepage_04 = () => {
             <BackImg>
                 <Section>
                     <Fade top distance="20%" duration={1000}>
-                        <HomeTitle>7년간의 노하우</HomeTitle>
+                        <HomeTitle>8년간의 노하우</HomeTitle>
                     </Fade>
                     <HomeSub>
                         <HomeSubText>
                             <Fade delay={500} duration={1000}>
-                                7년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다
+                                8년간 운영하며 얻은 노하우를 어부키친에 고스란히 담았습니다
                             </Fade>
                         </HomeSubText>
                     </HomeSub>

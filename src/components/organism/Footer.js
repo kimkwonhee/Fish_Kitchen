@@ -13,8 +13,9 @@ const Footer = ({location}) => {
             <Inner>
                 <TextArea>
                     <CompanyName>(주)바이오션</CompanyName>
-                    <CompanyAddress>경기도 용인시 기흥구 동백중앙로 16번길, 16-25 403호<Gpsimg src={gpsimg} alt="gps"/></CompanyAddress>
-                    <CompanyTel>director@fisherskitchen.co,kr  |  (031) 548. 0022</CompanyTel>
+                    <CompanyAddress>본사 : 경기도 용인시 기흥구 동백중앙로 16번길, 16-25 403호<Gpsimg src={gpsimg} alt="gps"/></CompanyAddress>
+                    <CompanyAddress>제1공장 : 경기도 광주시 곤지암읍 열미길 185-26<Gpsimg src={gpsimg} alt="gps"/></CompanyAddress>
+                    <CompanyTel>director@fisherskitchen.co.kr | (031) 548. 0022</CompanyTel>
                 </TextArea>
                 <InquiryArea>
                     <LinkTag to='/inquiry'>
@@ -22,7 +23,7 @@ const Footer = ({location}) => {
                     </LinkTag>
                 </InquiryArea>
             </Inner>
-            <FooterText>COPYRIGHT 2014-2021 BY.OCEAN. ALL RIGHTS RESERVED.</FooterText>
+            <FooterText>COPYRIGHT 2014-2021 BUYOCEAN. ALL RIGHTS RESERVED.</FooterText>
         </Wrapper>
     )
 }
@@ -47,7 +48,7 @@ const Inner = styled.div`
     margin-bottom : 20px;
     border-bottom : 1px solid #555555;
     display : flex;
-    padding : 70px 0px 45px 0px;
+    padding : 70px 0px 40px 0px;
     
     @media all and (max-width:1200px) {
         width : 92%;
@@ -59,7 +60,6 @@ const Inner = styled.div`
 
 const TextArea = styled.div`
     width : 100%;
-    height : 100px;
 
     @media all and (max-width:1200px) {
         text-align : center;
@@ -72,6 +72,7 @@ const CompanyName = styled.div`
     font-weight: 500;
     line-height: 1.8;
     color: #ffffff;
+    margin-bottom : 16px;
 
     @media all and (max-width:1200px) {
         font-size: 14px;
@@ -83,6 +84,7 @@ const CompanyAddress = styled.div`
     font-size: 14px;
     line-height: 1.78;
     color: #c1c1c1;
+    margin-bottom : 8px;
     
     @media all and (max-width:1200px) {
         font-size: 12px;
@@ -107,8 +109,8 @@ const Gpsimg = styled.img`
 
 const CompanyTel = styled.div`
     font-size: 14px;
-    line-height: 1.78;
     color: #c1c1c1;
+    margin-top : 18px;
 
     @media all and (max-width:1200px) {
         font-size: 12px;

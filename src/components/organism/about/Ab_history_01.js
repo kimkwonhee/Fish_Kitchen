@@ -10,20 +10,34 @@ const HistoryBoxList = () => {
     const list = [
         {
             id : 1,
-            type : 'left',
-            year : '2020',
+            type : 'right',
+            year : '2021',
             contents : [
-                '(주)현대그림푸드 공급',
-                '(주)쿠팡 2차벤더 공급'
+                '배민상회 공급',
+                '제1공장 설립 (경기도 광주)'
             ],
             mcontents : [
-                '(주)현대그림푸드 공급',
-                '(주)쿠팡 2차벤더 공급'
+                '배민상회 공급',
+                '제1공장 설립 (경기도 광주)'
             ],
             img : ''
         },
         {
             id : 2,
+            type : 'left',
+            year : '2020',
+            contents : [
+                '(주) 현대그린푸드 공급',
+                '(주) 쿠팡 2차벤더 공급'
+            ],
+            mcontents : [
+                '(주) 현대그린푸드 공급',
+                '(주) 쿠팡 2차벤더 공급'
+            ],
+            img : ''
+        },
+        {
+            id : 3,
             type : 'right',
             year : '2019',
             contents : [
@@ -37,7 +51,7 @@ const HistoryBoxList = () => {
             img : <Img src={history_img01} alt="이미지" />
         },
         {
-            id : 3,
+            id : 4,
             type : 'left',
             year : '2018',
             contents : [
@@ -51,7 +65,7 @@ const HistoryBoxList = () => {
             img : ''
         },
         {
-            id : 4,
+            id : 5,
             type : 'right',
             year : '2017',
             contents : [
@@ -63,7 +77,7 @@ const HistoryBoxList = () => {
             img : ''
         },
         {
-            id : 5,
+            id : 6,
             type : 'left',
             year : '2016',
             contents : [
@@ -75,7 +89,7 @@ const HistoryBoxList = () => {
             img : <Img src={history_img02} alt="이미지" />
         },
         {
-            id : 6,
+            id : 7,
             type : 'right',
             year : '2015',
             contents : [
@@ -87,7 +101,7 @@ const HistoryBoxList = () => {
             img : ''
         },
         {
-            id : 7,
+            id : 8,
             type : 'left',
             year : '2014',
             contents : [
@@ -196,7 +210,7 @@ const Inner = styled.div`
         content: "";
         position: absolute;
         width: 2px;
-        height : 1945px; 
+        height : 2160px; 
         left: 50%;
         margin-left: -2px;
         margin-top : 20px;
@@ -209,7 +223,7 @@ const Inner = styled.div`
         &:before {
             content: "";
             width: 2px;
-            height : 1337px; 
+            height : 1485px; 
             left: 0;
             margin-top : 9px;
             background: #c1c1c1;

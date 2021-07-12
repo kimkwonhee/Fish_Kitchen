@@ -155,7 +155,7 @@ const Menubar = ({ location }) => {
                         <DrawerFooter>
                             <DrawerMenuLogo src={mLogoimg3} alt="어부키친"/>
                             <DrawerFooterText>
-                                COPYRIGHT 2014-2021 BY.OCEAN. ALL RIGHTS RESERVED.
+                                COPYRIGHT 2014-2021 BUYOCEAN. ALL RIGHTS RESERVED.
                             </DrawerFooterText>
                         </DrawerFooter>
                     </DrawerWrapper>

@@ -12,7 +12,7 @@ const Pro_item_01 = () => {
     const itemlist = [
         { id : 1, name : '냉동 새우살', enname : 'Frozen Shrimp Meat', img : Img_item01 },
         { id : 2, name : '냉동 자반 고등어', enname : 'Frozen Salted Mackeral Fillet', img : Img_item02 },
-        { id : 3, name : '냉동 쭈꾸미', enname : 'Frozen Whole Cleaned Baby Octopus', img : Img_item03 },
+        { id : 3, name : '냉동 주꾸미', enname : 'Frozen Whole Cleaned Baby Octopus', img : Img_item03 },
         { id : 4, name : '냉동 절단 주꾸미', enname : 'Frozen Baby Octopus Cut', img : Img_item04 },
         { id : 5, name : '냉동 절단 낙지', enname : 'Frozen Poulp Squid Cut', img : Img_item05 },
         { id : 6, name : '냉동 절단 가자미', enname : 'Frozen Sole Cut', img : Img_item06 },

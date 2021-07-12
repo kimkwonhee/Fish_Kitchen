@@ -19,10 +19,10 @@ const Ab_store_02 = () => {
                     </Fade>
                     <ContentsArea1>
                         <Fade top distance="20%" duration={1000}>
-                            <Title1>7년간의 노하우로<br />신선함을 고스란히</Title1>
+                            <Title1>8년간의 노하우로<br />신선함을 고스란히</Title1>
                         </Fade>
                         <Fade delay={500} duration={1000}>
-                            <SubContents1>7년간 운영하며 얻은 노하우를 제품의<br />생산성과 품질에 최선의 노력을 기울이고 있습니다</SubContents1>
+                            <SubContents1>8년간 운영하며 얻은 노하우를 제품의<br />생산성과 품질에 최선의 노력을 기울이고 있습니다.</SubContents1>
                         </Fade>
                     </ContentsArea1>
                 </Inner1>

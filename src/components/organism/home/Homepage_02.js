@@ -15,7 +15,7 @@ const Homepage_02 = () => {
                     <HomeSub>
                         <HomeSubText>
                             <Fade delay={500} duration={1000}>
-                            어부키친은 최신식 생산 시설로 제품 생산성 및 품질에 최선의 노력을 기울이고 있습니다
+                            어부키친은 최신식 생산시설로 제품 생산성 및 품질에 최선의 노력을 기울이고 있습니다
                             </Fade>
                         </HomeSubText>
                     </HomeSub>

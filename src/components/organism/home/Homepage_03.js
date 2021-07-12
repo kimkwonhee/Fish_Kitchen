@@ -15,9 +15,12 @@ const Homepage_03= () => {
                         <HomeSub>
                             <HomeSubText>
                                 <Fade delay={500} duration={1000}>
-                                    검증된 위생 관리 시스템으로 안심하고 드실수 있습니다
+                                    검증된 위생 관리 시스템으로 안심하고 드실 수 있습니다
                                 </Fade>
                             </HomeSubText>
+                            <Fade delay={500} duration={1000}>
+                                <SubText>[어부키친은 생산지에서부터 철저히 품질 관리합니다.] </SubText>
+                            </Fade>
                         </HomeSub>
                 </Section>
             </BackImg>
@@ -87,6 +90,21 @@ const HomeSubText = styled.div`
 
     @media all and (max-width:1200px) {
         width : 190px;
+    }
+`
+
+const SubText = styled.div`
+    margin-top : 12px;
+    font-size: 15px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #ffffff;
+
+    @media all and (max-width:1200px) {
+        font-size: 10px;
     }
 `
 

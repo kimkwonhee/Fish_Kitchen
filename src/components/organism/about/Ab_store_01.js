@@ -14,7 +14,7 @@ const Ab_store_01 = () => {
                     <ContentsArea>
                         <Fade duration={1000}>
                             <HeaderTitle>
-                                사람들의 아침식탁에 올라갈<br />신선한 물고기를 위해
+                                사람들의 아침식탁에 올라갈<br />신선한 수산물을 위해
                             </HeaderTitle>
                         </Fade>
                         <Fade delay={500} duration={1000}>
@@ -28,7 +28,7 @@ const Ab_store_01 = () => {
                             </VerticalimgArea>
                         </Fade>
                         <Fade duration={1000}>
-                            <FooterContents>어부키친은 7년간의 노하우를 바탕으로<br />소비자에게 신선한 수산물을 제공하기 위해 만들어진 브랜드입니다.</FooterContents>
+                            <FooterContents>어부키친은 8년간의 노하우를 바탕으로<br />소비자에게 신선한 수산물을 제공하기 위해 만들어진 브랜드입니다.</FooterContents>
                         </Fade>
                     </ContentsArea>
             </BackgroudArea>
