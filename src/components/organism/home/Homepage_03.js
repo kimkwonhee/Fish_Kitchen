@@ -2,26 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import homeimg_03 from '../../../images/home_img03.jpg'
 import mo_homeimg_03 from '../../../images/mo_home_img03.png'
-import Fade from 'react-reveal/Fade'
 
-const Homepage_03= ({when}) => {
+const Homepage_03= ({side}) => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade top distance="20%" duration={1000} when={when}>
-                        <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
-                    </Fade>
-                        <HomeSub>
-                            <HomeSubText>
-                                <Fade delay={500} duration={1000} when={when}>
-                                    검증된 위생 관리 시스템으로 안심하고 드실 수 있습니다
-                                </Fade>
-                            </HomeSubText>
-                            <Fade delay={500} duration={1000} when={when}>
-                                <SubText>[어부키친은 생산지에서부터 철저히 품질 관리합니다.] </SubText>
-                            </Fade>
-                        </HomeSub>
+                    <HomeTitle side={side}>깔끔하고 깨끗하게</HomeTitle>
+                    <HomeSub>
+                        <HomeSubText side={side}>검증된 위생 관리 시스템으로 안심하고 드실 수 있습니다</HomeSubText >
+                        <SubText side={side}>[어부키친은 생산지에서부터 철저히 품질 관리합니다.] </SubText>    
+                    </HomeSub>
                 </Section>
             </BackImg>
         </Wrapper>
@@ -65,10 +56,28 @@ const HomeTitle = styled.div`
     font-weight: 600;
     letter-spacing: 1.04px;
     color: #ffffff;
-    margin-bottom : 8px;
+    margin-bottom : 18px;
+    opacity: 0;
 
     @media all and (max-width:1200px) {
         font-size: 24px;
+    }
+
+    animation-name : ${props => props.side === 2 ? 'fadeIn' : 'none'};
+    animation-duration : 1s;
+    animation-timing-function : ease-out;
+    animation-iteration-count : 1;
+    animation-fill-mode : forwards;
+
+    @keyframes fadeIn {
+        0% {
+            transform: translate3d(0px, 0px, 0px);
+            opacity: 0;
+        }
+        100% {
+            transform: translate3d(0px, 10px, 0px);
+            opacity: 1;
+        }
     }
 `
 
@@ -87,9 +96,26 @@ const HomeSub = styled.div`
 
 const HomeSubText = styled.div`
     width : 520px;
+    opacity: 0;
 
     @media all and (max-width:1200px) {
         width : 190px;
+    }
+
+    animation-name : ${props => props.side === 2 ? 'fadeIn2' : 'none'};
+    animation-duration : 1s;
+    animation-timing-function : ease-out;
+    animation-iteration-count : 1;
+    animation-fill-mode : forwards;
+    animation-delay : 500ms;
+
+    @keyframes fadeIn2 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 `
 
@@ -102,6 +128,23 @@ const SubText = styled.div`
     line-height: 1.5;
     letter-spacing: normal;
     color: #ffffff;
+    opacity: 0;
+
+    animation-name : ${props => props.side === 2 ? 'fadeIn3' : 'none'};
+    animation-duration : 1s;
+    animation-timing-function : ease-out;
+    animation-iteration-count : 1;
+    animation-fill-mode : forwards;
+    animation-delay : 500ms;
+
+    @keyframes fadeIn3 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     @media all and (max-width:1200px) {
         font-size: 10px;

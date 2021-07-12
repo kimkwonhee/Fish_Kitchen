@@ -12,8 +12,8 @@ const _Home = () => {
 
     const homeimges = useRef(null);
     const [number, setNumber] = useState(0);
-    const [side2, setSide2] = useState(false);
-    const [side3, setSide3] = useState(false);
+    const [side, setSide] = useState(0);
+    // const [side3, setSide3] = useState(false);
 
     useEffect(() => {
         const handleWhell = (e) => {
@@ -48,27 +48,21 @@ const _Home = () => {
         arrows : false,
         draggable : false,
         ref : homeimges,
-        afterChange: function(currentSlide) {
-            setNumber(currentSlide)
-            if (currentSlide === 1) {
-                setSide2(true);
-            } else if (currentSlide === 2) {
-                setSide3(true);
-            } 
+        afterChange: async function(currentSlide) {
+            setNumber(currentSlide);
+            setSide(currentSlide);
         }
     }
     const item = [0,1,2,3,4]
-    
-    console.log(number);
 
     return (
         <Wrapper>
             <Slider {...settings}>
-                <Homepage_01 />
-                <Homepage_02 when={side2}/>
-                <Homepage_03 when={side3}/>
-                <Homepage_04 />
-                <Homepage_05 />
+                <Homepage_01 side={side}/>
+                <Homepage_02 side={side}/>
+                <Homepage_03 side={side}/>
+                <Homepage_04 side={side}/>
+                <Homepage_05 side={side}/>
             </Slider>
             <DotsArea>
                 {item.map(index => {

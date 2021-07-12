@@ -2,23 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 import homeimg_05 from '../../../images/home_img05.jpg'
 import mo_homeimg_05 from '../../../images/mo_home_img05.png'
-import Fade from 'react-reveal/Fade'
 
-const Homepage_05= () => {
+const Homepage_05= ({side}) => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade top distance="20%" duration={1000}>
-                        <HomeTitle>믿고 받아보세요</HomeTitle>
-                    </Fade>
-                        <HomeSub>
-                            <HomeSubText>
-                                <Fade delay={500} duration={1000}>
-                                    어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다
-                                </Fade>
-                            </HomeSubText>
-                        </HomeSub>
+                    <HomeTitle side={side}>믿고 받아보세요</HomeTitle>
+                    <HomeSub>
+                        <HomeSubText side={side}>
+                            어부키친은 주문부터 도착까지 하나하나 마음을 담아 배송합니다            
+                        </HomeSubText>
+                    </HomeSub>
                 </Section>
             </BackImg>
             
@@ -63,10 +58,28 @@ const HomeTitle = styled.div`
     font-weight: 600;
     letter-spacing: 1.04px;
     color: #ffffff;
-    margin-bottom : 8px;
+    margin-bottom : 18px;
+    opacity: 0;
 
     @media all and (max-width:1200px) {
         font-size: 24px;
+    }
+
+    animation-name : ${props => props.side === 4 ? 'fadeIn' : 'none'};
+    animation-duration : 1s;
+    animation-timing-function : ease-out;
+    animation-iteration-count : 1;
+    animation-fill-mode : forwards;
+
+    @keyframes fadeIn {
+        0% {
+            transform: translate3d(0px, 0px, 0px);
+            opacity: 0;
+        }
+        100% {
+            transform: translate3d(0px, 10px, 0px);
+            opacity: 1;
+        }
     }
 `
 
@@ -85,6 +98,23 @@ const HomeSub = styled.div`
 
 const HomeSubText = styled.div`
     width : 600px;
+    opacity: 0;
+
+    animation-name : ${props => props.side === 4 ? 'fadeIn1' : 'none'};
+    animation-duration : 1s;
+    animation-timing-function : ease-out;
+    animation-iteration-count : 1;
+    animation-fill-mode : forwards;
+    animation-delay : 500ms;
+
+    @keyframes fadeIn1 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     @media all and (max-width:1200px) {
         width : 210px;
