@@ -4,18 +4,18 @@ import homeimg_02 from '../../../images/home_img02.jpg'
 import mo_homeimg_02 from '../../../images/mo_home_img02.png'
 import Fade from 'react-reveal/Fade'
 
-const Homepage_02 = () => {
+const Homepage_02 = ({when}) => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                <Fade top distance="20%" duration={1000}>
-                    <HomeTitle>신선함을 고스란히</HomeTitle>
+                <Fade top distance="20%" duration={1000} >
+                    <HomeTitle when={when}>신선함을 고스란히</HomeTitle>
                 </Fade>
                     <HomeSub>
                         <HomeSubText>
-                            <Fade delay={500} duration={1000}>
-                            어부키친은 최신식 생산시설로 제품 생산성 및 품질에 최선의 노력을 기울이고 있습니다
+                            <Fade delay={500} duration={1000} when={when}>
+                                어부키친은 최신식 생산시설로 제품 생산성 및 품질에 최선의 노력을 기울이고 있습니다
                             </Fade>
                         </HomeSubText>
                     </HomeSub>
@@ -68,6 +68,7 @@ const HomeTitle = styled.div`
     margin-bottom : 8px;
     margin-right : 2vw;
     text-align : right;
+    opacity : ${props => props.when ? 1 : 0 };
     
     @media all and (max-width:1200px) {
         font-size: 24px;

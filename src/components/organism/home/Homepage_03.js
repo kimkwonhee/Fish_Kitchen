@@ -4,21 +4,21 @@ import homeimg_03 from '../../../images/home_img03.jpg'
 import mo_homeimg_03 from '../../../images/mo_home_img03.png'
 import Fade from 'react-reveal/Fade'
 
-const Homepage_03= () => {
+const Homepage_03= ({when}) => {
     return (
         <Wrapper>
             <BackImg>
                 <Section>
-                    <Fade top distance="20%" duration={1000}>
+                    <Fade top distance="20%" duration={1000} when={when}>
                         <HomeTitle>깔끔하고 깨끗하게</HomeTitle>
                     </Fade>
                         <HomeSub>
                             <HomeSubText>
-                                <Fade delay={500} duration={1000}>
+                                <Fade delay={500} duration={1000} when={when}>
                                     검증된 위생 관리 시스템으로 안심하고 드실 수 있습니다
                                 </Fade>
                             </HomeSubText>
-                            <Fade delay={500} duration={1000}>
+                            <Fade delay={500} duration={1000} when={when}>
                                 <SubText>[어부키친은 생산지에서부터 철저히 품질 관리합니다.] </SubText>
                             </Fade>
                         </HomeSub>

@@ -6,6 +6,7 @@ import logo from '../../../images/logo_02.png'
 import Fade from 'react-reveal/Fade'
 
 const Homepage_01 = () => {
+
     return (
         <Wrapper>
             <BackImg>
@@ -13,7 +14,7 @@ const Homepage_01 = () => {
                     <Fade top distance="10%" duration={1000}>
                         <Logoimg src={logo} alt="logo"/>
                     </Fade>
-                    <Fade delay={500} duration={1000}>
+                    <Fade delay={500} duration={1000} >
                         <HomeSub>사람들의 아침 식탁에 올라갈 신선한 수산물을 위해</HomeSub>
                     </Fade>
             </BackImg>
