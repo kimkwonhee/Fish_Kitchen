@@ -82,7 +82,9 @@ const Title = styled.div`
 const ContentArea = styled.div`
     width : 100%;
     display : flex;
+    justify-content : center;
     margin-bottom : 150px;
+    /* background-color : red; */
 
     @media all and (max-width:1200px) {
         display : none;
@@ -90,7 +92,6 @@ const ContentArea = styled.div`
 `
 const FishArea = styled.div`
     height : 100%;
-
 `
 const Img_01 = styled.img`
     width : 592px;
@@ -101,7 +102,7 @@ const TextArea = styled.div`
     align-items : center;
 `
 const Text = styled.div`
-    width : 430px;
+    /* width : 430px; */
     margin-left : 80px;
     font-size: 26px;
     line-height: 1.64;
