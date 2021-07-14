@@ -25,8 +25,8 @@ const Ab_vision_02 = () => {
                 </ContentArea>
                 <MobileContentArea>
                     <Fade delay={500} duration={1000}>
-                        <MobileDesc>신선한 수산물을 위해 태양이 지고,<br />
-                        어둠이 가득한 밤 바다를 나아가는 그들의 이야기.
+                        <MobileDesc><MoBoldText>신선한 수산물</MoBoldText>을 위해 태양이 지고,<br />
+                        어둠이 가득한 <MoBoldText>밤 바다를 나아가는</MoBoldText><br /><MoBoldText>그들의 이야기.</MoBoldText>
                         </MobileDesc>
                     </Fade>
                     <Fade delay={800}duration={1000}>
@@ -120,16 +120,23 @@ const MobileContentArea = styled.div`
 
     @media all and (max-width:1200px) {
         display : block;
+        width : 100%;
     }
 `
 const MobileDesc = styled.div`
     @media all and (max-width:1200px) {
         font-size: 14px;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 1.5;
         color: #000000;
         text-align : center;
         margin-bottom : 30px;
+    }
+`
+
+const MoBoldText = styled.span`
+    @media all and (max-width:1200px) {
+        font-weight: bold;
     }
 `
 

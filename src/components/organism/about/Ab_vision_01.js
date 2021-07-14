@@ -18,12 +18,13 @@ const Ab_vision_01 = () => {
                     </Discription>
                 </Fade>
                 <Fade delay={500} duration={1000}>
-                    <MODiscription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데,<br/>
-                    흔들리는 배 위에서 무거운 어구를 던지고<br />
-                    당기는 작업을 수십 시간 동안 쉬지 않고<br/>
-                    하는게 어부의 일입니다.<br /><br/>
+                    <MODiscription>햇볕이나 비바람을 피할 수 없는 바다 한 가운데,<br />
+                    흔들거리는 배 위에서, 무거운 어구를 던지고<br />
+                    당기는 작업을 수십 시간 동안 쉬지 않고<br />
+                    하는게 어부의 일입니다.<br /><br />
                     아침 식탁에 올라갈 신선한 물고기를 잡기 위해<br />
-                    어부들은 사람들이 자는 시간에도<br/>물고기 사냥을 나섭니다.
+                    어부들은 사람들이 자는 시간에도 <br />
+                    물고기 사냥을 나섭니다.<br />
                     </MODiscription>
                 </Fade>
             </DiscriptionArea>
@@ -32,9 +33,14 @@ const Ab_vision_01 = () => {
                     <Visionimg src={img_01} alt="discription img"/>
                 </Fade>
             </ImgArea1>
-            <Fade duration={1000}>
-                <MobileBgimg src={mo_img_01} alt="mobile img"/>
-            </Fade>
+            <ImgArea2>
+                <Fade duration={1000}>
+                    <MobileBgimg src={mo_img_01} alt="mobile img"/>
+                </Fade>
+                <Fade duration={1000}>
+                <MobileSubText>별빛이 빛나는 밤하늘 속<br />바다 위에 떠있는 어선</MobileSubText>
+                </Fade>
+            </ImgArea2>
         </Wrapper>
     )
 }
@@ -92,10 +98,11 @@ const MODiscription = styled.div`
     @media all and (max-width:1200px) {
         display : block;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: bold;
         line-height: 1.5;
         text-align: center;
         color: #000000;
+        
     }
 `
 
@@ -110,16 +117,39 @@ const ImgArea1 = styled.div`
         display : none;
     }
 `
-const MobileBgimg = styled.img`
-    display : none;
 
+const ImgArea2 = styled.div`
+    display : none;
+    
     @media all and (max-width:1200px) {
-        display : block;
-        margin-top : 30px;
-        margin-bottom : 30px;
-        width : 100%;
+        display : block;    
+        width : 92%;
+        margin-top : 60px;
+        margin-bottom : 60px;
+        overflow-x : hidden;
+        /* background-color : red; */
     }
 `
+
+const MobileBgimg = styled.img`
+    display : none;
+    @media all and (max-width:1200px) {
+        display : block;
+        width : 100%;
+        margin-bottom : 33px;
+    }
+`
+const MobileSubText = styled.div`
+    display : none;
+    @media all and (max-width:1200px) {
+        display : block;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.57;
+        text-align : center;
+    }
+`
+
 
 const Visionimg = styled.img`
     width : 100%;
