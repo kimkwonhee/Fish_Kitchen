@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import img_01 from '../../../images/ab_vision_img06.png'
-import img_02 from '../../../images/ab_vision_img07.png'
 import mimg_01 from '../../../images/mo_ab_vision_img02.png'
 import Fade from 'react-reveal/Fade'
 
@@ -14,31 +13,19 @@ const Ab_vision_02 = () => {
                 </Fade>
                 <ContentArea>
                     <FishArea>
-                        <Fade delay={500} duration={1000}>
+                        <Fade delay={800} duration={1000}>
                             <Img_01 src={img_01} alt="어부" />
-                            <Discription1>행위가 주체가되는 대상</Discription1>
                         </Fade>
                     </FishArea>
-                    <PlusArea>
-                        <Fade delay={800} duration={1000}>
-                            <Plus>+</Plus>
-                        </Fade>
-                    </PlusArea>
-                    <KitchenArea>
-                        <Fade delay={1100} duration={1000}>
-                            <Img_01 src={img_02} alt="키친" />
-                            <Discription1>행위가 이루어지는 공간</Discription1>
-                        </Fade>
-                    </KitchenArea>
                     <TextArea>
-                    <Fade right distance="5%" delay={1400} duration={1000}>
-                        <Text><BoldText>신선한 물고기</BoldText>를 위해 태양이 지고,<br />어둠이 가득한 <BoldText>밤 바다</BoldText>를 나아가는<br/><BoldText>그들의 이야기.</BoldText></Text>
-                    </Fade>
+                        <Fade right distance="5%" delay={1400} duration={1000}>
+                            <Text><BoldText>신선한 수산물</BoldText>을 위해 태양이 지고,<br />어둠이 가득한 <BoldText>밤 바다</BoldText>를 나아가는<br/><BoldText>그들의 이야기.</BoldText></Text>
+                        </Fade>
                     </TextArea>
                 </ContentArea>
                 <MobileContentArea>
                     <Fade delay={500} duration={1000}>
-                        <MobileDesc>신선한 물고기를 위해 태양이 지고,<br />
+                        <MobileDesc>신선한 수산물을 위해 태양이 지고,<br />
                         어둠이 가득한 밤 바다를 나아가는 그들의 이야기.
                         </MobileDesc>
                     </Fade>
@@ -81,7 +68,7 @@ const Title = styled.div`
     letter-spacing: 0.96px;
     color: #000000;
     text-align : center;
-    margin-top : 100px;
+    margin-top : 150px;
     margin-bottom : 80px;
 
     @media all and (max-width:1200px) {
@@ -102,40 +89,14 @@ const ContentArea = styled.div`
     }
 `
 const FishArea = styled.div`
-    width : 236px;
     height : 100%;
-    margin-left : 100px;
+
 `
 const Img_01 = styled.img`
-    width : 236px;
-    height : 246px;
-    margin-bottom : 20px;
-`
-const Discription1 = styled.div`
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.6;
-    text-align: center;
-    color: #05103d;
-`
-const PlusArea = styled.div`
-    width : 120px;
-`
-const Plus = styled.div`
-    font-size : 60px;
-    color : #05103d;
-    text-align : center;
-    margin-top : 70px;
-    margin-left: 20px;
-    margin-right: 20px;
-`
-const KitchenArea = styled.div`
-    width : 236px;
-    height : 100%;
+    width : 592px;
+    height : 315px;
 `
 const TextArea = styled.div`
-    width : 100%;
-    height : 300px;
     display : flex;
     align-items : center;
 `

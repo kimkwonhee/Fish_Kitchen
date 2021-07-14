@@ -57,13 +57,15 @@ const BackgroudArea = styled.div`
     width : 100%;
     height : 100%;
     display : flex;
-    justify-content : center;
+    
+
 `
 
 const Bgimg = styled.div`
     position : absolute;
     width : 1200px;
     height : 868px;
+    left : 360px;
     margin-top : 21px;
     background : url(${about_bg01});
     background-repeat : no-repeat;
